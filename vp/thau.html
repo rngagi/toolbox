@@ -21,7 +21,8 @@
 function conv(){
 	var input = document.getElementById("input");
 	var output = document.getElementById("output");
-	var result = splitwords(input.value);
+	var newinput = input.value.replaceAll("'","’");
+	var result = splitwords(newinput);
 	output.innerHTML = result;
 }
 function samp(){
