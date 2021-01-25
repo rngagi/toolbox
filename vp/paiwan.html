@@ -22,8 +22,10 @@
 <script>
 function conv(){
 	var input = document.getElementById("input");
+	var newinput = input.value.replaceAll("'","’");
+	newinput = newinput.replaceAll("‘","’");
 	var output = document.getElementById("output");
-	var result = splitwords(input.value);
+	var result = splitwords(newinput);
 	output.innerHTML = result;
 }
 function clean(){
@@ -31,7 +33,7 @@ function clean(){
 }
 function samp(){
 	var input = document.getElementById("input");
-	var samptxt = "izua cu a senai na kakedrian a kinicaquan a kemasi gaikuku, pizua tu makaya situlu ta kakedrian inumalj sa tjauvaliti ta tjiniukukuan a kai, “drusa a ljikuljav” aya. na maitucu a parutavak: drusa likuljav, drusa likuljav, djaljav a mekelj! djaljav a mekelj! a ita neka nu calinga, a ita neka nu iku, na semamalji! na semamalji!";
+	var samptxt = "simaq mita wa lus’an, pashtay tunaw mashbabiar, pariqaz mita wa qali, piakakaimahan! piakakarina! yaku dai maqaquyash, ihu dai mimparaw, pashtay tunaw maqa atauduu, pariqaz mita wa qali, a~ a~ a~ a~ a~ a~ a~ a~ pashtay tunaw paqaquyash, piakakaimahan! piakakarina!";
 	input.value = samptxt;
 }
 function splitwords(mystr){
@@ -39,7 +41,7 @@ function splitwords(mystr){
 	var wlist = [];
 	var myword = '';
 	for(var i=0;i<mystr.length;i++){
-		if(mystr[i].match(/^[a-z0-9]+$/i))
+		if(mystr[i].match(/^[a-z0-9’]+$/i))
 			{myword+=mystr[i];}
 		else
 			{wlist.push(myword); wlist.push(mystr[i]); myword='';}
