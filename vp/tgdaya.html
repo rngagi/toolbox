@@ -3,18 +3,19 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
-	<title>族語詞彙分級標記 - 賽德克德固達雅語 (beta ver. 0.2.5)</title>
+	<title>族語詞彙分級標記 - 賽德克德固達雅語 (beta ver. 0.2.6)</title>
 	<link rel="stylesheet" type="text/css" href="style.css" media="all">
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
 	<script src='tgdaya.js'></script>
 </head>
 <body>
-	<h1>族語詞彙分級標記 - 賽德克德固達雅語 (beta ver. 0.2.5)</h1>
+	<h1>族語詞彙分級標記 - 賽德克德固達雅語 (beta ver. 0.2.6)</h1>
 	<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
 	<p>範例：<span class="sample" onclick="samp();">Uyas mlawa 呼喚歌</span></p>
 	<p><textarea id="input"></textarea></p>
 	<p><button onclick="conv();">標記</button>
 	<button onclick="clean()">清空文字</button></p>
+    <p><button onclick="location.href='index.html'">回首頁</button></p>
 	<p><div id="output" ></div></p>
 </body>
 
@@ -27,7 +28,7 @@ function conv(){
 }
 function clean(){
 	var input = document.getElementById("input").value = "";//清空input
-        }
+}
 function samp(){
 	var input = document.getElementById("input");
 	var samptxt = "Patis uyas mlawa ka nii, niqan bale ka bnarah na, slhaye ta muuyas hayan ho? Tama mnosa su inu? Kedu bale napa su camac. Bubu mnosa su inu? Kedu bale snkegan su nuqah yqeyaq hii. Riso mnosa su inu ha? Slluhe dapin ndaan rdrudan ta. Weewa mnosa su inu ha? Slhai ka tminun pala pniri ga. Laqi mnosa su inu ha? Sprui ka rdrudan ta ma slhai ka Gaya ta.";

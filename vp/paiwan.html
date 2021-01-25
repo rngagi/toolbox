@@ -3,17 +3,19 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
-	<title>族語詞彙分級標記 - 中排灣語 (beta ver 0.0.9)</title>
+	<title>族語詞彙分級標記 - 中排灣語 (beta ver. 0.0.9.6)</title>
 	<link  rel="stylesheet" type="text/css" href="style.css" media="all" />
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
 	<script src='paiwan.js'></script>
 </head>
 <body>
-	<h1>族語詞彙分級標記 - 中排灣語 (beta)</h1>
+	<h1>族語詞彙分級標記 - 中排灣語 (beta ver. 0.0.9)</h1>
 	<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
 	<p>範例：<span class="sample" onclick="samp();">兩隻老虎</span></p>
 	<p><textarea id="input"></textarea></p>
-	<p><button onclick="conv();">標記</button></p>
+	<p><button onclick="conv();">標記</button>
+    <button onclick="clean()">清空文字</button></p>
+    <p><button onclick="location.href='index.html'">回首頁</button></p>
 	<p><div id="output" ></div></p>
 </body>
 
@@ -23,6 +25,9 @@ function conv(){
 	var output = document.getElementById("output");
 	var result = splitwords(input.value);
 	output.innerHTML = result;
+}
+function clean(){
+	var input = document.getElementById("input").value = "";//清空input
 }
 function samp(){
 	var input = document.getElementById("input");
