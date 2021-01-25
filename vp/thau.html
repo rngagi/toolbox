@@ -34,7 +34,7 @@ function splitwords(mystr){
 	var wlist = [];
 	var myword = '';
 	for(var i=0;i<mystr.length;i++){
-		if(mystr[i].match(/^[a-z0-9]+$/i))
+		if(mystr[i].match(/^[a-z0-9’]+$/i))
 			{myword+=mystr[i];}
 		else
 			{wlist.push(myword); wlist.push(mystr[i]); myword='';}
