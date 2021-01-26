@@ -22,8 +22,10 @@
 <script>
 function conv(){
 	var input = document.getElementById("input");
+	var newinput = input.value.replaceAll("'","’");
+	newinput = newinput.replaceAll("‘","’");
 	var output = document.getElementById("output");
-	var result = splitwords(input.value);
+	var result = splitwords(newinput);
 	output.innerHTML = result;
 }
 function clean(){
