@@ -12,14 +12,15 @@
 	<h1>族語詞彙分級標記 - 賽德克德固達雅語 (beta ver. 0.2.6)</h1>
 	<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
 	<p>範例：<span class="sample" onclick="samp();">Uyas mlawa 呼喚歌</span></p>
-	<p><textarea id="input"></textarea></p>
-	<p><button onclick="conv();">標記</button>
+	<p><textarea id="input" onkeypress="return searchKeyPress(event);"></textarea></p>
+	<p><button id="go" onclick="conv();">標記</button>
 	<button onclick="clean()">清空文字</button></p>
     <p><button onclick="location.href='index.html'">回首頁</button></p>
 	<p><div id="output" ></div></p>
+    
 </body>
 
-<script>
+<script>   
 function conv(){
 	var input = document.getElementById("input");
 	var output = document.getElementById("output");
@@ -56,4 +57,15 @@ function splitwords(mystr){
 	}
 	return result;
 }
+function searchKeyPress(e){
+    // look for window.event in case event isn't passed in
+    e = e || window.event;
+    if (e.keyCode == 13)
+    {
+        document.getElementById('conv()').click();
+        return false;
+    }
+    return true;
+}
+
 </script>
