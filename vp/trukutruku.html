@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-tw">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+	<title>族語詞彙分級標記 - 太魯閣語 (beta ver. 0.0.9)</title>
+	<link rel="stylesheet" type="text/css" href="style.css" media="all">
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+	<script src='trukutruku.js'></script>
+</head>
+<body>
+	<h1>族語詞彙分級標記 - 太魯閣語 (beta ver. 0.0.9)</h1>
+	<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+	<p>範例：<span class="sample" onclick="samp();">Smbu hidaw 射太陽（節錄）</span></p>
+	<p><textarea id="input"></textarea></p>
+	<p><button onclick="conv();">標記</button>
+	<button onclick="clean()">清空文字</button></p>
+    <p><button onclick="location.href='index.html'">回首頁</button></p>
+	<p><div id="output" ></div></p>
+</body>
+
+<script>
+function conv(){
+	var input = document.getElementById("input");
+	var output = document.getElementById("output");
+	var result = splitwords(input.value);
+	output.innerHTML = result;
+}
+function clean(){
+	var input = document.getElementById("input").value = "";//清空input
+}
+function samp(){
+	var input = document.getElementById("input");
+	var samptxt = "Sbiyaw balay babaw dxgal o wana keeman nanak ungat jiyan. Kiya do kndsan seejiq o mqraqil balay ni ini krana saw sgealu. Kiya do musa ptrhiq harung ni kika sprdax dha mmkay sapah ni musa mmiyak. Niqan kingal jiyax, dha hiyi snaw o musa qmpahan ni mhhiru, asi lu strung bgihur mtgnuwin ni wada pskyaun bgihur ka dha hiyi nii ni sqapah karat do maadha hidaw da. Dha hidaw nii o mssriyux mnkala ni priyax ryaxan hidaw, wada rmiyax ka kingal han o mnkala ka kingal duri. Kiya do ungat keeman ni jiyan kdjiyax da, saw nii thdagan dha hidaw kdjiyax ka babaw dxgal do mdngu mhuqil kana ka uqun ni pnegalang pnhuma seejiq. Kiya do ungat uqun dha ka seejiq ni mrana mhuqil.Duri o yasa ungat keeman ni ini tduwa msangay ka seejiq uri da.";
+	input.value = samptxt;
+}
+function splitwords(mystr){
+	//分詞並產出 wlist
+	var wlist = [];
+	var myword = '';
+	for(var i=0;i<mystr.length;i++){
+		if(mystr[i].match(/^[a-z0-9]+$/i))
+			{myword+=mystr[i];}
+		else
+			{wlist.push(myword); wlist.push(mystr[i]); myword='';}
+	}
+	wlist.push(myword);
+	//查詞並產出 result
+	var result = '';
+	for(var i=0;i<wlist.length;i++){
+		var tagged = wlist[i];
+		for(var j=0;j<voc.length;j++){
+			if(wlist[i].toLowerCase()==voc[j].lex.toLowerCase()){tagged = '<span class="lv'+voc[j].lv+'">'+tagged+'</span>';break;}
+		}
+		result += tagged;
+	}
+	return result;
+}
+</script>
