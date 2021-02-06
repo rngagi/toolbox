@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" href="style.css" media="all">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-        <script src='tgdaya.js'></script>
+        <script src='voc.js'></script>
 	</head>
     
 	<body class="is-preload">
@@ -45,8 +45,6 @@
 							<article id="tgdaya">
 								<h2 class="major">德固達雅</h2>
 								<span class="image main"><img src="images/pic01.png" alt="" /></span>
-                                 <script src='tgdaya.js'></script>
-<!--								<h1>族語詞彙分級標記 - 賽德克德固達雅語 (beta ver. 0.3.2)</h1>-->
 	                                <p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
                                     <p>範例：<span class="sample1" onclick="samp1();">Uyas mlawa 呼喚歌</span></p>
 	                                <p><textarea id="input1" onkeypress="return searchKeyPress1(event);"></textarea></p>
@@ -87,8 +85,8 @@
                                             var result = '';
                                             for(var i=0;i<wlist.length;i++){
                                                 var tagged = wlist[i];
-                                                for(var j=0;j<voc.length;j++){
-                                                    if(wlist[i].toLowerCase()==voc[j].lex.toLowerCase()){tagged = '<span class="lv'+voc[j].lv+'">'+tagged+'</span>';break;}
+                                                for(var j=0;j<voc1.length;j++){
+                                                    if(wlist[i].toLowerCase()==voc1[j].lex.toLowerCase()){tagged = '<span class="lv'+voc1[j].lv+'">'+tagged+'</span>';break;}
                                                 }
                                                 result += tagged;
                                             }
@@ -112,77 +110,190 @@
 							<article id="thau">
 								<h2 class="major">邵語</h2>
 								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-<!--								<h1>族語詞彙分級標記 - 邵語 (beta ver. 0.2.2)</h1>-->
-	                            <p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-	                            <p>範例：<span class="sample2" onclick="samp2();">lus’an a quyash 過年之歌</span></p>
-	                            <p><textarea id="input2" onkeypress="return searchKeyPress2(event);"></textarea></p>
-	                            <p><button id="go2" onclick="conv2();">標記</button>
-	                            <button onclick="clean2(); conv2()">清空文字</button></p>
-                                <p><button onclick="location.href='index.html'">回首頁</button></p>
-	                            <p><div id="output2" ></div></p>
-                
-                <script>
-function conv2(){
-	var input = document.getElementById("input2");
-	var newinput = input.value.replaceAll("'","’");
-	newinput = newinput.replaceAll("‘","’");
-	var output = document.getElementById("output2");
-	var result = splitwords(newinput);
-	output.innerHTML = result;
-}
-function clean2(){
-	var input = document.getElementById("input2").value = "";//清空input
-}
-function samp2(){
-	var input = document.getElementById("input2");
-	var samptxt = "simaq mita wa lus’an, pashtay tunaw mashbabiar, pariqaz mita wa qali, piakakaimahan! piakakarina! yaku dai maqaquyash, ihu dai mimparaw, pashtay tunaw maqa atauduu, pariqaz mita wa qali, a~ a~ a~ a~ a~ a~ a~ a~ pashtay tunaw paqaquyash, piakakaimahan! piakakarina!";
-	input.value = samptxt;
-}
-function splitwords2(mystr){
-	//分詞並產出 wlist
-	var wlist = [];
-	var myword = '';
-	for(var i=0;i<mystr.length;i++){
-		if(mystr[i].match(/^[a-z0-9’]+$/i))
-			{myword+=mystr[i];}
-		else
-			{wlist.push(myword); wlist.push(mystr[i]); myword='';}
-	}
-	wlist.push(myword);
-	//查詞並產出 result
-	var result = '';
-	for(var i=0;i<wlist.length;i++){
-		var tagged = wlist[i];
-		for(var j=0;j<voc.length;j++){
-			if(wlist[i].toLowerCase()==voc[j].lex.toLowerCase()){tagged = '<span class="lv'+voc[j].lv+'">'+tagged+'</span>';break;}
-		}
-		result += tagged;
-	}
-	return result;
-}
-function searchKeyPress2(e){
-    // look for window.event in case event isn't passed in
-    e = e || window.event;
-    if (e.keyCode == 13)
-    {
-        document.getElementById('go2').click();
-        return false;
-    }
-    return true;
-}
-</script>
+                                    <p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+                                    <p>範例：<span class="sample2" onclick="samp2();">lus’an a quyash 過年之歌</span></p>
+                                    <p><textarea id="input2" onkeypress="return searchKeyPress2(event);"></textarea></p>
+                                    <p><button id="go2" onclick="conv2();">標記</button>
+                                    <button onclick="clean2(); conv2()">清空文字</button></p>
+                                    <p><button onclick="location.href='index.html'">回首頁</button></p>
+                                    <p><div id="output2" ></div></p>
+
+                                    <script>
+                                    function conv2(){
+                                        var input = document.getElementById("input2");
+                                        var newinput = input.value.replaceAll("'","’");
+                                        newinput = newinput.replaceAll("‘","’");
+                                        var output = document.getElementById("output2");
+                                        var result = splitwords2(newinput);
+                                        output.innerHTML = result;
+                                    }
+                                    function clean2(){
+                                        var input = document.getElementById("input2").value = "";//清空input
+                                    }
+                                    function samp2(){
+                                        var input = document.getElementById("input2");
+                                        var samptxt2 = "simaq mita wa lus’an, pashtay tunaw mashbabiar, pariqaz mita wa qali, piakakaimahan! piakakarina! yaku dai maqaquyash, ihu dai mimparaw, pashtay tunaw maqa atauduu, pariqaz mita wa qali, a~ a~ a~ a~ a~ a~ a~ a~ pashtay tunaw paqaquyash, piakakaimahan! piakakarina!";
+                                        input.value = samptxt2;
+                                    }
+                                    function splitwords2(mystr){
+                                        //分詞並產出 wlist
+                                        var wlist = [];
+                                        var myword = '';
+                                        for(var i=0;i<mystr.length;i++){
+                                            if(mystr[i].match(/^[a-z0-9’]+$/i))
+                                                {myword+=mystr[i];}
+                                            else
+                                                {wlist.push(myword); wlist.push(mystr[i]); myword='';}
+                                        }
+                                        wlist.push(myword);
+                                        //查詞並產出 result
+                                        var result = '';
+                                        for(var i=0;i<wlist.length;i++){
+                                            var tagged = wlist[i];
+                                            for(var j=0;j<voc2.length;j++){
+                                                if(wlist[i].toLowerCase()==voc2[j].lex.toLowerCase()){tagged = '<span class="lv'+voc2[j].lv+'">'+tagged+'</span>';break;}
+                                            }
+                                            result += tagged;
+                                        }
+                                        return result;
+                                    }
+                                    function searchKeyPress2(e){
+                                        // look for window.event in case event isn't passed in
+                                        e = e || window.event;
+                                        if (e.keyCode == 13)
+                                        {
+                                            document.getElementById('go2').click();
+                                            return false;
+                                        }
+                                        return true;
+                                    }
+                                </script>
 							</article>
 
 						<!-- Paiwan -->
 							<article id="paiwan">
 								<h2 class="major">排灣語</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+								<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+	                            <p>範例：<span class="sample3" onclick="samp3();">兩隻老虎</span></p>
+	                            <p><textarea id="input3" onkeypress="return searchKeyPress3(event);"></textarea></p>
+	                            <p><button id="go3" onclick="conv3();">標記</button>
+                                <button onclick="clean3(); conv3()">清空文字</button></p>
+                                <p><button onclick="location.href='index.html'">回首頁</button></p>
+	                            <p><div id="output3" ></div></p>
+        
+                                <script>
+                                function conv3(){
+                                    var input = document.getElementById("input3");
+                                    var newinput = input.value.replaceAll("'","’");
+                                    newinput = newinput.replaceAll("‘","’");
+                                    var output = document.getElementById("output3");
+                                    var result = splitwords3(newinput);
+                                    output.innerHTML = result;
+                                }
+                                function clean3(){
+                                    var input = document.getElementById("input3").value = "";//清空input
+                                }
+                                function samp3(){
+                                    var input = document.getElementById("input3");
+                                    var samptxt = "izua cu a senai na kakedrian a kinicaquan a kemasi gaikuku, pizua tu makaya situlu ta kakedrian inumalj sa tjauvaliti ta tjiniukukuan a kai, “drusa a ljikuljav” aya. na maitucu a parutavak: drusa likuljav, drusa likuljav, djaljav a mekelj! djaljav a mekelj! a ita neka nu calinga, a ita neka nu iku, na semamalji! na semamalji! ";
+                                    input.value = samptxt;
+                                }
+                                function splitwords3(mystr){
+                                    //分詞並產出 wlist
+                                    var wlist = [];
+                                    var myword = '';
+                                    for(var i=0;i<mystr.length;i++){
+                                        if(mystr[i].match(/^[a-z0-9’]+$/i))
+                                            {myword+=mystr[i];}
+                                        else
+                                            {wlist.push(myword); wlist.push(mystr[i]); myword='';}
+                                    }
+                                    wlist.push(myword);
+                                    //查詞並產出 result
+                                    var result = '';
+                                    for(var i=0;i<wlist.length;i++){
+                                        var tagged = wlist[i];
+                                        for(var j=0;j<voc3.length;j++){
+                                            if(wlist[i].toLowerCase()==voc3[j].lex.toLowerCase()){tagged = '<span class="lv'+voc3[j].lv+'">'+tagged+'</span>';break;}
+                                        }
+                                        result += tagged;
+                                    }
+                                    return result;
+                                }
+                                function searchKeyPress3(e){
+                                    // look for window.event in case event isn't passed in
+                                    e = e || window.event;
+                                    if (e.keyCode == 13)
+                                    {
+                                        document.getElementById('go').click();
+                                        return false;
+                                    }
+                                    return true;
+                                }
+</script>
+        
 							</article>
 
 						<!-- Trukutruku -->
-							<article id="truku">
+							<article id="trukutruku">
 								<h2 class="major">太魯閣</h2>
-								
+								<p>範例：<span class="sample4" onclick="samp4();">Smbu hidaw 射太陽（節錄）</span></p>
+	                            <p><textarea id="input4" onkeypress="return searchKeyPress4(event);"></textarea></p>
+	                            <p><button id="go4" onclick="conv4();">標記</button>
+	                            <button onclick="clean4(); conv4()">清空文字</button></p>
+                                <p><button onclick="location.href='index.html'">回首頁</button></p>
+	                            <p><div id="output4" ></div></p>
+    
+                            <script>
+                            function conv4(){
+                                var input = document.getElementById("input4");
+                                var output = document.getElementById("output4");
+                                var result = splitwords4(input.value);
+                                output.innerHTML = result;
+                            }
+                            function clean4(){
+                                var input = document.getElementById("input4").value = "";//清空input
+                            }
+                            function samp4(){
+                                var input = document.getElementById("input4");
+                                var samptxt = "Sbiyaw balay babaw dxgal o wana keeman nanak ungat jiyan. Kiya do kndsan seejiq o mqraqil balay ni ini krana saw sgealu. Kiya do musa ptrhiq harung ni kika sprdax dha mmkay sapah ni musa mmiyak. Niqan kingal jiyax, dha hiyi snaw o musa qmpahan ni mhhiru, asi lu strung bgihur mtgnuwin ni wada pskyaun bgihur ka dha hiyi nii ni sqapah karat do maadha hidaw da. Dha hidaw nii o mssriyux mnkala ni priyax ryaxan hidaw, wada rmiyax ka kingal han o mnkala ka kingal duri. Kiya do ungat keeman ni jiyan kdjiyax da, saw nii thdagan dha hidaw kdjiyax ka babaw dxgal do mdngu mhuqil kana ka uqun ni pnegalang pnhuma seejiq. Kiya do ungat uqun dha ka seejiq ni mrana mhuqil.Duri o yasa ungat keeman ni ini tduwa msangay ka seejiq uri da.";
+                                input.value = samptxt;
+                            }
+                            function splitwords4(mystr){
+                                //分詞並產出 wlist
+                                var wlist = [];
+                                var myword = '';
+                                for(var i=0;i<mystr.length;i++){
+                                    if(mystr[i].match(/^[a-z0-9]+$/i))
+                                        {myword+=mystr[i];}
+                                    else
+                                        {wlist.push(myword); wlist.push(mystr[i]); myword='';}
+                                }
+                                wlist.push(myword);
+                                //查詞並產出 result
+                                var result = '';
+                                for(var i=0;i<wlist.length;i++){
+                                    var tagged = wlist[i];
+                                    for(var j=0;j<voc4.length;j++){
+                                        if(wlist[i].toLowerCase()==voc4[j].lex.toLowerCase()){tagged = '<span class="lv'+voc4[j].lv+'">'+tagged+'</span>';break;}
+                                    }
+                                    result += tagged;
+                                }
+                                return result;
+                            }
+                            function searchKeyPress4(e){
+                                // look for window.event in case event isn't passed in
+                                e = e || window.event;
+                                if (e.keyCode == 13)
+                                {
+                                    document.getElementById('go').click();
+                                    return false;
+                                }
+                                return true;
+                            }
+                            </script>
+    
+    
 							</article>
 
 						<!-- Elements -->
@@ -431,7 +542,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Untitled. Design: Haha.</p>
+						<p class="copyright">&copy; Rngagi. Design: Samaw Pan & Walis Taywang</p>
 					</footer>
 
 			</div>
@@ -445,10 +556,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-          
-            <script src='thau.js'></script>
-            <script src='paiwan.js'></script>
-            <script src='trukutruku.js'></script>
-
+        
 	</body>
 </html>
