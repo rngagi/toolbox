@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+<!--Ver. 1.0.0RC-->
 <html>
 	<head>
 		<title>族語詞彙分級標記 - 首頁</title>
@@ -25,7 +26,8 @@
 						<div class="content">
 							<div class="inner">
 								<h1>族語詞彙分級標記</h1>
-								<p>原住民族語言千詞表分級標記小工具</p>
+								<h3>原住民族語言千詞表分級標記小工具</h3>
+                                <p><a href="#guide">使用說明</a></p>
 							</div>
 						</div>
 						<nav>
@@ -45,9 +47,10 @@
 						<!-- Tgdaya -->
 							<article id="tgdaya">
 								<h2 class="major">德固達雅</h2>
-								<span class="image main"><img src="images/pic01.png" alt="" /></span>
+								<span class="image main"><img src="images/sdq.png" alt="" /></span>
 	                                <p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
                                     <p>範例：<span class="sample1" onclick="samp1();">Uyas mlawa 呼喚歌</span></p>
+                                    請在下框輸入欲標示等級的族語：<br>
 	                                <p><textarea id="input1" onkeypress="return searchKeyPress1(event);"></textarea></p>
 	                                <p><button id="go1" onclick="conv1();">標記</button>
 	                                <button onclick="clean1(); conv1();">清空文字</button></p>
@@ -110,9 +113,10 @@
 						<!-- Thau -->
 							<article id="thau">
 								<h2 class="major">邵語</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+								<span class="image main"><img src="images/ssf.png" alt="" /></span>
                                     <p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
                                     <p>範例：<span class="sample2" onclick="samp2();">lus’an a quyash 過年之歌</span></p>
+                                    請在下框輸入欲標示等級的族語：<br>
                                     <p><textarea id="input2" onkeypress="return searchKeyPress2(event);"></textarea></p>
                                     <p><button id="go2" onclick="conv2();">標記</button>
                                     <button onclick="clean2(); conv2()">清空文字</button></p>
@@ -174,8 +178,10 @@
 						<!-- Paiwan -->
 							<article id="paiwan">
 								<h2 class="major">排灣語</h2>
+                                <span class="image main"><img src="images/pwn.png" alt="" /></span>
 								<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
 	                            <p>範例：<span class="sample3" onclick="samp3();">兩隻老虎</span></p>
+                                請在下框輸入欲標示等級的族語：<br>
 	                            <p><textarea id="input3" onkeypress="return searchKeyPress3(event);"></textarea></p>
 	                            <p><button id="go3" onclick="conv3();">標記</button>
                                 <button onclick="clean3(); conv3()">清空文字</button></p>
@@ -238,7 +244,9 @@
 						<!-- Trukutruku -->
 							<article id="trukutruku">
 								<h2 class="major">太魯閣</h2>
+                                <span class="image main"><img src="images/trv.png" alt="" /></span>
 								<p>範例：<span class="sample4" onclick="samp4();">Smbu hidaw 射太陽（節錄）</span></p>
+                                請在下框輸入欲標示等級的族語：<br>
 	                            <p><textarea id="input4" onkeypress="return searchKeyPress4(event);"></textarea></p>
 	                            <p><button id="go4" onclick="conv4();">標記</button>
 	                            <button onclick="clean4(); conv4()">清空文字</button></p>
@@ -297,6 +305,17 @@
     
 							</article>
 
+	                    <!-- User Guide -->
+                            <article id="guide">
+                                <h2 class="major">使用說明</h2>
+                                <span class="image main"><img src="images/guide.png" alt="" /></span>
+                                <p>　　本工具參考2018年族語千詞表的分級並進行修正，使用時將您所需要標示等級的族語詞彙、句子、段落等輸入或複製到文字框中，並按下「標記」按鈕，即可標記出千詞表中含有的族語詞彙及部分常用衍生詞。</p>
+                                若有任何疑問請洽：<br>
+                                核心功能開發：Samaw Pan　　<a href="mailto:samuel.yhpan@gmail.com">samuel.yhpan@gmail.com</a><br>
+                                UI/UX：Walis Taywang　　　<a href="mailto:walistaywang0914@gmail.com">walistaywang0914@gmail.com</a>
+
+
+                            </article>
 						<!-- Elements -->
 							<article id="elements">
 								<h2 class="major">Elements</h2>
@@ -544,7 +563,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				<!-- Footer -->
 					<footer id="footer">
 						<p class="copyright">&copy; Rngagi. Design: Samaw Pan & Walis Taywang</p>
-                        <p> <a href="../index.html"> Beta Version </a> </p>
+                        <p> <a href="../index.html"> Click for Beta Version </a> </p>
 					</footer>
 
 			</div>
