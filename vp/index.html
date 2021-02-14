@@ -1,35 +1,613 @@
-<!doctype html>
-<html lang="zh-tw">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
-    <link rel="shortcut icon" href="alpha/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="alpha/images/favicon.ico" type="image/x-icon">
-    <title>族語詞彙分級標記 - 首頁</title>
-</head>
+<!DOCTYPE HTML>
+<!--Ver. 0.9.0 RC-->
+<html>
+	<head>
+		<title>族語詞彙分級標記</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta property="og:description" content="原住民族語言千詞表分級標記小工具" />
+        <meta property="og:image" content="images/img.png" />
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="style.css" media="all">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+        <script src='voc.js'></script>
+	</head>
     
-<body>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-gem"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>族語詞彙分級標記</h1>
+								<h3>原住民族語言千詞表分級標記小工具</h3>
+							</div>
+						</div>
+						<nav>
+							<ul>
+                                <li><a href="#menu">語言選擇</a></li>
+                                <li><a href="#guide">使用說明</a><li>
+                                <li><a href="#about">版本資訊</a><li>
+<!--
+								<li><a href="#tgdaya">Tgdaya</a></li>
+								<li><a href="#thau">Thau</a></li>
+								<li><a href="#paiwan">Paiwan</a></li>
+								<li><a href="#trukutruku">Truku</a></li>
+								<li><a href="#elements">Elements</a></li>
+-->
+							</ul>
+                            
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+                        
+                        <!-- lgs menu -->
+                            <article id="menu">
+                                <h2 class="major">語言選擇</h2>
+                                <span class="image main"><img src="images/menu.png" alt="" /></span>
+                                <p><a href="#tgdaya">賽德克德固達雅語</a></p>
+                                <p><a href="#thau">邵語</a></p>
+                                <p><a href="#trukutruku">太魯閣語</a></p>
+<!--                                <p><a href="#Paiwan">排灣語</a></p>-->
+                             
+                        
+                            </article>
+
+						<!-- Tgdaya -->
+							<article id="tgdaya">
+								<h2 class="major">德固達雅</h2>
+								<span class="image main"><img src="images/sdq.png" alt="" /></span>
+	                                <p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+                                    <p>範例：<span class="sample1" onclick="samp1();">Uyas mlawa 呼喚歌</span></p>
+                                    請在下框輸入欲標示等級的族語：<br>
+	                                <p><textarea id="input1" onkeypress="return searchKeyPress1(event);"></textarea></p>
+	                                <p><button id="go1" onclick="conv1();">標記</button>
+	                                <button onclick="clean1(); conv1();">清空文字</button></p>
+                                    <p><button onclick="location.href='index.html'">回首頁</button><button onclick="location.href='index.html#menu'">回選單</button></p>
+	                                <p><div id="output1"></div></p>
+                        
+                                    <script>   
+                                        function conv1(){
+                                            var input = document.getElementById("input1");
+                                            var output = document.getElementById("output1");
+                                            var result = splitwords1(input.value);
+                                            output.innerHTML = result;
+                                        }
+                                        function clean1(){
+                                            var input = document.getElementById("input1");
+                                            input.value = "";//清空input
+
+                                        }
+                                        function samp1(){
+                                            var input = document.getElementById("input1");
+                                            var samptxt1 = "Patis uyas mlawa ka nii, niqan bale ka bnarah na, slhaye ta muuyas hayan ho? Tama mnosa su inu? Kedu bale napa su camac. Bubu mnosa su inu? Kedu bale snkegan su nuqah yqeyaq hii. Riso mnosa su inu ha? Slluhe dapin ndaan rdrudan ta. Weewa mnosa su inu ha? Slhai ka tminun pala pniri ga. Laqi mnosa su inu ha? Sprui ka rdrudan ta ma slhai ka Gaya ta.";
+                                            input.value = samptxt1;
+                                        }
+                                        function splitwords1(mystr){
+                                            //分詞並產出 wlist
+                                            var wlist = [];
+                                            var myword = '';
+                                            for(var i=0;i<mystr.length;i++){
+                                                if(mystr[i].match(/^[a-z0-9]+$/i))
+                                                    {myword+=mystr[i];}
+                                                else
+                                                    {wlist.push(myword); wlist.push(mystr[i]); myword='';}
+                                            }
+                                            wlist.push(myword);
+                                            //查詞並產出 result
+                                            var result = '';
+                                            for(var i=0;i<wlist.length;i++){
+                                                var tagged = wlist[i];
+                                                for(var j=0;j<voc1.length;j++){
+                                                    if(wlist[i].toLowerCase()==voc1[j].lex.toLowerCase()){tagged = '<span class="lv'+voc1[j].lv+'">'+tagged+'</span>';break;}
+                                                }
+                                                result += tagged;
+                                            }
+                                            return result;
+                                        }
+                                        function searchKeyPress1(e){
+                                            // look for window.event in case event isn't passed in
+                                            e = e || window.event;
+                                            if (e.keyCode == 13)
+                                            {
+                                                document.getElementById('go1').click();
+                                                return false;
+                                            }
+                                            return true;
+                                        }
+
+                                    </script>
+							</article>
+
+						<!-- Thau -->
+							<article id="thau">
+								<h2 class="major">邵語</h2>
+								<span class="image main"><img src="images/ssf.png" alt="" /></span>
+                                    <p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+                                    <p>範例：<span class="sample2" onclick="samp2();">lus’an a quyash 過年之歌</span></p>
+                                    請在下框輸入欲標示等級的族語：<br>
+                                    <p><textarea id="input2" onkeypress="return searchKeyPress2(event);"></textarea></p>
+                                    <p><button id="go2" onclick="conv2();">標記</button>
+                                    <button onclick="clean2(); conv2()">清空文字</button></p>
+                                    <p><button onclick="location.href='index.html'">回首頁</button><button onclick="location.href='index.html#menu'">回選單</button></p>
+                                    <p><div id="output2" ></div></p>
+
+                                    <script>
+                                    function conv2(){
+                                        var input = document.getElementById("input2");
+                                        var newinput = input.value.replaceAll("'","’");
+                                        newinput = newinput.replaceAll("‘","’");
+                                        var output = document.getElementById("output2");
+                                        var result = splitwords2(newinput);
+                                        output.innerHTML = result;
+                                    }
+                                    function clean2(){
+                                        var input = document.getElementById("input2").value = "";//清空input
+                                    }
+                                    function samp2(){
+                                        var input = document.getElementById("input2");
+                                        var samptxt2 = "simaq mita wa lus’an, pashtay tunaw mashbabiar, pariqaz mita wa qali, piakakaimahan! piakakarina! yaku dai maqaquyash, ihu dai mimparaw, pashtay tunaw maqa atauduu, pariqaz mita wa qali, a~ a~ a~ a~ a~ a~ a~ a~ pashtay tunaw paqaquyash, piakakaimahan! piakakarina!";
+                                        input.value = samptxt2;
+                                    }
+                                    function splitwords2(mystr){
+                                        //分詞並產出 wlist
+                                        var wlist = [];
+                                        var myword = '';
+                                        for(var i=0;i<mystr.length;i++){
+                                            if(mystr[i].match(/^[a-z0-9’]+$/i))
+                                                {myword+=mystr[i];}
+                                            else
+                                                {wlist.push(myword); wlist.push(mystr[i]); myword='';}
+                                        }
+                                        wlist.push(myword);
+                                        //查詞並產出 result
+                                        var result = '';
+                                        for(var i=0;i<wlist.length;i++){
+                                            var tagged = wlist[i];
+                                            for(var j=0;j<voc2.length;j++){
+                                                if(wlist[i].toLowerCase()==voc2[j].lex.toLowerCase()){tagged = '<span class="lv'+voc2[j].lv+'">'+tagged+'</span>';break;}
+                                            }
+                                            result += tagged;
+                                        }
+                                        return result;
+                                    }
+                                    function searchKeyPress2(e){
+                                        // look for window.event in case event isn't passed in
+                                        e = e || window.event;
+                                        if (e.keyCode == 13)
+                                        {
+                                            document.getElementById('go2').click();
+                                            return false;
+                                        }
+                                        return true;
+                                    }
+                                </script>
+							</article>
+
+						<!-- Paiwan -->
+							<article id="paiwan">
+								<h2 class="major">排灣語</h2>
+                                <span class="image main"><img src="images/pwn.png" alt="" /></span>
+								<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+	                            <p>範例：<span class="sample3" onclick="samp3();">兩隻老虎</span></p>
+                                請在下框輸入欲標示等級的族語：<br>
+	                            <p><textarea id="input3" onkeypress="return searchKeyPress3(event);"></textarea></p>
+	                            <p><button id="go3" onclick="conv3();">標記</button>
+                                <button onclick="clean3(); conv3()">清空文字</button></p>
+                                <p><button onclick="location.href='index.html'">回首頁</button><button onclick="location.href='index.html#menu'">回選單</button></p>
+	                            <p><div id="output3" ></div></p>
+        
+                                <script>
+                                function conv3(){
+                                    var input = document.getElementById("input3");
+                                    var newinput = input.value.replaceAll("'","’");
+                                    newinput = newinput.replaceAll("‘","’");
+                                    var output = document.getElementById("output3");
+                                    var result = splitwords3(newinput);
+                                    output.innerHTML = result;
+                                }
+                                function clean3(){
+                                    var input = document.getElementById("input3").value = "";//清空input
+                                }
+                                function samp3(){
+                                    var input = document.getElementById("input3");
+                                    var samptxt = "izua cu a senai na kakedrian a kinicaquan a kemasi gaikuku, pizua tu makaya situlu ta kakedrian inumalj sa tjauvaliti ta tjiniukukuan a kai, “drusa a likuljav” aya. na maitucu a parutavak: drusa likuljav, drusa likuljav, djaljav a mekelj! djaljav a mekelj! a ita neka nu calinga, a ita neka nu iku, na semamalji! na semamalji! ";
+                                    input.value = samptxt;
+                                }
+                                function splitwords3(mystr){
+                                    //分詞並產出 wlist
+                                    var wlist = [];
+                                    var myword = '';
+                                    for(var i=0;i<mystr.length;i++){
+                                        if(mystr[i].match(/^[a-z0-9’]+$/i))
+                                            {myword+=mystr[i];}
+                                        else
+                                            {wlist.push(myword); wlist.push(mystr[i]); myword='';}
+                                    }
+                                    wlist.push(myword);
+                                    //查詞並產出 result
+                                    var result = '';
+                                    for(var i=0;i<wlist.length;i++){
+                                        var tagged = wlist[i];
+                                        for(var j=0;j<voc3.length;j++){
+                                            if(wlist[i].toLowerCase()==voc3[j].lex.toLowerCase()){tagged = '<span class="lv'+voc3[j].lv+'">'+tagged+'</span>';break;}
+                                        }
+                                        result += tagged;
+                                    }
+                                    return result;
+                                }
+                                function searchKeyPress3(e){
+                                    // look for window.event in case event isn't passed in
+                                    e = e || window.event;
+                                    if (e.keyCode == 13)
+                                    {
+                                        document.getElementById('go').click();
+                                        return false;
+                                    }
+                                    return true;
+                                }
+</script>
+        
+							</article>
+
+						<!-- Trukutruku -->
+							<article id="trukutruku">
+								<h2 class="major">太魯閣</h2>
+                                <span class="image main"><img src="images/trv.png" alt="" /></span>
+                                <p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+								<p>範例：<span class="sample4" onclick="samp4();">Smbu hidaw 射太陽（節錄）</span></p>
+                                請在下框輸入欲標示等級的族語：<br>
+	                            <p><textarea id="input4" onkeypress="return searchKeyPress4(event);"></textarea></p>
+	                            <p><button id="go4" onclick="conv4();">標記</button>
+	                            <button onclick="clean4(); conv4()">清空文字</button></p>
+                                <p><button onclick="location.href='index.html'">回首頁</button><button onclick="location.href='index.html#menu'">回選單</button></p>
+	                            <p><div id="output4" ></div></p>
     
-        <h1><div style="text-align:center;">族語詞彙分級標記 - 首頁</div></h1>
-	
-    <center>
-        <p><a href="alpha/index.html" style="color:white"> Alpha Version </a></p>
-        
-        <p>
-            <input type="button" value="賽德克德固達雅語 beta 0.3.2" style="width:600px;height:40px;font-size:20px;" onclick="location.href='tgdaya.html'">
-        </p>
-        
-        <p>
-            <input type="button" value="邵語 beta 0.2.2" style="width:600px;height:40px;font-size:20px;" onclick="location.href='thau.html'" >
-        </p>
-        <p>
-           <input type="button" value="中排灣語 beta 0.1.2" style="width:600px;height:40px;font-size:20px;" onclick="location.href='paiwan.html'" >
-        </p>
-        
-        <p>
-            <input type="button" value="太魯閣語 beta 0.2.2" style="width:600px;height:40px;font-size:20px;" onclick="location.href='trukutruku.html'" >
-        </p>
-        
-    </center>
+                            <script>
+                            function conv4(){
+                                var input = document.getElementById("input4");
+                                var output = document.getElementById("output4");
+                                var result = splitwords4(input.value);
+                                output.innerHTML = result;
+                            }
+                            function clean4(){
+                                var input = document.getElementById("input4").value = "";//清空input
+                            }
+                            function samp4(){
+                                var input = document.getElementById("input4");
+                                var samptxt = "Sbiyaw balay babaw dxgal o wana keeman nanak ungat jiyan. Kiya do kndsan seejiq o mqraqil balay ni ini krana saw sgealu. Kiya do musa ptrhiq harung ni kika sprdax dha mmkay sapah ni musa mmiyak. Niqan kingal jiyax, dha hiyi snaw o musa qmpahan ni mhhiru, asi lu strung bgihur mtgnuwin ni wada pskyaun bgihur ka dha hiyi nii ni sqapah karat do maadha hidaw da. Dha hidaw nii o mssriyux mnkala ni priyax ryaxan hidaw, wada rmiyax ka kingal han o mnkala ka kingal duri. Kiya do ungat keeman ni jiyan kdjiyax da, saw nii thdagan dha hidaw kdjiyax ka babaw dxgal do mdngu mhuqil kana ka uqun ni pnegalang pnhuma seejiq. Kiya do ungat uqun dha ka seejiq ni mrana mhuqil.Duri o yasa ungat keeman ni ini tduwa msangay ka seejiq uri da.";
+                                input.value = samptxt;
+                            }
+                            function splitwords4(mystr){
+                                //分詞並產出 wlist
+                                var wlist = [];
+                                var myword = '';
+                                for(var i=0;i<mystr.length;i++){
+                                    if(mystr[i].match(/^[a-z0-9]+$/i))
+                                        {myword+=mystr[i];}
+                                    else
+                                        {wlist.push(myword); wlist.push(mystr[i]); myword='';}
+                                }
+                                wlist.push(myword);
+                                //查詞並產出 result
+                                var result = '';
+                                for(var i=0;i<wlist.length;i++){
+                                    var tagged = wlist[i];
+                                    for(var j=0;j<voc4.length;j++){
+                                        if(wlist[i].toLowerCase()==voc4[j].lex.toLowerCase()){tagged = '<span class="lv'+voc4[j].lv+'">'+tagged+'</span>';break;}
+                                    }
+                                    result += tagged;
+                                }
+                                return result;
+                            }
+                            function searchKeyPress4(e){
+                                // look for window.event in case event isn't passed in
+                                e = e || window.event;
+                                if (e.keyCode == 13)
+                                {
+                                    document.getElementById('go').click();
+                                    return false;
+                                }
+                                return true;
+                            }
+                            </script>
     
-</body>
+    
+							</article>
+
+	                    <!-- User Guide -->
+                            <article id="guide">
+                                <h2 class="major">使用說明</h2>
+                                <span class="image main"><img src="images/guide.png" alt="" /></span>
+                                <p>　　本工具參考2018年族語千詞表的分級並進行修正，使用時將您所需要標示等級的族語詞彙、句子、段落等輸入或複製到文字框中，並按下「標記」按鈕，即可標記出千詞表中含有的族語詞彙及部分常用衍生詞。如果想要試用本工具，亦可點選範例文字以進行標記。</p>
+                                若有任何疑問請洽：<br>
+                                核心功能開發：Samaw Pan　　<a href="mailto:samuel.yhpan@gmail.com">samuel.yhpan@gmail.com</a><br>
+                                UI/UX：Walis Taywang　　　<a href="mailto:walistaywang0914@gmail.com">walistaywang0914@gmail.com</a></article>
+
+                        <!-- About -->
+                            <article id="about">
+                                <h2 class="major">版本資訊</h2>
+                                <span class="image main"><img src="images/ver.png" alt="" /></span>
+                                <h3>Ver. 0.9.9. </h3>
+                                基本功能上線：2018(107)年族語千詞表詞彙等級標記。<br>
+                                支援語別：德固達雅語、邵語、中排灣語、太魯閣語。<p>
+                                <h3>次版本預計更新以下內容： </h3>
+                                輸入段落族語詞彙翻譯功能。<p>
+                                </article>
+
+						<!-- Elements -->
+							<article id="elements">
+								<h2 class="major">Elements</h2>
+
+								<section>
+									<h3 class="major">Text</h3>
+									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+									<hr />
+									<h2>Heading Level 2</h2>
+									<h3>Heading Level 3</h3>
+									<h4>Heading Level 4</h4>
+									<h5>Heading Level 5</h5>
+									<h6>Heading Level 6</h6>
+									<hr />
+									<h4>Blockquote</h4>
+									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+									<h4>Preformatted</h4>
+									<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+								</section>
+
+								<section>
+									<h3 class="major">Lists</h3>
+
+									<h4>Unordered</h4>
+									<ul>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Alternate</h4>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Ordered</h4>
+									<ol>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis viverra.</li>
+										<li>Felis enim feugiat.</li>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis lorem.</li>
+										<li>Felis enim et feugiat.</li>
+									</ol>
+									<h4>Icons</h4>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
+
+									<h4>Actions</h4>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Table</h3>
+									<h4>Default</h4>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+
+									<h4>Alternate</h4>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+								</section>
+
+								<section>
+									<h3 class="major">Buttons</h3>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Primary</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button">Default</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+									</ul>
+									<ul class="actions">
+										<li><span class="button primary disabled">Disabled</span></li>
+										<li><span class="button disabled">Disabled</span></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Form</h3>
+									<form method="post" action="#">
+										<div class="fields">
+											<div class="field half">
+												<label for="demo-name">Name</label>
+												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+											</div>
+											<div class="field half">
+												<label for="demo-email">Email</label>
+												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+											</div>
+											<div class="field">
+												<label for="demo-category">Category</label>
+												<select name="demo-category" id="demo-category">
+													<option value="">-</option>
+													<option value="1">Manufacturing</option>
+													<option value="1">Shipping</option>
+													<option value="1">Administration</option>
+													<option value="1">Human Resources</option>
+												</select>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+												<label for="demo-priority-low">Low</label>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-high" name="demo-priority">
+												<label for="demo-priority-high">High</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-copy" name="demo-copy">
+												<label for="demo-copy">Email me a copy</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-human" name="demo-human" checked>
+												<label for="demo-human">Not a robot</label>
+											</div>
+											<div class="field">
+												<label for="demo-message">Message</label>
+												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</form>
+								</section>
+
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Rngagi. Design: Samaw Pan & Walis Taywang</p>
+                        <p> <a href="../index.html"> Click for Beta Version </a><br> 
+<!--                        <a href="twn.html"> Tâi-gí </a>　<a href="hakka.html"> Hak-fa </a> </p>-->
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+        
+	</body>
+</html>

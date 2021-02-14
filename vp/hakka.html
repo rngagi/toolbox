@@ -2,13 +2,10 @@
 <!--Ver. 0.9.0 RC-->
 <html>
 	<head>
-		<title>族語詞彙分級標記</title>
+		<title>族語詞彙分級標記 - 首頁</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <meta property="og:description" content="原住民族語言千詞表分級標記小工具" />
-        <meta property="og:image" content="images/img.png" />
-        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <meta property="og:description" content="原住民族語言千詞表分級標記小工具">
 		<link rel="stylesheet" href="assets/css/main.css" />
         <link rel="stylesheet" type="text/css" href="style.css" media="all">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -29,40 +26,31 @@
 						<div class="content">
 							<div class="inner">
 								<h1>族語詞彙分級標記</h1>
-								<h3>原住民族語言千詞表分級標記小工具</h3>
+								<h3>原住民族語言千詞表分級標記小工具</h3><br>
+                                <h6><a href="#guide">使用說明</a></h6>
+                                <h6><a href="#ver">版本資訊</a></h6>
 							</div>
 						</div>
 						<nav>
 							<ul>
-                                <li><a href="#menu">語言選擇</a></li>
-                                <li><a href="#guide">使用說明</a><li>
-                                <li><a href="#about">版本資訊</a><li>
-<!--
 								<li><a href="#tgdaya">Tgdaya</a></li>
 								<li><a href="#thau">Thau</a></li>
 								<li><a href="#paiwan">Paiwan</a></li>
 								<li><a href="#trukutruku">Truku</a></li>
-								<li><a href="#elements">Elements</a></li>
--->
+								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
+<!--
+                            <br>
+                            <ul>
+								<li><a href="#tgdaya">Tgdaya</a></li>
+							</ul>
+-->
                             
 						</nav>
 					</header>
 
 				<!-- Main -->
 					<div id="main">
-                        
-                        <!-- lgs menu -->
-                            <article id="menu">
-                                <h2 class="major">語言選擇</h2>
-                                <span class="image main"><img src="images/menu.png" alt="" /></span>
-                                <p><a href="#tgdaya">賽德克德固達雅語</a></p>
-                                <p><a href="#thau">邵語</a></p>
-                                <p><a href="#trukutruku">太魯閣語</a></p>
-<!--                                <p><a href="#Paiwan">排灣語</a></p>-->
-                             
-                        
-                            </article>
 
 						<!-- Tgdaya -->
 							<article id="tgdaya">
@@ -74,7 +62,7 @@
 	                                <p><textarea id="input1" onkeypress="return searchKeyPress1(event);"></textarea></p>
 	                                <p><button id="go1" onclick="conv1();">標記</button>
 	                                <button onclick="clean1(); conv1();">清空文字</button></p>
-                                    <p><button onclick="location.href='index.html'">回首頁</button><button onclick="location.href='index.html#menu'">回選單</button></p>
+                                    <p><button onclick="location.href='index.html'">回首頁</button></p>
 	                                <p><div id="output1"></div></p>
                         
                                     <script>   
@@ -140,7 +128,7 @@
                                     <p><textarea id="input2" onkeypress="return searchKeyPress2(event);"></textarea></p>
                                     <p><button id="go2" onclick="conv2();">標記</button>
                                     <button onclick="clean2(); conv2()">清空文字</button></p>
-                                    <p><button onclick="location.href='index.html'">回首頁</button><button onclick="location.href='index.html#menu'">回選單</button></p>
+                                    <p><button onclick="location.href='index.html'">回首頁</button></p>
                                     <p><div id="output2" ></div></p>
 
                                     <script>
@@ -205,7 +193,7 @@
 	                            <p><textarea id="input3" onkeypress="return searchKeyPress3(event);"></textarea></p>
 	                            <p><button id="go3" onclick="conv3();">標記</button>
                                 <button onclick="clean3(); conv3()">清空文字</button></p>
-                                <p><button onclick="location.href='index.html'">回首頁</button><button onclick="location.href='index.html#menu'">回選單</button></p>
+                                <p><button onclick="location.href='index.html'">回首頁</button></p>
 	                            <p><div id="output3" ></div></p>
         
                                 <script>
@@ -222,7 +210,7 @@
                                 }
                                 function samp3(){
                                     var input = document.getElementById("input3");
-                                    var samptxt = "izua cu a senai na kakedrian a kinicaquan a kemasi gaikuku, pizua tu makaya situlu ta kakedrian inumalj sa tjauvaliti ta tjiniukukuan a kai, “drusa a likuljav” aya. na maitucu a parutavak: drusa likuljav, drusa likuljav, djaljav a mekelj! djaljav a mekelj! a ita neka nu calinga, a ita neka nu iku, na semamalji! na semamalji! ";
+                                    var samptxt = "izua cu a senai na kakedrian a kinicaquan a kemasi gaikuku, pizua tu makaya situlu ta kakedrian inumalj sa tjauvaliti ta tjiniukukuan a kai, “drusa a ljikuljav” aya. na maitucu a parutavak: drusa likuljav, drusa likuljav, djaljav a mekelj! djaljav a mekelj! a ita neka nu calinga, a ita neka nu iku, na semamalji! na semamalji! ";
                                     input.value = samptxt;
                                 }
                                 function splitwords3(mystr){
@@ -265,13 +253,12 @@
 							<article id="trukutruku">
 								<h2 class="major">太魯閣</h2>
                                 <span class="image main"><img src="images/trv.png" alt="" /></span>
-                                <p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
 								<p>範例：<span class="sample4" onclick="samp4();">Smbu hidaw 射太陽（節錄）</span></p>
                                 請在下框輸入欲標示等級的族語：<br>
 	                            <p><textarea id="input4" onkeypress="return searchKeyPress4(event);"></textarea></p>
 	                            <p><button id="go4" onclick="conv4();">標記</button>
 	                            <button onclick="clean4(); conv4()">清空文字</button></p>
-                                <p><button onclick="location.href='index.html'">回首頁</button><button onclick="location.href='index.html#menu'">回選單</button></p>
+                                <p><button onclick="location.href='index.html'">回首頁</button></p>
 	                            <p><div id="output4" ></div></p>
     
                             <script>
@@ -335,8 +322,8 @@
                                 核心功能開發：Samaw Pan　　<a href="mailto:samuel.yhpan@gmail.com">samuel.yhpan@gmail.com</a><br>
                                 UI/UX：Walis Taywang　　　<a href="mailto:walistaywang0914@gmail.com">walistaywang0914@gmail.com</a></article>
 
-                        <!-- About -->
-                            <article id="about">
+                        <!-- Release Note -->
+                            <article id="ver">
                                 <h2 class="major">版本資訊</h2>
                                 <span class="image main"><img src="images/ver.png" alt="" /></span>
                                 <h3>Ver. 0.9.9. </h3>
@@ -593,8 +580,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				<!-- Footer -->
 					<footer id="footer">
 						<p class="copyright">&copy; Rngagi. Design: Samaw Pan & Walis Taywang</p>
-                        <p> <a href="../index.html"> Click for Beta Version </a><br> 
-<!--                        <a href="twn.html"> Tâi-gí </a>　<a href="hakka.html"> Hak-fa </a> </p>-->
+                        <p> <a href="../index.html"> Click for Beta Version </a> </p>
 					</footer>
 
 			</div>
