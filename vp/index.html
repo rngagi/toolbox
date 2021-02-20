@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<!--Ver. 1.0.0 RC-->
+<!--Ver. 1.1.0-->
 <html>
 	<head>
 		<title>族語詞彙分級標記</title>
@@ -39,10 +39,6 @@
                                 <li><a href="#guide">使用說明</a></li>
                                 <li><a href="#about">版本資訊</a></li>
 <!--
-								<li><a href="#tgdaya">Tgdaya</a></li>
-								<li><a href="#thau">Thau</a></li>
-								<li><a href="#paiwan">Paiwan</a></li>
-								<li><a href="#trukutruku">Truku</a></li>
 								<li><a href="#elements">Elements</a></li>
 -->
 							</ul>
@@ -59,8 +55,10 @@
                                 <span class="image main"><img src="images/menu.png" alt="" /></span>
                                 <p><li><a href="#tgdaya">賽德克德固達雅語</a></li></p>
                                 <p><li><a href="#thau">邵語</a></li></p>
+                                <!--<p><a href="#Paiwan">排灣語</a></p>-->
                                 <p><li><a href="#trukutruku">太魯閣語</a></li></p>
-<!--                                <p><a href="#Paiwan">排灣語</a></p>-->
+                                <p><li><a href="#hla">拉阿魯哇語</a></li></p>
+
                              
                         
                             </article>
@@ -327,6 +325,73 @@
     
 							</article>
 
+                        <!-- Hla'alua -->
+							<article id="hla">
+								<h2 class="major">拉阿魯哇語</h2>
+                                <span class="image main"><img src="images/hla.png" alt="" /></span>
+								<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+	                            <p>範例：<span class="sample5" onclick="samp5();">auninia langica arinani? 今天天氣怎麼樣？</span></p>
+                                請在下框輸入欲標示等級的族語：<br>
+	                            <p><textarea id="input5" onkeypress="return searchKeyPress5(event);"></textarea></p>
+	                            <p><button id="go5" onclick="conv5();">標記</button>
+                                <button onclick="clean5(); conv5()">清空文字</button></p>
+                                <p><button onclick="location.href='index.html'; clean5(); conv5();">回首頁</button><button onclick="location.href='index.html#menu'; clean5(); conv5();" >回選單</button></p>
+	                            <p><div id="output5" ></div></p>
+        
+                                <script>
+                                function conv5(){
+                                    var input = document.getElementById("input5");
+                                    var newinput = input.value.replaceAll("'","’");
+                                    newinput = newinput.replaceAll("‘","’");
+                                    var output = document.getElementById("output5");
+                                    var result = splitwords5(newinput);
+                                    output.innerHTML = result;
+                                }
+                                function clean5(){
+                                    var input = document.getElementById("input5").value = "";//清空input
+                                }
+                                function samp5(){
+                                    var input = document.getElementById("input5");
+                                    var samptxt = "auninia langica arinani? tam macici arinania tahliaria. auninia langica matata? taiacuami muacʉkʉhlʉka pariavaratʉ. hliumusahlʉ i kiruvana? ausii hliruhlahlavusa hla talasululunga. tam macici arinani tam hlimurutumuhlu aku mururahlʉnga. musapuaili masinu mima iiama tamucu’ai mavacangʉ. amihla kiahlahlamulangicana miataisami umusahlʉ matata. murumita vahlita atʉhlʉngʉkia mahlavaa saunga. mauruhla matata aramasarʉmʉ. macahlia kuhlaisai maritatumuhlu kiatikuru iniciki kuaracarʉmʉ.";
+                                    input.value = samptxt;
+                                }
+                                function splitwords5(mystr){
+                                    //分詞並產出 wlist
+                                    var wlist = [];
+                                    var myword = '';
+                                    for(var i=0;i<mystr.length;i++){
+                                        if(mystr[i].match(/^[a-z0-9ʉ’]+$/i))
+                                            {myword+=mystr[i];}
+                                        else
+                                            {wlist.push(myword); wlist.push(mystr[i]); myword='';}
+                                    }
+                                    wlist.push(myword);
+                                    //查詞並產出 result
+                                    var result = '';
+                                    for(var i=0;i<wlist.length;i++){
+                                        var tagged = wlist[i];
+                                        for(var j=0;j<voc5.length;j++){
+                                            if(wlist[i].toLowerCase()==voc5[j].lex.toLowerCase()){tagged = '<span class="lv'+voc5[j].lv+'">'+tagged+'</span>';break;}
+                                        }
+                                        result += tagged;
+                                    }
+                                    return result;
+                                }
+                                function searchKeyPress5(e){
+                                    // look for window.event in case event isn't passed in
+                                    e = e || window.event;
+                                    if (e.keyCode == 13)
+                                    {
+                                        document.getElementById('go').click();
+                                        return false;
+                                    }
+                                    return true;
+                                }
+</script>
+        
+							</article>
+
+
 	                    <!-- User Guide -->
                             <article id="guide">
                                 <h2 class="major">使用說明</h2>
@@ -340,11 +405,11 @@
                             <article id="about">
                                 <h2 class="major">版本資訊</h2>
                                 <span class="image main"><img src="images/ver.png" alt="" /></span>
+                                <h3>Ver. 1.1.0 </h3>
+                                拉阿魯哇語上線：使用2019年學習詞表。<p>
                                 <h3>Ver. 1.0.0 </h3>
                                 基本功能上線：2018年(107版)族語千詞表詞彙等級標記。<br>
                                 支援語別：賽德克德固達雅語、邵語、太魯閣語。<p>
-                                <h3>次版本預計更新以下內容： </h3>
-                                輸入段落族語詞彙翻譯功能。<p>
                                 </article>
 
 						<!-- Elements -->
