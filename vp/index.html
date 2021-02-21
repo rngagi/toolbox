@@ -58,6 +58,7 @@
                                 <!--<p><a href="#Paiwan">排灣語</a></p>-->
                                 <p><li><a href="#trukutruku">太魯閣語</a></li></p>
                                 <p><li><a href="#hla">拉阿魯哇語</a></li></p>
+                                <p><li><a href="#kan">卡那卡那富語</a></li></p>
 
                              
                         
@@ -391,12 +392,78 @@
         
 							</article>
 
+                        <!-- Kanakanavu -->
+							<article id="kan">
+								<h2 class="major">卡那卡那富語</h2>
+                                <span class="image main"><img src="images/kan.png" alt="" /></span>
+								<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+	                            <p>範例：<span class="sample6" onclick="samp6();">neen nganai musu? 你叫什麼名字？</span></p>
+                                請在下框輸入欲標示等級的族語：<br>
+	                            <p><textarea id="input6" onkeypress="return searchKeyPress6(event);"></textarea></p>
+	                            <p><button id="go6" onclick="conv6();">標記</button>
+                                <button onclick="clean6(); conv6()">清空文字</button></p>
+                                <p><button onclick="location.href='index.html'; clean6(); conv6();">回首頁</button><button onclick="location.href='index.html#menu'; clean6(); conv6();" >回選單</button></p>
+	                            <p><div id="output6" ></div></p>
+        
+                                <script>
+                                function conv6(){
+                                    var input = document.getElementById("input6");
+                                    var newinput = input.value.replaceAll("'","’");
+                                    newinput = newinput.replaceAll("‘","’");
+                                    var output = document.getElementById("output6");
+                                    var result = splitwords6(newinput);
+                                    output.innerHTML = result;
+                                }
+                                function clean6(){
+                                    var input = document.getElementById("input6").value = "";//清空input
+                                }
+                                function samp6(){
+                                    var input = document.getElementById("input6");
+                                    var samptxt = "macangcangarʉ soni arakukun kasua, nakai mareen, ka’aan pa ku tavarʉ’ʉ nganai musu? sua nganai maku ia, ’Akori Ka’angena, kesoni kangvang kasua, neen nganai musu? sua nganai maku ia, ’Angai, ’esi Mangacun tanasa maku. kesoni pa kasua, sua cuma mataa cina musu ia, Mu’u mataa Na’u kara? ʉʉ’ʉ, miseen kasu tavarʉ’ʉ? nimavici cu cuma mataa cima maku, mookusa tanasa musu rovʉvʉ, ’akia kasu meesua. makasoin ia, maatʉa kita Ka’angena kavangvang. ʉʉ’ʉ, cani ta’avu tanasa mita. imova! miaa mosikarʉ ku tupuru misoon ia, ’una cau makasi, capai mita makai kan kinvara. cucuru kara? tuturoo mamarang musu, ’arupacʉ’ʉra kita soni. kacangcangarʉn soni, ’apatarakanaang kita nesi.";
+                                    input.value = samptxt;
+                                }
+                                function splitwords6(mystr){
+                                    //分詞並產出 wlist
+                                    var wlist = [];
+                                    var myword = '';
+                                    for(var i=0;i<mystr.length;i++){
+                                        if(mystr[i].match(/^[a-z0-9ʉ’]+$/i))
+                                            {myword+=mystr[i];}
+                                        else
+                                            {wlist.push(myword); wlist.push(mystr[i]); myword='';}
+                                    }
+                                    wlist.push(myword);
+                                    //查詞並產出 result
+                                    var result = '';
+                                    for(var i=0;i<wlist.length;i++){
+                                        var tagged = wlist[i];
+                                        for(var j=0;j<voc6.length;j++){
+                                            if(wlist[i].toLowerCase()==voc6[j].lex.toLowerCase()){tagged = '<span class="lv'+voc6[j].lv+'">'+tagged+'</span>';break;}
+                                        }
+                                        result += tagged;
+                                    }
+                                    return result;
+                                }
+                                function searchKeyPress6(e){
+                                    // look for window.event in case event isn't passed in
+                                    e = e || window.event;
+                                    if (e.keyCode == 13)
+                                    {
+                                        document.getElementById('go').click();
+                                        return false;
+                                    }
+                                    return true;
+                                }
+</script>
+        
+							</article>
+
 
 	                    <!-- User Guide -->
                             <article id="guide">
                                 <h2 class="major">使用說明</h2>
                                 <span class="image main"><img src="images/guide.png" alt="" /></span>
-                                <p>　　本工具參考2018年族語千詞表的分級並進行修正，使用時將您所需要標示等級的族語詞彙、句子、段落等輸入或複製到文字框中，並按下「標記」按鈕，即可標記出千詞表中含有的族語詞彙及部分常用衍生詞。如果想要試用本工具，亦可點選範例文字以進行標記。</p>
+                                <p>　　本工具參考2018年族語千詞表（賽德克、邵、太魯閣）、2020年族語學習詞表（拉阿魯哇、卡那卡那富）的詞彙分級並進行修正，使用時將您所需要標示等級的族語詞彙、句子、段落等輸入或複製到文字框中，並按下「標記」按鈕，即可標記出千詞表中含有的族語詞彙及部分常用衍生詞。如果想要試用本工具，亦可點選範例文字以進行標記。</p>
                                 若有任何疑問請洽：<br>
                                 核心功能開發：Samaw Pan　　<a href="mailto:samuel.yhpan@gmail.com">samuel.yhpan@gmail.com</a><br>
                                 UI/UX：Walis Taywang　　　<a href="mailto:walistaywang0914@gmail.com">walistaywang0914@gmail.com</a></article>
@@ -405,8 +472,10 @@
                             <article id="about">
                                 <h2 class="major">版本資訊</h2>
                                 <span class="image main"><img src="images/ver.png" alt="" /></span>
-                                <h3>Ver. 1.1.0 </h3>
-                                拉阿魯哇語上線：使用2020年學習詞表。<p>
+                                <h3>目前支援語別：</h3>
+                                賽德克德固達雅語、邵語、太魯閣語、拉阿魯哇語、卡那卡那富語。<p>
+                                <h3>Ver. 1.1.1 </h3>
+                                拉阿魯哇語、卡那卡那富語上線：使用2020年學習詞表。<p>
                                 <h3>Ver. 1.0.0 </h3>
                                 基本功能上線：2018年族語千詞表詞彙等級標記。<br>
                                 支援語別：賽德克德固達雅語、邵語、太魯閣語。<p>
