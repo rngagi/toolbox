@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<!--Ver. 1.1.0-->
+<!--Ver. 1.1.1-->
 <html>
 	<head>
 		<title>族語詞彙分級標記</title>
@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <meta property="og:description" content="原住民族語言千詞表分級標記小工具" />
         <meta property="og:image" content="images/img.png" />
-<!--        以上為預覽-->
+        <!--以上為預覽-->
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -55,13 +55,12 @@
                                 <span class="image main"><img src="images/menu.png" alt="" /></span>
                                 <p><li><a href="#tgdaya">賽德克德固達雅語</a></li></p>
                                 <p><li><a href="#thau">邵語</a></li></p>
-                                <!--<p><a href="#Paiwan">排灣語</a></p>-->
-                                <p><li><a href="#trukutruku">太魯閣語</a></li></p>
-                                <p><li><a href="#hla">拉阿魯哇語</a></li></p>
-                                <p><li><a href="#kan">卡那卡那富語</a></li></p>
-
-                             
-                        
+                                <!--<p><a href="#pwn">排灣語</a></p>-->
+                                <p><li><a href="#trv-h">太魯閣語</a></li></p>
+                                <!--<p><li><a href="#hla">拉阿魯哇語</a></li></p>-->
+                                <!--<p><li><a href="#kan">卡那卡那富語</a></li></p>-->
+                                <!--<p><a href="#Say">賽夏語</a></p>-->
+                            
                             </article>
 
 						<!-- Tgdaya -->
@@ -196,7 +195,7 @@
 							</article>
 
 						<!-- Paiwan -->
-							<article id="paiwan">
+							<article id="pwn">
 								<h2 class="major">排灣語</h2>
                                 <span class="image main"><img src="images/pwn.png" alt="" /></span>
 								<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
@@ -262,7 +261,7 @@
 							</article>
 
 						<!-- Trukutruku -->
-							<article id="trukutruku">
+							<article id="trv-h">
 								<h2 class="major">太魯閣</h2>
                                 <span class="image main"><img src="images/trv.png" alt="" /></span>
                                 <p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
@@ -458,12 +457,78 @@
         
 							</article>
 
+                        <!-- SaySiyat -->
+							<article id="Say">
+								<h2 class="major">賽夏語</h2>
+                                <span class="image main"><img src="images/say.png" alt="" /></span>
+								<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+	                            <p>範例：<span class="sample7" onclick="samp7();">So’o Sin hiya’en? 你叫什麼名字？</span></p>
+                                請在下框輸入欲標示等級的族語：<br>
+	                            <p><textarea id="input7" onkeypress="return searchKeyPress7(event);"></textarea></p>
+	                            <p><button id="go7" onclick="conv7();">標記</button>
+                                <button onclick="clean7(); conv7()">清空文字</button></p>
+                                <p><button onclick="location.href='index.html'; clean7(); conv7();">回首頁</button><button onclick="location.href='index.html#menu'; clean7(); conv7();" >回選單</button></p>
+	                            <p><div id="output7" ></div></p>
+        
+                                <script>
+                                function conv7(){
+                                    var input = document.getElementById("input7");
+                                    var newinput = input.value.replaceAll("'","’");
+                                    newinput = newinput.replaceAll("‘","’");
+                                    var output = document.getElementById("output7");
+                                    var result = splitwords7(newinput);
+                                    output.innerHTML = result;
+                                }
+                                function clean7(){
+                                    var input = document.getElementById("input7").value = "";//清空input
+                                }
+                                function samp7(){
+                                    var input = document.getElementById("input7");
+                                    var samptxt = "So’o kayzaeh ay! niSo’ raro:o’ Sin hiya’en? ma’an raro:o’ Sin kizawen. moyo roSa’ ’aehael ay? ’ihi’, siya minayti’ ma’an, Sin ta:inin. ’a:ay! kita’en nakhara hingha’ ka kinmae’iyaehan. moyo ’inay’ino’ ’ima mowa:i’? yami ’inay walo’ ’ima mowa:i’. niSo’ kano’ kapatawawen? ya:o homawan ray taew’an maelaehang ka korkoring, ray minaSangay rima’ ray kakiSka:atan tomortoroe’ ka ’alnoSaySiyat kapayaka:i’. So’o kin makakreng o!";
+                                    input.value = samptxt;
+                                }
+                                function splitwords7(mystr){
+                                    //分詞並產出 wlist
+                                    var wlist = [];
+                                    var myword = '';
+                                    for(var i=0;i<mystr.length;i++){
+                                        if(mystr[i].match(/^[a-z0-9’:]+$/i))
+                                            {myword+=mystr[i];}
+                                        else
+                                            {wlist.push(myword); wlist.push(mystr[i]); myword='';}
+                                    }
+                                    wlist.push(myword);
+                                    //查詞並產出 result
+                                    var result = '';
+                                    for(var i=0;i<wlist.length;i++){
+                                        var tagged = wlist[i];
+                                        for(var j=0;j<voc7.length;j++){
+                                            if(wlist[i].toLowerCase()==voc7[j].lex.toLowerCase()){tagged = '<span class="lv'+voc7[j].lv+'">'+tagged+'</span>';break;}
+                                        }
+                                        result += tagged;
+                                    }
+                                    return result;
+                                }
+                                function searchKeyPress7(e){
+                                    // look for window.event in case event isn't passed in
+                                    e = e || window.event;
+                                    if (e.keyCode == 13)
+                                    {
+                                        document.getElementById('go').click();
+                                        return false;
+                                    }
+                                    return true;
+                                }
+</script>
+        
+							</article>
+
 
 	                    <!-- User Guide -->
                             <article id="guide">
                                 <h2 class="major">使用說明</h2>
                                 <span class="image main"><img src="images/guide.png" alt="" /></span>
-                                <p>　　本工具參考2018年族語千詞表（賽德克、邵、太魯閣）、2020年族語學習詞表（拉阿魯哇、卡那卡那富）的詞彙分級並進行修正，使用時將您所需要標示等級的族語詞彙、句子、段落等輸入或複製到文字框中，並按下「標記」按鈕，即可標記出千詞表中含有的族語詞彙及部分常用衍生詞。如果想要試用本工具，亦可點選範例文字以進行標記。</p>
+                                <p>　　本工具參考2018年族語千詞表（賽德克、邵、太魯閣）、2020年族語學習詞表（拉阿魯哇、卡那卡那富、賽夏）的詞彙分級並進行修正，使用時將您所需要標示等級的族語詞彙、句子、段落等輸入或複製到文字框中，並按下「標記」按鈕，即可標記出千詞表中含有的族語詞彙及部分常用衍生詞。如果想要試用本工具，亦可點選範例文字以進行標記。</p>
                                 若有任何疑問請洽：<br>
                                 核心功能開發：Samaw Pan　　<a href="mailto:samuel.yhpan@gmail.com">samuel.yhpan@gmail.com</a><br>
                                 UI/UX：Walis Taywang　　　<a href="mailto:walistaywang0914@gmail.com">walistaywang0914@gmail.com</a></article>
@@ -472,10 +537,14 @@
                             <article id="about">
                                 <h2 class="major">版本資訊</h2>
                                 <span class="image main"><img src="images/ver.png" alt="" /></span>
+<!--
                                 <h3>目前支援語別：</h3>
-                                賽德克德固達雅語、邵語、太魯閣語、拉阿魯哇語、卡那卡那富語。<p>
+                                賽德克德固達雅語、邵語、太魯閣語、拉阿魯哇語、卡那卡那富語、賽夏語。<p>
+                                <h3>Ver. 1.2.0 </h3>
+                                賽夏語上線：使用2020年學習詞表。<p>
                                 <h3>Ver. 1.1.1 </h3>
                                 拉阿魯哇語、卡那卡那富語上線：使用2020年學習詞表。<p>
+-->
                                 <h3>Ver. 1.0.0 </h3>
                                 基本功能上線：2018年族語千詞表詞彙等級標記。<br>
                                 支援語別：賽德克德固達雅語、邵語、太魯閣語。<p>
