@@ -1,5 +1,5 @@
-.input{width:100%; height: 200px;}
-.output{width:100%;}
+.input{width:100%; font-family: Noto Sans, sans-serif; font-weight:100;}
+.output{width:100%; font-family: Noto Sans, sans-serif; font-weight:100;}
 .sample{color:white; text-decoration:underline;}
 .lv1{background-color: green;}
 .lv2{background-color: goldenrod;}
