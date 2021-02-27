@@ -22,6 +22,13 @@ function samp(mylang){
 	input.value = samptxt;
 }
 
+function language(mylang){
+	var voc;
+	if (mylang == "pwn"){voc = pwn;}
+	if (mylang == "sdq"){voc = sdq;}
+	return voc;
+}
+
 function wordlist(mystr,mylang){
 	var wlist = [];
 	var myword = '';
@@ -40,9 +47,7 @@ function splitwords(mystr,mylang){
 	wlist = wordlist(mystr,mylang);
 	
 	//確定文本語言
-	var voc;
-	if (mylang == "pwn"){voc = pwn;}
-	if (mylang == "sdq"){voc = sdq;}
+	var voc = language(mylang);
 
 	//查詞並產出 result
 	var result = '';
@@ -55,3 +60,8 @@ function splitwords(mystr,mylang){
 	}
 	return result;
 }
+
+function clean(mylang){
+	var input = document.getElementById("input-"+mylang);
+	input.value = "";//清空input
+	)
