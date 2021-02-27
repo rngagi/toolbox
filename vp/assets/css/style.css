@@ -1,8 +1,8 @@
 @font-face {
-	font-family: 'Inter';
-	src: url(https://rngagi.github.io/toolbox/vp/assets/webfonts/Inter.ttf);
+	font-family: 'Inter Light';
+	src: url(https://rngagi.github.io/toolbox/vp/assets/webfonts/Inter-Light.ttf);
 }
-.input, .output{resize:none; width:100%; height:200px; font-family: 'Inter', Arial, sans-serif; font-weight:100;}
+.input, .output{resize:none; width:100%; height:200px; font-family: 'Inter Light', Arial, sans-serif; font-weight:100;}
 .sample{color:white; text-decoration:underline;}
 .lv1{background-color: green;}
 .lv2{background-color: goldenrod;}
