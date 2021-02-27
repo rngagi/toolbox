@@ -13,14 +13,14 @@
 	<h1>族語詞彙分級標記 - 中排灣語 (beta)</h1>
 	<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
 	<p>範例：<span class="sample" onclick="samp('pwn');">兩隻老虎</span></p>
-	<p><textarea id="input-pwn" class="input"></textarea></p>
-	<p><button onclick="conv('pwn');">標記</button></p>
+	<p><textarea id="input-pwn" class="input" onkeypress="return searchKeyPress(event, 'pwn');"></textarea></p>
+	<p><button id="go-pwn" onclick="conv('pwn');">標記</button><button onclick="clean('pwn');">清空</button></p>
 	<p><div id="output-pwn" class="output"></div></p>
 	<hr>
 	<h1>族語詞彙分級標記 - 賽德克語 (beta)</h1>
 	<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
 	<p>範例：<span class="sample" onclick="samp('sdq');">兩隻老虎</span></p>
-	<p><textarea id="input-sdq" class="input"></textarea></p>
-	<p><button onclick="conv('sdq');">標記</button></p>
+	<p><textarea id="input-sdq" class="input" onkeypress="return searchKeyPress(event, 'sdq');"></textarea></p>
+	<p><button id="go-sdq" onclick="conv('sdq');">標記</button><button onclick="clean('sdq');">清空</button></p>
 	<p><div id="output-sdq" class="output"></div></p>
 </body>
