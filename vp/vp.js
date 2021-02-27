@@ -36,6 +36,11 @@ function lang(mylang){
 	var voc;
 	if (mylang == "pwn") {voc = pwn;}
 	if (mylang == "sdq") {voc = sdq;}
+	if (mylang == "ssf") {voc = ssf;}
+	if (mylang == "trv") {voc = trv;}
+	if (mylang == "sxr") {voc = sxr;}
+	if (mylang == "xnb") {voc = xnb;}
+	if (mylang == "xsy") {voc = xsy;}
 	return voc;
 }
 

@@ -5,18 +5,19 @@
 		<title>族語詞彙分級標記</title>
 		<meta charset="utf-8" /> 
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <meta property="og:description" content="原住民族語言學習詞表分級標記小工具" />
-        <meta property="og:image" content="images/img.png" />
-        <!--以上為預覽-->
-        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+		<meta property="og:description" content="原住民族語言學習詞表分級標記小工具" />
+		<meta property="og:image" content="images/img.png" />
+		<!--以上為預覽-->
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="assets/css/main.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-        <script src='voc.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+		<script src='voc.js'></script>
+		<script src='vp.js'></script>
 	</head>
-    
+	
 	<body class="is-preload">
 
 		<!-- Wrapper -->
@@ -31,522 +32,159 @@
 							<div class="inner">
 								<h1>族語詞彙分級標記</h1>
 								<h3>原住民族語言學習詞表分級標記小工具</h3>
-                                <h4><a href="#about">Ver.1.2.0</a></h4>
+								<h4><a href="#about">Ver.1.2.0</a></h4>
 							</div>
 						</div>
 						<nav>
 							<ul>
-                                <li><a href="#menu">語言選擇</a></li>
-                                <li><a href="#guide">使用說明</a></li>
-                                <li><a href="#about">版本資訊</a></li>
+								<li><a href="#menu">語言選擇</a></li>
+								<li><a href="#guide">使用說明</a></li>
+								<li><a href="#about">版本資訊</a></li>
 <!--
 								<li><a href="#elements">Elements</a></li>
 -->
 							</ul>
-                            
+							
 						</nav>
 					</header>
 
 				<!-- Main -->
 					<div id="main">
-                        
-                        <!-- lgs menu -->
-                            <article id="menu">
-                                <h2 class="major">語言選擇</h2>
-                                <span class="image main"><img src="images/menu.png" alt="" /></span>
-                                <p><li><a href="#sdq">賽德克德固達雅語</a></li></p>
-                                <p><li><a href="#thau">邵語</a></li></p>
-                                <!--<p><a href="#pwn">排灣語</a></p>-->
-                                <p><li><a href="#trv">太魯閣語</a></li></p>
-                                <p><li><a href="#hla">拉阿魯哇語</a></li></p>
-                                <p><li><a href="#kan">卡那卡那富語</a></li></p>
-                                <p><li><a href="#Say">賽夏語</a></li></p>
-                            
-                            </article>
+						
+						<!-- lgs menu -->
+							<article id="menu">
+								<h2 class="major">語言選擇</h2>
+								<span class="image main"><img src="images/menu.png" alt="" /></span>
+								<!--<p><a href="#pwn">排灣語</a></p>-->
+								<p><li><a href="#sdq">賽德克德固達雅語</a></li></p>
+								<p><li><a href="#ssf">邵語</a></li></p>
+								<p><li><a href="#trv">太魯閣語</a></li></p>
+								<p><li><a href="#sxr">拉阿魯哇語</a></li></p>
+								<p><li><a href="#xnb">卡那卡那富語</a></li></p>
+								<p><li><a href="#xsy">賽夏語</a></li></p>
+							</article>
 
 						<!-- Tgdaya -->
 							<article id="sdq">
 								<h2 class="major">德固達雅</h2>
 								<span class="image main"><img src="images/sdq.png" alt="" /></span>
-	                                <p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-                                    <p>範例：<span class="sample1" onclick="samp1();">Uyas mlawa 呼喚歌</span></p>
-                                    請在下框輸入欲標示等級的族語：<br>
-	                                <p><textarea id="input1" onkeypress="return searchKeyPress1(event);"></textarea></p>
-	                                <p><button id="go1" onclick="conv1();">標記</button>
-	                                <button onclick="clean1(); conv1();">清空文字</button></p>
-                                    <p><button onclick="location.href='index.html'; clean1(); conv1();">回首頁</button><button onclick="location.href='index.html#menu'; clean1(); conv1();" >回選單</button></p>
-	                                <p><div id="output1"></div></p>
-                        
-                                    <script>   
-                                        function conv1(){
-                                            var input = document.getElementById("input1");
-                                            var output = document.getElementById("output1");
-                                            var result = splitwords1(input.value);
-                                            output.innerHTML = result;
-                                        }
-                                        function clean1(){
-                                            var input = document.getElementById("input1");
-                                            input.value = "";//清空input
-
-                                        }
-                                        function samp1(){
-                                            var input = document.getElementById("input1");
-                                            var samptxt1 = "Patis uyas mlawa ka nii, niqan bale ka bnarah na, slhaye ta muuyas hayan ho? Tama mnosa su inu? Kedu bale napa su camac. Bubu mnosa su inu? Kedu bale snkegan su nuqah yqeyaq hii. Riso mnosa su inu ha? Slluhe dapin ndaan rdrudan ta. Weewa mnosa su inu ha? Slhai ka tminun pala pniri ga. Laqi mnosa su inu ha? Sprui ka rdrudan ta ma slhai ka Gaya ta.";
-                                            input.value = samptxt1;
-                                        }
-                                        function splitwords1(mystr){
-                                            //分詞並產出 wlist
-                                            var wlist = [];
-                                            var myword = '';
-                                            for(var i=0;i<mystr.length;i++){
-                                                if(mystr[i].match(/^[a-z0-9]+$/i))
-                                                    {myword+=mystr[i];}
-                                                else
-                                                    {wlist.push(myword); wlist.push(mystr[i]); myword='';}
-                                            }
-                                            wlist.push(myword);
-                                            //查詞並產出 result
-                                            var result = '';
-                                            for(var i=0;i<wlist.length;i++){
-                                                var tagged = wlist[i];
-                                                for(var j=0;j<voc1.length;j++){
-                                                    if(wlist[i].toLowerCase()==voc1[j].lex.toLowerCase()){tagged = '<span class="lv'+voc1[j].lv+'">'+tagged+'</span>';break;}
-                                                }
-                                                result += tagged;
-                                            }
-                                            return result;
-                                        }
-                                        function searchKeyPress1(e){
-                                            // look for window.event in case event isn't passed in
-                                            e = e || window.event;
-                                            if (e.keyCode == 13)
-                                            {
-                                                document.getElementById('go1').click();
-                                                return false;
-                                            }
-                                            return true;
-                                        }
-
-                                    </script>
+									<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+									<p>範例：<span class="sample" onclick="samp('sdq');">Uyas mlawa 呼喚歌</span></p>
+									請在下框輸入欲標示等級的族語：<br>
+									<p><textarea id="input-sdq" class="input" onkeypress="return searchKeyPress(event,'sdq');"></textarea></p>
+									<p><button id="go-sdq" onclick="conv('sdq');">標記</button>
+									<button onclick="clean('sdq');">清空文字</button></p>
+									<p><button onclick="location.href='index.html'; clean('sdq');">回首頁</button><button onclick="location.href='index.html#menu'; clean1();" >回選單</button></p>
+									<p><div id="output-sdq" class="output" ></div></p>
 							</article>
 
 						<!-- Thau -->
-							<article id="thau">
+							<article id="ssf">
 								<h2 class="major">邵語</h2>
 								<span class="image main"><img src="images/ssf.png" alt="" /></span>
-                                    <p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-                                    <p>範例：<span class="sample2" onclick="samp2();">lus’an a quyash 過年之歌</span></p>
-                                    請在下框輸入欲標示等級的族語：<br>
-                                    <p><textarea id="input2" onkeypress="return searchKeyPress2(event);"></textarea></p>
-                                    <p><button id="go2" onclick="conv2();">標記</button>
-                                    <button onclick="clean2(); conv2()">清空文字</button></p>
-                                    <p><button onclick="location.href='index.html'; clean2(); conv2();">回首頁</button><button onclick="location.href='index.html#menu'; clean2(); conv2();" >回選單</button></p>
-                                    <p><div id="output2" ></div></p>
-
-                                    <script>
-                                    function conv2(){
-                                        var input = document.getElementById("input2");
-                                        var newinput = input.value.replaceAll("'","’");
-                                        newinput = newinput.replaceAll("‘","’");
-                                        var output = document.getElementById("output2");
-                                        var result = splitwords2(newinput);
-                                        output.innerHTML = result;
-                                    }
-                                    function clean2(){
-                                        var input = document.getElementById("input2").value = "";//清空input
-                                    }
-                                    function samp2(){
-                                        var input = document.getElementById("input2");
-                                        var samptxt2 = "simaq mita wa lus’an, pashtay tunaw mashbabiar, pariqaz mita wa qali, piakakaimahan! piakakarina! yaku dai maqaquyash, ihu dai mimparaw, pashtay tunaw maqa atauduu, pariqaz mita wa qali, a~ a~ a~ a~ a~ a~ a~ a~ pashtay tunaw paqaquyash, piakakaimahan! piakakarina!";
-                                        input.value = samptxt2;
-                                    }
-                                    function splitwords2(mystr){
-                                        //分詞並產出 wlist
-                                        var wlist = [];
-                                        var myword = '';
-                                        for(var i=0;i<mystr.length;i++){
-                                            if(mystr[i].match(/^[a-z0-9’]+$/i))
-                                                {myword+=mystr[i];}
-                                            else
-                                                {wlist.push(myword); wlist.push(mystr[i]); myword='';}
-                                        }
-                                        wlist.push(myword);
-                                        //查詞並產出 result
-                                        var result = '';
-                                        for(var i=0;i<wlist.length;i++){
-                                            var tagged = wlist[i];
-                                            for(var j=0;j<voc2.length;j++){
-                                                if(wlist[i].toLowerCase()==voc2[j].lex.toLowerCase()){tagged = '<span class="lv'+voc2[j].lv+'">'+tagged+'</span>';break;}
-                                            }
-                                            result += tagged;
-                                        }
-                                        return result;
-                                    }
-                                    function searchKeyPress2(e){
-                                        // look for window.event in case event isn't passed in
-                                        e = e || window.event;
-                                        if (e.keyCode == 13)
-                                        {
-                                            document.getElementById('go2').click();
-                                            return false;
-                                        }
-                                        return true;
-                                    }
-                                </script>
+									<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+									<p>範例：<span class="sampl-ssf" onclick="samp('ssf');">lus’an a quyash 過年之歌</span></p>
+									請在下框輸入欲標示等級的族語：<br>
+									<p><textarea id="input-ssf" class="input" onkeypress="return searchKeyPress2(event);"></textarea></p>
+									<p><button id="go-ssf" onclick="conv('ssf');">標記</button>
+									<button onclick="clean('ssf');">清空文字</button></p>
+									<p><button onclick="location.href='index.html'; clean('ssf');">回首頁</button><button onclick="location.href='index.html#menu'; clean('ssf'); conv('ssf');" >回選單</button></p>
+									<p><div id="output-ssf" class="output"></div></p>
 							</article>
 
 						<!-- Paiwan -->
 							<article id="pwn">
 								<h2 class="major">排灣語</h2>
-                                <span class="image main"><img src="images/pwn.png" alt="" /></span>
+								<span class="image main"><img src="images/pwn.png" alt="" /></span>
 								<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-	                            <p>範例：<span class="sample3" onclick="samp3();">兩隻老虎</span></p>
-                                請在下框輸入欲標示等級的族語：<br>
-	                            <p><textarea id="input3" onkeypress="return searchKeyPress3(event);"></textarea></p>
-	                            <p><button id="go3" onclick="conv3();">標記</button>
-                                <button onclick="clean3(); conv3()">清空文字</button></p>
-                                <p><button onclick="location.href='index.html'; clean3(); conv3();">回首頁</button><button onclick="location.href='index.html#menu'; clean3(); conv3();" >回選單</button></p>
-	                            <p><div id="output3" ></div></p>
-        
-                                <script>
-                                function conv3(){
-                                    var input = document.getElementById("input3");
-                                    var newinput = input.value.replaceAll("'","’");
-                                    newinput = newinput.replaceAll("‘","’");
-                                    var output = document.getElementById("output3");
-                                    var result = splitwords3(newinput);
-                                    output.innerHTML = result;
-                                }
-                                function clean3(){
-                                    var input = document.getElementById("input3").value = "";//清空input
-                                }
-                                function samp3(){
-                                    var input = document.getElementById("input3");
-                                    var samptxt = "izua cu a senai na kakedrian a kinicaquan a kemasi gaikuku, pizua tu makaya situlu ta kakedrian inumalj sa tjauvaliti ta tjiniukukuan a kai, “drusa a likuljav” aya. na maitucu a parutavak: drusa likuljav, drusa likuljav, djaljav a mekelj! djaljav a mekelj! a ita neka nu calinga, a ita neka nu iku, na semamalji! na semamalji! ";
-                                    input.value = samptxt;
-                                }
-                                function splitwords3(mystr){
-                                    //分詞並產出 wlist
-                                    var wlist = [];
-                                    var myword = '';
-                                    for(var i=0;i<mystr.length;i++){
-                                        if(mystr[i].match(/^[a-z0-9’]+$/i))
-                                            {myword+=mystr[i];}
-                                        else
-                                            {wlist.push(myword); wlist.push(mystr[i]); myword='';}
-                                    }
-                                    wlist.push(myword);
-                                    //查詞並產出 result
-                                    var result = '';
-                                    for(var i=0;i<wlist.length;i++){
-                                        var tagged = wlist[i];
-                                        for(var j=0;j<voc3.length;j++){
-                                            if(wlist[i].toLowerCase()==voc3[j].lex.toLowerCase()){tagged = '<span class="lv'+voc3[j].lv+'">'+tagged+'</span>';break;}
-                                        }
-                                        result += tagged;
-                                    }
-                                    return result;
-                                }
-                                function searchKeyPress3(e){
-                                    // look for window.event in case event isn't passed in
-                                    e = e || window.event;
-                                    if (e.keyCode == 13)
-                                    {
-                                        document.getElementById('go').click();
-                                        return false;
-                                    }
-                                    return true;
-                                }
-</script>
-        
+								<p>範例：<span class="sample-pwn" onclick="samp('pwn');">兩隻老虎</span></p>
+								請在下框輸入欲標示等級的族語：<br>
+								<p><textarea id="input-pwn" class="input" onkeypress="return searchKeyPress3(event);"></textarea></p>
+								<p><button id="go-pwn" onclick="conv('pwn');">標記</button>
+								<button onclick="clean('pwn');">清空文字</button></p>
+								<p><button onclick="location.href='index.html'; clean('pwn');">回首頁</button><button onclick="location.href='index.html#menu'; clean('pwn');" >回選單</button></p>
+								<p><div id="output-pwn" class="output"></div></p>
 							</article>
 
 						<!-- Trukutruku -->
 							<article id="trv">
 								<h2 class="major">太魯閣</h2>
-                                <span class="image main"><img src="images/trv.png" alt="" /></span>
-                                <p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-								<p>範例：<span class="sample4" onclick="samp4();">Smbu hidaw 射太陽（節錄）</span></p>
-                                請在下框輸入欲標示等級的族語：<br>
-	                            <p><textarea id="input4" onkeypress="return searchKeyPress4(event);"></textarea></p>
-	                            <p><button id="go4" onclick="conv4();">標記</button>
-	                            <button onclick="clean4(); conv4()">清空文字</button></p>
-                                <p><button onclick="location.href='index.html'; clean4(); conv4();">回首頁</button><button onclick="location.href='index.html#menu'; clean4(); conv4();" >回選單</button></p>
-	                            <p><div id="output4" ></div></p>
-    
-                            <script>
-                            function conv4(){
-                                var input = document.getElementById("input4");
-                                var output = document.getElementById("output4");
-                                var result = splitwords4(input.value);
-                                output.innerHTML = result;
-                            }
-                            function clean4(){
-                                var input = document.getElementById("input4").value = "";//清空input
-                            }
-                            function samp4(){
-                                var input = document.getElementById("input4");
-                                var samptxt = "Sbiyaw balay babaw dxgal o wana keeman nanak ungat jiyan. Kiya do kndsan seejiq o mqraqil balay ni ini krana saw sgealu. Kiya do musa ptrhiq harung ni kika sprdax dha mmkay sapah ni musa mmiyak. Niqan kingal jiyax, dha hiyi snaw o musa qmpahan ni mhhiru, asi lu strung bgihur mtgnuwin ni wada pskyaun bgihur ka dha hiyi nii ni sqapah karat do maadha hidaw da. Dha hidaw nii o mssriyux mnkala ni priyax ryaxan hidaw, wada rmiyax ka kingal han o mnkala ka kingal duri. Kiya do ungat keeman ni jiyan kdjiyax da, saw nii thdagan dha hidaw kdjiyax ka babaw dxgal do mdngu mhuqil kana ka uqun ni pnegalang pnhuma seejiq. Kiya do ungat uqun dha ka seejiq ni mrana mhuqil.Duri o yasa ungat keeman ni ini tduwa msangay ka seejiq uri da.";
-                                input.value = samptxt;
-                            }
-                            function splitwords4(mystr){
-                                //分詞並產出 wlist
-                                var wlist = [];
-                                var myword = '';
-                                for(var i=0;i<mystr.length;i++){
-                                    if(mystr[i].match(/^[a-z0-9]+$/i))
-                                        {myword+=mystr[i];}
-                                    else
-                                        {wlist.push(myword); wlist.push(mystr[i]); myword='';}
-                                }
-                                wlist.push(myword);
-                                //查詞並產出 result
-                                var result = '';
-                                for(var i=0;i<wlist.length;i++){
-                                    var tagged = wlist[i];
-                                    for(var j=0;j<voc4.length;j++){
-                                        if(wlist[i].toLowerCase()==voc4[j].lex.toLowerCase()){tagged = '<span class="lv'+voc4[j].lv+'">'+tagged+'</span>';break;}
-                                    }
-                                    result += tagged;
-                                }
-                                return result;
-                            }
-                            function searchKeyPress4(e){
-                                // look for window.event in case event isn't passed in
-                                e = e || window.event;
-                                if (e.keyCode == 13)
-                                {
-                                    document.getElementById('go').click();
-                                    return false;
-                                }
-                                return true;
-                            }
-                            </script>
-    
-    
+								<span class="image main"><img src="images/trv.png" alt="" /></span>
+								<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+								<p>範例：<span class="sample-trv" onclick="samp('trv');">Smbu hidaw 射太陽（節錄）</span></p>
+								請在下框輸入欲標示等級的族語：<br>
+								<p><textarea id="input-trv" class="input" onkeypress="return searchKeyPress4(event);"></textarea></p>
+								<p><button id="go-trv" onclick="conv('trv');">標記</button>
+								<button onclick="clean('trv');">清空文字</button></p>
+								<p><button onclick="location.href='index.html'; clean('trv');">回首頁</button><button onclick="location.href='index.html#menu'; clean('trv');" >回選單</button></p>
+								<p><div id="output-trv" class="output"></div></p>
 							</article>
 
-                        <!-- Hla'alua -->
-							<article id="hla">
+						<!-- Hla'alua -->
+							<article id="sxr">
 								<h2 class="major">拉阿魯哇語</h2>
-                                <span class="image main"><img src="images/hla.png" alt="" /></span>
+								<span class="image main"><img src="images/hla.png" alt="" /></span>
 								<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-	                            <p>範例：<span class="sample5" onclick="samp5();">auninia langica arinani? 今天天氣怎麼樣？</span></p>
-                                請在下框輸入欲標示等級的族語：<br>
-	                            <p><textarea id="input5" onkeypress="return searchKeyPress5(event);"></textarea></p>
-	                            <p><button id="go5" onclick="conv5();">標記</button>
-                                <button onclick="clean5(); conv5()">清空文字</button></p>
-                                <p><button onclick="location.href='index.html'; clean5(); conv5();">回首頁</button><button onclick="location.href='index.html#menu'; clean5(); conv5();" >回選單</button></p>
-	                            <p><div id="output5" ></div></p>
-        
-                                <script>
-                                function conv5(){
-                                    var input = document.getElementById("input5");
-                                    var newinput = input.value.replaceAll("'","’");
-                                    newinput = newinput.replaceAll("‘","’");
-                                    var output = document.getElementById("output5");
-                                    var result = splitwords5(newinput);
-                                    output.innerHTML = result;
-                                }
-                                function clean5(){
-                                    var input = document.getElementById("input5").value = "";//清空input
-                                }
-                                function samp5(){
-                                    var input = document.getElementById("input5");
-                                    var samptxt = "auninia langica arinani? tam macici arinania tahliaria. auninia langica matata? taiacuami muacʉkʉhlʉka pariavaratʉ. hliumusahlʉ i kiruvana? ausii hliruhlahlavusa hla talasululunga. tam macici arinani tam hlimurutumuhlu aku mururahlʉnga. musapuaili masinu mima iiama tamucu’ai mavacangʉ. amihla kiahlahlamulangicana miataisami umusahlʉ matata. murumita vahlita atʉhlʉngʉkia mahlavaa saunga. mauruhla matata aramasarʉmʉ. macahlia kuhlaisai maritatumuhlu kiatikuru iniciki kuaracarʉmʉ.";
-                                    input.value = samptxt;
-                                }
-                                function splitwords5(mystr){
-                                    //分詞並產出 wlist
-                                    var wlist = [];
-                                    var myword = '';
-                                    for(var i=0;i<mystr.length;i++){
-                                        if(mystr[i].match(/^[a-z0-9ʉ’]+$/i))
-                                            {myword+=mystr[i];}
-                                        else
-                                            {wlist.push(myword); wlist.push(mystr[i]); myword='';}
-                                    }
-                                    wlist.push(myword);
-                                    //查詞並產出 result
-                                    var result = '';
-                                    for(var i=0;i<wlist.length;i++){
-                                        var tagged = wlist[i];
-                                        for(var j=0;j<voc5.length;j++){
-                                            if(wlist[i].toLowerCase()==voc5[j].lex.toLowerCase()){tagged = '<span class="lv'+voc5[j].lv+'">'+tagged+'</span>';break;}
-                                        }
-                                        result += tagged;
-                                    }
-                                    return result;
-                                }
-                                function searchKeyPress5(e){
-                                    // look for window.event in case event isn't passed in
-                                    e = e || window.event;
-                                    if (e.keyCode == 13)
-                                    {
-                                        document.getElementById('go').click();
-                                        return false;
-                                    }
-                                    return true;
-                                }
-</script>
-        
+								<p>範例：<span class="sample" onclick="samp('sxr');">auninia langica arinani? 今天天氣怎麼樣？</span></p>
+								請在下框輸入欲標示等級的族語：<br>
+								<p><textarea id="input-sxr" class="input" onkeypress="return searchKeyPress5(event);"></textarea></p>
+								<p><button id="go-sxr" onclick="conv('sxr');">標記</button>
+								<button onclick="clean('sxr');">清空文字</button></p>
+								<p><button onclick="location.href='index.html'; clean('sxr');">回首頁</button><button onclick="location.href='index.html#menu'; clean('sxr');" >回選單</button></p>
+								<p><div id="output-sxr" class="output"></div></p>
 							</article>
 
-                        <!-- Kanakanavu -->
-							<article id="kan">
+						<!-- Kanakanavu -->
+							<article id="xnb">
 								<h2 class="major">卡那卡那富語</h2>
-                                <span class="image main"><img src="images/kan.png" alt="" /></span>
+								<span class="image main"><img src="images/kan.png" alt="" /></span>
 								<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-	                            <p>範例：<span class="sample6" onclick="samp6();">neen nganai musu? 你叫什麼名字？</span></p>
-                                請在下框輸入欲標示等級的族語：<br>
-	                            <p><textarea id="input6" onkeypress="return searchKeyPress6(event);"></textarea></p>
-	                            <p><button id="go6" onclick="conv6();">標記</button>
-                                <button onclick="clean6(); conv6()">清空文字</button></p>
-                                <p><button onclick="location.href='index.html'; clean6(); conv6();">回首頁</button><button onclick="location.href='index.html#menu'; clean6(); conv6();" >回選單</button></p>
-	                            <p><div id="output6" ></div></p>
-        
-                                <script>
-                                function conv6(){
-                                    var input = document.getElementById("input6");
-                                    var newinput = input.value.replaceAll("'","’");
-                                    newinput = newinput.replaceAll("‘","’");
-                                    var output = document.getElementById("output6");
-                                    var result = splitwords6(newinput);
-                                    output.innerHTML = result;
-                                }
-                                function clean6(){
-                                    var input = document.getElementById("input6").value = "";//清空input
-                                }
-                                function samp6(){
-                                    var input = document.getElementById("input6");
-                                    var samptxt = "macangcangarʉ soni arakukun kasua, nakai mareen, ka’aan pa ku tavarʉ’ʉ nganai musu? sua nganai maku ia, ’Akori Ka’angena, kesoni kangvang kasua, neen nganai musu? sua nganai maku ia, ’Angai, ’esi Mangacun tanasa maku. kesoni pa kasua, sua cuma mataa cina musu ia, Mu’u mataa Na’u kara? ʉʉ’ʉ, miseen kasu tavarʉ’ʉ? nimavici cu cuma mataa cima maku, mookusa tanasa musu rovʉvʉ, ’akia kasu meesua. makasoin ia, maatʉa kita Ka’angena kavangvang. ʉʉ’ʉ, cani ta’avu tanasa mita. imova! miaa mosikarʉ ku tupuru misoon ia, ’una cau makasi, capai mita makai kan kinvara. cucuru kara? tuturoo mamarang musu, ’arupacʉ’ʉra kita soni. kacangcangarʉn soni, ’apatarakanaang kita nesi.";
-                                    input.value = samptxt;
-                                }
-                                function splitwords6(mystr){
-                                    //分詞並產出 wlist
-                                    var wlist = [];
-                                    var myword = '';
-                                    for(var i=0;i<mystr.length;i++){
-                                        if(mystr[i].match(/^[a-z0-9ʉ’]+$/i))
-                                            {myword+=mystr[i];}
-                                        else
-                                            {wlist.push(myword); wlist.push(mystr[i]); myword='';}
-                                    }
-                                    wlist.push(myword);
-                                    //查詞並產出 result
-                                    var result = '';
-                                    for(var i=0;i<wlist.length;i++){
-                                        var tagged = wlist[i];
-                                        for(var j=0;j<voc6.length;j++){
-                                            if(wlist[i].toLowerCase()==voc6[j].lex.toLowerCase()){tagged = '<span class="lv'+voc6[j].lv+'">'+tagged+'</span>';break;}
-                                        }
-                                        result += tagged;
-                                    }
-                                    return result;
-                                }
-                                function searchKeyPress6(e){
-                                    // look for window.event in case event isn't passed in
-                                    e = e || window.event;
-                                    if (e.keyCode == 13)
-                                    {
-                                        document.getElementById('go').click();
-                                        return false;
-                                    }
-                                    return true;
-                                }
-</script>
-        
+								<p>範例：<span class="sample" onclick="samp('xnb');">neen nganai musu? 你叫什麼名字？</span></p>
+								請在下框輸入欲標示等級的族語：<br>
+								<p><textarea id="input-xnb" class="input" onkeypress="return searchKeyPress(event,'xnb');"></textarea></p>
+								<p><button id="go-xnb" onclick="conv('xnb');">標記</button>
+								<button onclick="clean('xnb');">清空文字</button></p>
+								<p><button onclick="location.href='index.html'; clean('xnb');">回首頁</button><button onclick="location.href='index.html#menu'; clean('xsy');" >回選單</button></p>
+								<p><div id="output-xnb" class="output"></div></p>
 							</article>
 
-                        <!-- SaySiyat -->
-							<article id="Say">
+						<!-- SaySiyat -->
+							<article id="xsy">
 								<h2 class="major">賽夏語</h2>
-                                <span class="image main"><img src="images/say.png" alt="" /></span>
+								<span class="image main"><img src="images/say.png" alt="" /></span>
 								<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-	                            <p>範例：<span class="sample7" onclick="samp7();">So’o Sin hiya’en? 你叫什麼名字？</span></p>
-                                請在下框輸入欲標示等級的族語：<br>
-	                            <p><textarea id="input7" onkeypress="return searchKeyPress7(event);"></textarea></p>
-	                            <p><button id="go7" onclick="conv7();">標記</button>
-                                <button onclick="clean7(); conv7()">清空文字</button></p>
-                                <p><button onclick="location.href='index.html'; clean7(); conv7();">回首頁</button><button onclick="location.href='index.html#menu'; clean7(); conv7();" >回選單</button></p>
-	                            <p><div id="output7" ></div></p>
-        
-                                <script>
-                                function conv7(){
-                                    var input = document.getElementById("input7");
-                                    var newinput = input.value.replaceAll("'","’");
-                                    newinput = newinput.replaceAll("‘","’");
-                                    var output = document.getElementById("output7");
-                                    var result = splitwords7(newinput);
-                                    output.innerHTML = result;
-                                }
-                                function clean7(){
-                                    var input = document.getElementById("input7").value = "";//清空input
-                                }
-                                function samp7(){
-                                    var input = document.getElementById("input7");
-                                    var samptxt = "So’o kayzaeh ay! niSo’ raro:o’ Sin hiya’en? ma’an raro:o’ Sin kizawen. moyo roSa’ ’aehael ay? ’ihi’, siya minayti’ ma’an, Sin ta:inin. ’a:ay! kita’en nakhara hingha’ ka kinmae’iyaehan. moyo ’inay’ino’ ’ima mowa:i’? yami ’inay walo’ ’ima mowa:i’. niSo’ kano’ kapatawawen? ya:o homawan ray taew’an maelaehang ka korkoring, ray minaSangay rima’ ray kakiSka:atan tomortoroe’ ka ’alnoSaySiyat kapayaka:i’. So’o kin makakreng o!";
-                                    input.value = samptxt;
-                                }
-                                function splitwords7(mystr){
-                                    //分詞並產出 wlist
-                                    var wlist = [];
-                                    var myword = '';
-                                    for(var i=0;i<mystr.length;i++){
-                                        if(mystr[i].match(/^[a-z0-9’:]+$/i))
-                                            {myword+=mystr[i];}
-                                        else
-                                            {wlist.push(myword); wlist.push(mystr[i]); myword='';}
-                                    }
-                                    wlist.push(myword);
-                                    //查詞並產出 result
-                                    var result = '';
-                                    for(var i=0;i<wlist.length;i++){
-                                        var tagged = wlist[i];
-                                        for(var j=0;j<voc7.length;j++){
-                                            if(wlist[i].toLowerCase()==voc7[j].lex.toLowerCase()){tagged = '<span class="lv'+voc7[j].lv+'">'+tagged+'</span>';break;}
-                                        }
-                                        result += tagged;
-                                    }
-                                    return result;
-                                }
-                                function searchKeyPress7(e){
-                                    // look for window.event in case event isn't passed in
-                                    e = e || window.event;
-                                    if (e.keyCode == 13)
-                                    {
-                                        document.getElementById('go').click();
-                                        return false;
-                                    }
-                                    return true;
-                                }
-</script>
-        
+								<p>範例：<span class="sample" onclick="samp('xsy');">So’o Sin hiya’en? 你叫什麼名字？</span></p>
+								請在下框輸入欲標示等級的族語：<br>
+								<p><textarea id="input-xsy" class="input" onkeypress="return searchKeyPress(event,'xsy');"></textarea></p>
+								<p><button id="go7" onclick="conv('xsy');">標記</button>
+								<button onclick="clean('xsy');">清空文字</button></p>
+								<p><button onclick="location.href='index.html';conv('xsy');">回首頁</button><button onclick="location.href='index.html#menu'; clean('xsy');" >回選單</button></p>
+								<p><div id="output-xsy" class="output"></div></p>
 							</article>
 
-	                    <!-- User Guide -->
-                            <article id="guide">
-                                <h2 class="major">使用說明</h2>
-                                <span class="image main"><img src="images/guide.png" alt="" /></span>
-                                <p>　　本工具參考2018年族語千詞表（賽德克、邵、太魯閣）、2020年族語學習詞表（賽德克、拉阿魯哇、卡那卡那富、賽夏）的詞彙分級並進行修正，使用時將您所需要標示等級的族語詞彙、句子、段落等輸入或複製到文字框中，並按下「標記」按鈕，即可標記出千詞表中含有的族語詞彙及部分常用衍生詞之等級。如果想要試用本工具，亦可點選範例文字以進行標記。</p>
-                                若有任何疑問請洽：<br>
-                                核心功能開發：Samaw Pan　　<a href="mailto:samuel.yhpan@gmail.com">samuel.yhpan@gmail.com</a><br>
-                                UI/UX：Walis Taywang　　　<a href="mailto:walistaywang0914@gmail.com">walistaywang0914@gmail.com</a></article>
+						<!-- User Guide -->
+							<article id="guide">
+								<h2 class="major">使用說明</h2>
+								<span class="image main"><img src="images/guide.png" alt="" /></span>
+								<p>　　本工具參考2018年族語千詞表（賽德克、邵、太魯閣）、2020年族語學習詞表（賽德克、拉阿魯哇、卡那卡那富、賽夏）的詞彙分級並進行修正，使用時將您所需要標示等級的族語詞彙、句子、段落等輸入或複製到文字框中，並按下「標記」按鈕，即可標記出千詞表中含有的族語詞彙及部分常用衍生詞之等級。如果想要試用本工具，亦可點選範例文字以進行標記。</p>
+								若有任何疑問請洽：<br>
+								核心功能開發：Samaw Pan　　<a href="mailto:samuel.yhpan@gmail.com">samuel.yhpan@gmail.com</a><br>
+								UI/UX：Walis Taywang　　　<a href="mailto:walistaywang0914@gmail.com">walistaywang0914@gmail.com</a></article>
 
-                        <!-- About -->
-                            <article id="about">
-                                <h2 class="major">版本資訊</h2>
-                                <span class="image main"><img src="images/ver.png" alt="" /></span>
-                                <h3>目前支援語別：</h3>
-                                賽德克德固達雅語、邵語、太魯閣語、拉阿魯哇語、卡那卡那富語、賽夏語。<p>
-                                <h3>Ver.1.2.0 </h3>
-                                賽夏語上線：使用2020年學習詞表。<p>
-                                <h3>Ver.1.1.1 </h3>
-                                拉阿魯哇語、卡那卡那富語上線：使用2020年學習詞表。<p>
-                                <h3>Ver.1.0.0 </h3>
-                                基本功能上線：2018年族語千詞表詞彙等級標記。<br>
-                                支援語別：賽德克德固達雅語、邵語、太魯閣語。<p>
-                                </article>
+						<!-- About -->
+							<article id="about">
+								<h2 class="major">版本資訊</h2>
+								<span class="image main"><img src="images/ver.png" alt="" /></span>
+								<h3>目前支援語別：</h3>
+								賽德克德固達雅語、邵語、太魯閣語、拉阿魯哇語、卡那卡那富語、賽夏語。<p>
+								<h3>Ver.1.2.0 </h3>
+								賽夏語上線：使用2020年學習詞表。<p>
+								<h3>Ver.1.1.1 </h3>
+								拉阿魯哇語、卡那卡那富語上線：使用2020年學習詞表。<p>
+								<h3>Ver.1.0.0 </h3>
+								基本功能上線：2018年族語千詞表詞彙等級標記。<br>
+								支援語別：賽德克德固達雅語、邵語、太魯閣語。<p>
+								</article>
 
 						<!-- Elements -->
 							<article id="elements">
@@ -556,7 +194,7 @@
 									<h3 class="major">Text</h3>
 									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
 									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+									This is <u>underlined</u> and this is code: <code>for (;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
 									<hr />
 									<h2>Heading Level 2</h2>
 									<h3>Heading Level 3</h3>
@@ -570,9 +208,9 @@
 									<pre><code>i = 0;
 
 while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
+	print 'Iteration ' + i;
+	deck.shuffle();
+	i++;
 }
 
 print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
@@ -795,9 +433,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				<!-- Footer -->
 					<footer id="footer">
 						<p class="copyright"> Rngagi Projects © 2021 <br>
-                            Design: Samaw Pan & Walis Taywang</p>
-<!--                        <p> <a href="beta/index.html"> Click for Beta Version </a><br> -->
-<!--                        <a href="twn.html"> Tâi-gí </a>　<a href="hakka.html"> Hak-fa </a> </p>-->
+							Design: Samaw Pan & Walis Taywang</p>
+<!--						<p> <a href="beta/index.html"> Click for Beta Version </a><br> -->
+<!--						<a href="twn.html"> Tâi-gí </a>　<a href="hakka.html"> Hak-fa </a> </p>-->
 					</footer>
 
 			</div>
@@ -811,6 +449,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-        
+		
 	</body>
 </html>
