@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
-.input{width:100%; height:200px;  font-family: 'Inter', sans-serif; font-weight:100;}
+.input{resize:none; width:100%; height:200px;  font-family: 'Inter', sans-serif; font-weight:100;}
 .output{width:100%; font-family: 'Inter', sans-serif; font-weight:100;}
 .sample{color:white; text-decoration:underline;}
 .lv1{background-color: green;}
