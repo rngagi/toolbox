@@ -74,8 +74,8 @@
                                     請在下框輸入欲標示等級的族語：<br>
 	                                <p><textarea id="input-sdq" class="input" onkeypress="return searchKeyPress(event);"></textarea></p>
 	                                <p><button id="go" onclick="conv('sdq');">標記</button>
-	                                <button onclick="clean(); conv('sdq');">清空文字</button></p>
-                                    <p><button onclick="location.href='index.html'; clean(); conv('sdq');">回首頁</button><button onclick="location.href='index.html#menu'; clean(); conv('sdq');" >回選單</button></p>
+	                                <button onclick="clean('sdq'); conv('sdq');">清空文字</button></p>
+                                    <p><button onclick="location.href='index.html'; clean('sdq'); conv('sdq');">回首頁</button><button onclick="location.href='index.html#menu'; clean('sdq'); conv('sdq');" >回選單</button></p>
 	                                <p><div id="output-sdq" class="output"></div></p>
                         
                                    

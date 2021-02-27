@@ -5,8 +5,9 @@ function conv(mylang){
 	output.innerHTML = result;
 }
 
-function clean(){
-    var input = document.getElementById("input-"+mylang).value = "";//改了，不知道為啥沒用，所以還要改XD
+function clean(mylang){
+    var input = document.getElementById("input-"+mylang).value = ""; 
+}
 
 function samp(mylang){
 	var input = document.getElementById("input-"+mylang);
@@ -106,5 +107,5 @@ function searchKeyPress(e){
                 document.getElementById('go').click();
                 return false;
             }
-            return true;
-        }//要改
+            return true; 
+}
