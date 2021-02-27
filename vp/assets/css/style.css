@@ -1,5 +1,5 @@
-.input{height:200px; width:500px;}
-.output{height:200px; width:500px;}
+.input{width:100%;}
+.output{width:100%;}
 .sample{color:white; text-decoration:underline;}
 .lv1{background-color: green;}
 .lv2{background-color: goldenrod;}
