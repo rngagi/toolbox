@@ -1,8 +1,15 @@
 function conv(mylang){
 	var input = document.getElementById("input-"+mylang);
 	var output = document.getElementById("output-"+mylang);
-	var result = splitwords(input.value, mylang);
+	var newinput = glot(input.value);
+	var result = splitwords(newinput, mylang);
 	output.innerHTML = result;
+}
+
+function glot(myinput){
+	var newinput = myinput.replaceAll("'","’");
+	newinput = newinput.replaceAll("‘","’");
+	return newinput;
 }
 
 function samp(mylang){
@@ -19,7 +26,7 @@ function wordlist(mystr,mylang){
 	var wlist = [];
 	var myword = '';
 	for(var i=0;i<mystr.length;i++){
-		if(mystr[i].match(/^[a-z0-9]+$^éṟɨʉ’/i))
+		if(mystr[i].match(/^[a-z0-9^éṟɨʉ’]+$/i))
 			{myword+=mystr[i];}
 		else
 			{wlist.push(myword); wlist.push(mystr[i]); myword='';}
