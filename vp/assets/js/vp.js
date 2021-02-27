@@ -5,6 +5,9 @@ function conv(mylang){
 	output.innerHTML = result;
 }
 
+function clean(){
+    var input = document.getElementById("input-"+mylang).value = "";//改了，不知道為啥沒用，所以還要改XD
+
 function samp(mylang){
 	var input = document.getElementById("input-"+mylang);
 	var samptxt;
@@ -94,3 +97,14 @@ function splitwords(mystr,mylang){
 	}
 	return result;
 }
+
+function searchKeyPress(e){
+        // look for window.event in case event isn't passed in
+        e = e || window.event;
+        if (e.keyCode == 13)
+            {
+                document.getElementById('go').click();
+                return false;
+            }
+            return true;
+        }//要改
