@@ -15,11 +15,11 @@ function samp(mylang){
 	input.value = samptxt;
 }
 
-function wordlist(mystr){
+function wordlist(mystr,mylang){
 	var wlist = [];
 	var myword = '';
 	for(var i=0;i<mystr.length;i++){
-		if(mystr[i].match(/^[a-z0-9]+$/i))
+		if(mystr[i].match(/^[a-z0-9]+$^éṟɨʉ’/i))
 			{myword+=mystr[i];}
 		else
 			{wlist.push(myword); wlist.push(mystr[i]); myword='';}
@@ -30,7 +30,7 @@ function wordlist(mystr){
 
 function splitwords(mystr,mylang){
 	//產出文本詞表 wlist
-	wlist = wordlist(mystr);
+	wlist = wordlist(mystr,mylang);
 	
 	//確定文本語言
 	var voc;
