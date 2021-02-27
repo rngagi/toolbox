@@ -62,6 +62,8 @@
 								<p><li><a href="#sxr">拉阿魯哇語</a></li></p>
 								<p><li><a href="#xnb">卡那卡那富語</a></li></p>
 								<p><li><a href="#xsy">賽夏語</a></li></p>
+<!--                                <p><li><a href="#ckv">噶瑪蘭語</a></li></p>-->
+<!--                                <p><li><a href="#tao">達悟語</a></li></p>-->
 							</article>
 
 						<!-- Tgdaya -->
@@ -156,10 +158,38 @@
 								<p>範例：<span class="sample" onclick="samp('xsy');">So’o Sin hiya’en? 你叫什麼名字？</span></p>
 								請在下框輸入欲標示等級的族語：<br>
 								<p><textarea id="input-xsy" class="input" onkeypress="return searchKeyPress(event,'xsy');"></textarea></p>
-								<p><button id="go7" onclick="conv('xsy');">標記</button>
+								<p><button id="go-xsy" onclick="conv('xsy');">標記</button>
 								<button onclick="clean('xsy');">清空文字</button></p>
 								<p><button onclick="location.href='index.html';conv('xsy');">回首頁</button><button onclick="location.href='index.html#menu'; clean('xsy');" >回選單</button></p>
 								<p><div id="output-xsy" class="output"></div></p>
+							</article>
+
+                        <!-- Kebalan -->
+							<article id="ckv">
+								<h2 class="major">噶瑪蘭語</h2>
+								<span class="image main"><img src="images/ckv.png" alt="" /></span>
+								<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+								<p>範例：<span class="sample" onclick="samp('ckv');">naquni dedan setangi? 今天天氣怎麼樣？</span></p>
+								請在下框輸入欲標示等級的族語：<br>
+								<p><textarea id="input-ckv" class="input" onkeypress="return searchKeyPress(event,'ckv');"></textarea></p>
+								<p><button id="go-ckv" onclick="conv('ckv');">標記</button>
+								<button onclick="clean('ckv');">清空文字</button></p>
+								<p><button onclick="location.href='index.html';conv('ckv');">回首頁</button><button onclick="location.href='index.html#menu'; clean('ckv');" >回選單</button></p>
+								<p><div id="output-ckv" class="output"></div></p>
+							</article>
+
+                        <!-- Tao -->
+							<article id="tao">
+								<h2 class="major">達悟語</h2>
+								<span class="image main"><img src="images/tao.png" alt="" /></span>
+								<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+								<p>範例：<span class="sample" onclick="samp('tao');">sino o ngaran mo? 你叫什麼名字？</span></p>
+								請在下框輸入欲標示等級的族語：<br>
+								<p><textarea id="input-tao" class="input" onkeypress="return searchKeyPress(event,'tao');"></textarea></p>
+								<p><button id="go-tao" onclick="conv('tao');">標記</button>
+								<button onclick="clean('tao');">清空文字</button></p>
+								<p><button onclick="location.href='index.html';conv('tao');">回首頁</button><button onclick="location.href='index.html#menu'; clean('tao');" >回選單</button></p>
+								<p><div id="output-tao" class="output"></div></p>
 							</article>
 
 						<!-- User Guide -->
