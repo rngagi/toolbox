@@ -75,24 +75,25 @@
                         
                         <!-- inter-menu -->
                             <article id="intermenu">
-								<h2 class="major">語言選擇（內部）</h2>
+								<h2 class="major">語言選擇（內部進度）</h2>
 								<span class="image main"><img src="images/menu.png" alt="" /></span>
-                                <p><li><a href="#ami">阿美語</a></li></p>
-                                <p><li><a href="#tay">泰雅語</a></li></p>
-								<p><li><a href="#pwn">排灣語</a></li></p>
-                                <p><li><a href="#bnn">布農語</a></li></p>
-                                <p><li><a href="#pyu">卑南語</a></li></p>
-                                <p><li><a href="#dru">魯凱語</a></li></p>
-                                <p><li><a href="#tsu">鄒語</a></li></p>
-                                <p><li><a href="#xsy">賽夏語</a></li></p>
-                                <p><li><a href="#tao">達悟語</a></li></p>
-                                <p><li><a href="#ssf">邵語</a></li></p>
-                                <p><li><a href="#ckv">噶瑪蘭語</a></li></p>      
-                                <p><li><a href="#trv">太魯閣語</a></li></p>
-                                <p><li><a href="#ais">撒奇萊雅語</a></li></p>
-								<p><li><a href="#sdq">賽德克語</a></li></p>
-								<p><li><a href="#sxr">拉阿魯哇語</a></li></p>
-								<p><li><a href="#xnb">卡那卡那富語</a></li></p>
+                                N:還沒動 H:動一半 F: 完成
+                                <p><li><a href="#ami">N阿美語</a></li></p>
+                                <p><li><a href="#tay">N泰雅語</a></li></p>
+								<p><li><a href="#pwn">H排灣語</a></li></p>
+                                <p><li><a href="#bnn">N布農語</a></li></p>
+                                <p><li><a href="#pyu">N卑南語</a></li></p>
+                                <p><li><a href="#dru">N魯凱語</a></li></p>
+                                <p><li><a href="#tsu">N鄒語</a></li></p>
+                                <p><li><a href="#xsy">F賽夏語</a></li></p>
+                                <p><li><a href="#tao">F達悟語</a></li></p>
+                                <p><li><a href="#ssf">F邵語</a></li></p>
+                                <p><li><a href="#ckv">F噶瑪蘭語</a></li></p>      
+                                <p><li><a href="#trv">F太魯閣語</a></li></p>
+                                <p><li><a href="#ais">F撒奇萊雅語</a></li></p>
+								<p><li><a href="#sdq">F賽德克語</a></li></p>
+								<p><li><a href="#sxr">F拉阿魯哇語</a></li></p>
+								<p><li><a href="#xnb">F卡那卡那富語</a></li></p>
 							</article>
                         
                         <!-- Amis -->
@@ -116,7 +117,7 @@
 								<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
 								<p>範例：<span class="sample" onclick="samp('pwn');">兩隻老虎</span></p>
 								請在下框輸入欲標示等級的族語：<br>
-								<p><textarea id="input-pwn" class="input" onkeypress="return searchKeyPress3(event);"></textarea></p>
+								<p><textarea id="input-pwn" class="input" onkeypress="return searchKeyPress(event, 'pwn');"></textarea></p>
 								<p><button id="go-pwn" onclick="conv('pwn');">標記</button>
 								<button onclick="clean('pwn');">清空文字</button></p>
 								<p><button onclick="location.href='index.html'; clean('pwn');">回首頁</button><button onclick="location.href='index.html#menu'; clean('pwn');" >回選單</button></p>
@@ -186,7 +187,7 @@
 									<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
 									<p>範例：<span class="sample" onclick="samp('ssf');">lus’an a quyash 過年之歌</span></p>
 									請在下框輸入欲標示等級的族語：<br>
-									<p><textarea id="input-ssf" class="input" onkeypress="return searchKeyPress2(event);"></textarea></p>
+									<p><textarea id="input-ssf" class="input" onkeypress="return searchKeyPress(event, 'ssf');"></textarea></p>
 									<p><button id="go-ssf" onclick="conv('ssf');">標記</button>
 									<button onclick="clean('ssf');">清空文字</button></p>
 									<p><button onclick="location.href='index.html'; clean('ssf');">回首頁</button><button onclick="location.href='index.html#menu'; clean('ssf'); conv('ssf');" >回選單</button></p>
@@ -214,7 +215,7 @@
 								<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
 								<p>範例：<span class="sample" onclick="samp('trv');">Smbu hidaw 射太陽（節錄）</span></p>
 								請在下框輸入欲標示等級的族語：<br>
-								<p><textarea id="input-trv" class="input" onkeypress="return searchKeyPress4(event);"></textarea></p>
+								<p><textarea id="input-trv" class="input" onkeypress="return searchKeyPress(event, 'trv');"></textarea></p>
 								<p><button id="go-trv" onclick="conv('trv');">標記</button>
 								<button onclick="clean('trv');">清空文字</button></p>
 								<p><button onclick="location.href='index.html'; clean('trv');">回首頁</button><button onclick="location.href='index.html#menu'; clean('trv');" >回選單</button></p>
@@ -225,7 +226,14 @@
                             <article id="ais">
                                 <h2 class="major">撒奇萊雅語</h2>
 								<span class="image main"><img src="images/ais.png" alt="" /></span>
-                                <span class="image main"><img src="images/working.png" alt="" /></span>
+                                    <p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+                                    <p>範例：<span class="sample" onclick="samp('ais');">cima ku ngangan nu misu? 你叫什麼名字？</span></p>
+                                    請在下框輸入欲標示等級的族語：<br>
+                                    <p><textarea id="input-ais" class="input" onkeypress="return searchKeyPress(event, 'ais');"></textarea></p>
+                                    <p><button id="go-ais" onclick="conv('ais');">標記</button>
+                                    <button onclick="clean('ais');">清空文字</button></p>
+                                    <p><button onclick="location.href='index.html'; clean('ais');">回首頁</button><button onclick="location.href='index.html#menu'; clean('ais');" >回選單</button></p>
+                                    <p><div id="output-ais" class="output"></div></p>
                             </article>
 
 						<!-- Seediq -->
@@ -238,7 +246,7 @@
 									<p><textarea id="input-sdq" class="input" onkeypress="return searchKeyPress(event,'sdq');"></textarea></p>
 									<p><button id="go-sdq" onclick="conv('sdq');">標記</button>
 									<button onclick="clean('sdq');">清空文字</button></p>
-									<p><button onclick="location.href='index.html'; clean('sdq');">回首頁</button><button onclick="location.href='index.html#menu'; clean1();" >回選單</button></p>
+									<p><button onclick="location.href='index.html'; clean('sdq');">回首頁</button><button onclick="location.href='index.html#menu'; clean('sdq');" >回選單</button></p>
 									<p><div id="output-sdq" class="output" ></div></p>
 							</article>
 
@@ -249,7 +257,7 @@
 								<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
 								<p>範例：<span class="sample" onclick="samp('sxr');">auninia langica arinani? 今天天氣怎麼樣？</span></p>
 								請在下框輸入欲標示等級的族語：<br>
-								<p><textarea id="input-sxr" class="input" onkeypress="return searchKeyPress5(event);"></textarea></p>
+								<p><textarea id="input-sxr" class="input" onkeypress="return searchKeyPress(event, 'sxr');"></textarea></p>
 								<p><button id="go-sxr" onclick="conv('sxr');">標記</button>
 								<button onclick="clean('sxr');">清空文字</button></p>
 								<p><button onclick="location.href='index.html'; clean('sxr');">回首頁</button><button onclick="location.href='index.html#menu'; clean('sxr');" >回選單</button></p>
@@ -266,7 +274,7 @@
 								<p><textarea id="input-xnb" class="input" onkeypress="return searchKeyPress(event,'xnb');"></textarea></p>
 								<p><button id="go-xnb" onclick="conv('xnb');">標記</button>
 								<button onclick="clean('xnb');">清空文字</button></p>
-								<p><button onclick="location.href='index.html'; clean('xnb');">回首頁</button><button onclick="location.href='index.html#menu'; clean('xsy');" >回選單</button></p>
+								<p><button onclick="location.href='index.html'; clean('xnb');">回首頁</button><button onclick="location.href='index.html#menu'; clean('xnb');" >回選單</button></p>
 								<p><div id="output-xnb" class="output"></div></p>
 							</article>
 
