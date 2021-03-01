@@ -84,7 +84,7 @@
                                 <p><li><a href="#bnn">N布農語</a></li></p>
                                 <p><li><a href="#pyu">N卑南語</a></li></p>
                                 <p><li><a href="#dru">N魯凱語</a></li></p>
-                                <p><li><a href="#tsu">N鄒語</a></li></p>
+                                <p><li><a href="#tsu">F鄒語</a></li></p>
                                 <p><li><a href="#xsy">F賽夏語</a></li></p>
                                 <p><li><a href="#tao">F達悟語</a></li></p>
                                 <p><li><a href="#ssf">F邵語</a></li></p>
@@ -149,7 +149,14 @@
                             <article id="tsu">
                                 <h2 class="major">鄒語</h2>
 								<span class="image main"><img src="images/tsu.png" alt="" /></span>
-                                <span class="image main"><img src="images/working.png" alt="" /></span>
+                                <p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+								<p>範例：<span class="sample" onclick="samp('tsu');">mʉchʉ 下雨</span></p>
+								請在下框輸入欲標示等級的族語：<br>
+								<p><textarea id="input-tsu" class="input" onkeypress="return searchKeyPress(event, 'tsu');"></textarea></p>
+								<p><button id="go-tsu" onclick="conv('tsu');">標記</button>
+								<button onclick="clean('tsu');">清空文字</button></p>
+								<p><button onclick="location.href='index.html'; clean('tsu');">回首頁</button><button onclick="location.href='index.html#menu'; clean('tsu');" >回選單</button></p>
+								<p><div id="output-tsu" class="output"></div></p>
                             </article>
                 
                         <!-- SaySiyat -->

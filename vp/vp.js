@@ -27,8 +27,8 @@ function samp(mylang){
 		{samptxt = "這裡空空如也。";}
     if (mylang == "dru")
 		{samptxt = "這裡空空如也。";}
-    if (mylang == "tsu")
-		{samptxt = "這裡空空如也。";}
+    if (mylang == "tsu") //鄒-mʉchʉ 下雨
+		{samptxt = "mio mʉchʉ ne yofna? ’a mio topeasmu ne yofna. isi yainca to televi tee ausuhcu smʉnʉ’ʉ ho hucma. tee nana a’ʉmtʉ? ma tee eno mainenu ho te’on’a mvoe to ton’u. o’a mocu mo eno oemi’mi? moc’on’a conohie ne o’u poezi. tee nana alʉ smuaveivei? asonʉ o’a tee nama na’no smuna’o. ’a tee eno ʉmnʉ honci a’ʉmtʉ maica.";}
     if (mylang == "xsy") //賽夏-So’o Sin hiya’en? 你叫什麼名字？
 		{samptxt = "So’o kayzaeh ay! niSo’ raro:o’ Sin hiya’en? ma’an raro:o’ Sin kizawen. moyo roSa’ ’aehael ay? ’ihi’, siya minayti’ ma’an, Sin ta:inin. ’a:ay! kita’en nakhara hingha’ ka kinmae’iyaehan. moyo ’inay’ino’ ’ima mowa:i’? yami ’inay walo’ ’ima mowa:i’. niSo’ kano’ kapatawawen? ya:o homawan ray taew’an maelaehang ka korkoring, ray minaSangay rima’ ray kakiSka:atan tomortoroe’ ka ’alnoSaySiyat kapayaka:i’. So’o kin makakreng o!";}
     if (mylang == "tao") //達悟-sino o ngaran mo? 你叫什麼名字？
