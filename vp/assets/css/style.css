@@ -3,7 +3,7 @@
 	src: url(https://rngagi.github.io/toolbox/vp/assets/webfonts/Inter-ExtraLight.woff2);
 }
 .input, .output{resize:none; width:100%; height:200px; font-family: 'Inter-extralight', Arial, sans-serif; font-weight:100;}
-.sample{color:white; text-decoration:underline;}
+.sample{color:white; text-decoration:underline; font-family: 'Inter-extralight', Arial, sans-serif; font-weight:100;}
 .lv1{background-color: green;}
 .lv2{background-color: goldenrod;}
 .lv3{background-color: coral;}
