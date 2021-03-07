@@ -1,586 +1,677 @@
 <!DOCTYPE HTML>
-<!--Ver. 1.1.1-->
+<!--Ver. 1.3.0-->
 <html>
-	<head>
-		<title>族語詞彙分級標記</title>
-		<meta charset="utf-8" /> 
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta property="og:description" content="原住民族語言學習詞表分級標記小工具" />
-		<meta property="og:image" content="images/img.png" />
-		<!--以上為預覽-->
-		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all">    
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-		<script src='voc.js'></script>
-		<script src='vp.js'></script>
-	</head>
-	
-	<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<head>
+	<title>族語詞彙分級標記</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta property="og:description" content="原住民族語言學習詞表分級標記小工具" />
+	<meta property="og:image" content="images/img.png" />
+	<!--以上為預覽-->
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all">
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+	<script src='voc.js'></script>
+	<script src='vp.js'></script>
+</head>
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon solid fa-book"></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>族語詞彙分級標記</h1>
-								<h3>原住民族語言學習詞表分級標記小工具</h3>
-                                <h4><a href="#about">Ver.1.3.0</a></h4>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#menu">語言選擇</a></li>
-								<li><a href="#guide">使用說明</a></li>
-								<li><a href="#about">版本資訊</a></li>
-<!--
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<div class="logo">
+				<span class="icon solid fa-book"></span>
+			</div>
+			<div class="content">
+				<div class="inner">
+					<h1>族語詞彙分級標記</h1>
+					<h3>原住民族語言學習詞表分級標記小工具</h3>
+					<h4><a href="#about">Ver.1.3.0</a></h4>
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="#menu">語言選擇</a></li>
+					<li><a href="#guide">使用說明</a></li>
+					<li><a href="#about">版本資訊</a></li>
+					<!--
 								<li><a href="#elements">Elements</a></li>
 -->
-							</ul>
-							
-						</nav>
-					</header>
+				</ul>
 
-				<!-- Main -->
-					<div id="main">
-						
-						<!-- lgs menu -->
-							<article id="menu">
-								<h2 class="major">語言選擇</h2>
-								<span class="image main"><img src="images/menu.png" alt="" /></span>
-<!--                                <p><li><a href="#ami">阿美語</a></li></p>-->
-<!--                                <p><li><a href="#tay">泰雅語</a></li></p>-->
-<!--								<p><li><a href="#pwn">排灣語</a></li></p>-->
-<!--                                <p><li><a href="#bnn">布農語</a></li></p>-->
-<!--                                <p><li><a href="#pyu">卑南語</a></li></p>-->
-<!--                                <p><li><a href="#dru">魯凱語</a></li></p>-->
-                                <p><li><a href="#tsu">鄒語</a></li></p>
-                                <p><li><a href="#xsy">賽夏語</a></li></p>
-                                <p><li><a href="#tao">達悟語</a></li></p>
-                                <p><li><a href="#ssf">邵語</a></li></p>
-                                <p><li><a href="#ckv">噶瑪蘭語</a></li></p>      
-                                <p><li><a href="#trv">太魯閣語</a></li></p>
-                                <p><li><a href="#ais">撒奇萊雅語</a></li></p>
-								<p><li><a href="#sdq">賽德克語</a></li></p>
-								<p><li><a href="#sxr">拉阿魯哇語</a></li></p>
-								<p><li><a href="#xnb">卡那卡那富語</a></li></p>
-                            </article>
-                        
-                        <!-- inter-menu -->
-                            <article id="intermenu">
-								<h2 class="major">語言選擇（內部進度）</h2>
-								<span class="image main"><img src="images/menu.png" alt="" /></span>
-                                N:還沒動 H:動一半 F: 完成
-                                <p><li><a href="#ami">N阿美語</a></li></p>
-                                <p><li><a href="#tay">N泰雅語</a></li></p>
-								<p><li><a href="#pwn">H排灣語</a></li></p>
-                                <p><li><a href="#bnn">N布農語</a></li></p>
-                                <p><li><a href="#pyu">N卑南語</a></li></p>
-                                <p><li><a href="#dru">N魯凱語</a></li></p>
-                                <p><li><a href="#tsu">F鄒語</a></li></p>
-                                <p><li><a href="#xsy">F賽夏語</a></li></p>
-                                <p><li><a href="#tao">F達悟語</a></li></p>
-                                <p><li><a href="#ssf">F邵語</a></li></p>
-                                <p><li><a href="#ckv">F噶瑪蘭語</a></li></p>      
-                                <p><li><a href="#trv">F太魯閣語</a></li></p>
-                                <p><li><a href="#ais">F撒奇萊雅語</a></li></p>
-								<p><li><a href="#sdq">F賽德克語</a></li></p>
-								<p><li><a href="#sxr">F拉阿魯哇語</a></li></p>
-								<p><li><a href="#xnb">F卡那卡那富語</a></li></p>
-							</article>
-                        
-                        <!-- Amis -->
-                            <article id="ami">
-                                <h2 class="major">阿美語</h2>
-                                <span class="image main"><img src="images/ami.png" alt="" /></span>
-								<span class="image main"><img src="images/working.png" alt="" /></span>
-                            </article>
-                        
-                        <!-- Atayal -->
-                            <article id="tay">
-                                <h2 class="major">泰雅語</h2>
-                                <span class="image main"><img src="images/tay.png" alt="" /></span>
-								<span class="image main"><img src="images/working.png" alt="" /></span>
-                            </article>
-                        
-                        <!-- Payuan -->
-							<article id="pwn">
-								<h2 class="major">排灣語</h2>
-								<span class="image main"><img src="images/pwn.png" alt="" /></span>
-								<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-								<p>範例：<span class="sample" onclick="samp('pwn');">兩隻老虎</span></p>
-								請在下框輸入欲標示等級的族語：<br>
-								<p><textarea id="input-pwn" class="input" onkeypress="return searchKeyPress(event, 'pwn');"></textarea></p>
-								<p><button id="go-pwn" onclick="conv('pwn');">標記</button>
-								<button onclick="clean('pwn');">清空文字</button></p>
-								<p><button onclick="location.href='index.html'; clean('pwn');">回首頁</button><button onclick="location.href='index.html#menu'; clean('pwn');" >回選單</button></p>
-								<p><div id="output-pwn" class="output"></div></p>
-							</article>
-                
-                        <!-- Bunun -->
-                            <article id="bnn">
-                                <h2 class="major">布農語</h2>
-								<span class="image main"><img src="images/bnn.png" alt="" /></span>
-                                <span class="image main"><img src="images/working.png" alt="" /></span>
-                            </article>
-                
-                        <!-- Pinuyumayan -->
-                            <article id="pyu">
-                                <h2 class="major">卑南語</h2>
-								<span class="image main"><img src="images/pyu.png" alt="" /></span>
-                                <span class="image main"><img src="images/working.png" alt="" /></span>
-                            </article>
-                
-                        <!-- Drekai -->
-                            <article id="dru">
-                                <h2 class="major">魯凱語</h2>
-								<span class="image main"><img src="images/dru.png" alt="" /></span>
-                                <span class="image main"><img src="images/working.png" alt="" /></span>
-                            </article>
-                        
-                        <!-- Cou -->
-                            <article id="tsu">
-                                <h2 class="major">鄒語</h2>
-								<span class="image main"><img src="images/tsu.png" alt="" /></span>
-                                <p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-								<p>範例：<span class="sample" onclick="samp('tsu');">mʉchʉ 下雨</span></p>
-								請在下框輸入欲標示等級的族語：<br>
-								<p><textarea id="input-tsu" class="input" onkeypress="return searchKeyPress(event, 'tsu');"></textarea></p>
-								<p><button id="go-tsu" onclick="conv('tsu');">標記</button>
-								<button onclick="clean('tsu');">清空文字</button></p>
-								<p><button onclick="location.href='index.html'; clean('tsu');">回首頁</button><button onclick="location.href='index.html#menu'; clean('tsu');" >回選單</button></p>
-								<p><div id="output-tsu" class="output"></div></p>
-                            </article>
-                
-                        <!-- SaySiyat -->
-							<article id="xsy">
-								<h2 class="major">賽夏語</h2>
-								<span class="image main"><img src="images/xsy.png" alt="" /></span>
-								<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-								<p>範例：<span class="sample" onclick="samp('xsy');">So’o Sin hiya’en? 你叫什麼名字？</span></p>
-								請在下框輸入欲標示等級的族語：<br>
-								<p><textarea id="input-xsy" class="input" onkeypress="return searchKeyPress(event,'xsy');"></textarea></p>
-								<p><button id="go-xsy" onclick="conv('xsy');">標記</button>
-								<button onclick="clean('xsy');">清空文字</button></p>
-								<p><button onclick="location.href='index.html';conv('xsy');">回首頁</button><button onclick="location.href='index.html#menu'; clean('xsy');" >回選單</button></p>
-								<p><div id="output-xsy" class="output"></div></p>
-							</article>
-        
-                        <!-- Tao -->
-							<article id="tao">
-								<h2 class="major">達悟語</h2>
-								<span class="image main"><img src="images/tao.png" alt="" /></span>
-								<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-								<p>範例：<span class="sample" onclick="samp('tao');">sino o ngaran mo? 你叫什麼名字？</span></p>
-								請在下框輸入欲標示等級的族語：<br>
-								<p><textarea id="input-tao" class="input" onkeypress="return searchKeyPress(event,'tao');"></textarea></p>
-								<p><button id="go-tao" onclick="conv('tao');">標記</button>
-								<button onclick="clean('tao');">清空文字</button></p>
-								<p><button onclick="location.href='index.html';conv('tao');">回首頁</button><button onclick="location.href='index.html#menu'; clean('tao');" >回選單</button></p>
-								<p><div id="output-tao" class="output"></div></p>
-							</article>
-    
-                        <!-- Thau -->
-							<article id="ssf">
-								<h2 class="major">邵語</h2>
-								<span class="image main"><img src="images/ssf.png" alt="" /></span>
-									<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-									<p>範例：<span class="sample" onclick="samp('ssf');">lus’an a quyash 過年之歌</span></p>
-									請在下框輸入欲標示等級的族語：<br>
-									<p><textarea id="input-ssf" class="input" onkeypress="return searchKeyPress(event, 'ssf');"></textarea></p>
-									<p><button id="go-ssf" onclick="conv('ssf');">標記</button>
-									<button onclick="clean('ssf');">清空文字</button></p>
-									<p><button onclick="location.href='index.html'; clean('ssf');">回首頁</button><button onclick="location.href='index.html#menu'; clean('ssf'); conv('ssf');" >回選單</button></p>
-									<p><div id="output-ssf" class="output"></div></p>
-							</article>
+			</nav>
+		</header>
 
-                        <!-- Kebalan -->
-							<article id="ckv">
-								<h2 class="major">噶瑪蘭語</h2>
-								<span class="image main"><img src="images/ckv.png" alt="" /></span>
-								<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-								<p>範例：<span class="sample" onclick="samp('ckv');">naquni dedan setangi? 今天天氣怎麼樣？</span></p>
-								請在下框輸入欲標示等級的族語：<br>
-								<p><textarea id="input-ckv" class="input" onkeypress="return searchKeyPress(event,'ckv');"></textarea></p>
-								<p><button id="go-ckv" onclick="conv('ckv');">標記</button>
-								<button onclick="clean('ckv');">清空文字</button></p>
-								<p><button onclick="location.href='index.html';conv('ckv');">回首頁</button><button onclick="location.href='index.html#menu'; clean('ckv');" >回選單</button></p>
-								<p><div id="output-ckv" class="output"></div></p>
-							</article>
+		<!-- Main -->
+		<div id="main">
 
-                        <!-- Truku -->
-							<article id="trv">
-								<h2 class="major">太魯閣</h2>
-								<span class="image main"><img src="images/trv.png" alt="" /></span>
-								<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-								<p>範例：<span class="sample" onclick="samp('trv');">Smbu hidaw 射太陽（節錄）</span></p>
-								請在下框輸入欲標示等級的族語：<br>
-								<p><textarea id="input-trv" class="input" onkeypress="return searchKeyPress(event, 'trv');"></textarea></p>
-								<p><button id="go-trv" onclick="conv('trv');">標記</button>
-								<button onclick="clean('trv');">清空文字</button></p>
-								<p><button onclick="location.href='index.html'; clean('trv');">回首頁</button><button onclick="location.href='index.html#menu'; clean('trv');" >回選單</button></p>
-								<p><div id="output-trv" class="output"></div></p>
-							</article>
+			<!-- lgs menu -->
+			<article id="menu">
+				<h2 class="major">語言選擇</h2>
+				<span class="image main"><img src="images/menu.png" alt="" /></span>
+				<!-- <p><li><a href="#ami">阿美語</a></li></p> -->
+				<!-- <p><li><a href="#tay">泰雅語</a></li></p> -->
+				<!-- <p><li><a href="#pwn">排灣語</a></li></p> -->
+				<!-- <p><li><a href="#bnn">布農語</a></li></p> -->
+				<!-- <p><li><a href="#pyu">卑南語</a></li></p> -->
+				<!-- <p><li><a href="#dru">魯凱語</a></li></p> -->
+				<p>
+					<li><a href="#tsu">鄒語</a></li>
+				</p>
+				<p>
+					<li><a href="#xsy">賽夏語</a></li>
+				</p>
+				<p>
+					<li><a href="#tao">達悟語</a></li>
+				</p>
+				<p>
+					<li><a href="#ssf">邵語</a></li>
+				</p>
+				<p>
+					<li><a href="#ckv">噶瑪蘭語</a></li>
+				</p>
+				<p>
+					<li><a href="#trv">太魯閣語</a></li>
+				</p>
+				<p>
+					<li><a href="#ais">撒奇萊雅語</a></li>
+				</p>
+				<p>
+					<li><a href="#sdq">賽德克語</a></li>
+				</p>
+				<p>
+					<li><a href="#sxr">拉阿魯哇語</a></li>
+				</p>
+				<p>
+					<li><a href="#xnb">卡那卡那富語</a></li>
+				</p>
+			</article>
 
-                        <!-- Sakizaya -->
-                            <article id="ais">
-                                <h2 class="major">撒奇萊雅語</h2>
-								<span class="image main"><img src="images/ais.png" alt="" /></span>
-                                    <p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-                                    <p>範例：<span class="sample" onclick="samp('ais');">cima ku ngangan nu misu? 你叫什麼名字？</span></p>
-                                    請在下框輸入欲標示等級的族語：<br>
-                                    <p><textarea id="input-ais" class="input" onkeypress="return searchKeyPress(event, 'ais');"></textarea></p>
-                                    <p><button id="go-ais" onclick="conv('ais');">標記</button>
-                                    <button onclick="clean('ais');">清空文字</button></p>
-                                    <p><button onclick="location.href='index.html'; clean('ais');">回首頁</button><button onclick="location.href='index.html#menu'; clean('ais');" >回選單</button></p>
-                                    <p><div id="output-ais" class="output"></div></p>
-                            </article>
+			<!-- inter-menu -->
+			<article id="intermenu">
+				<h2 class="major">語言選擇（內部進度）</h2>
+				<span class="image main"><img src="images/menu.png" alt="" /></span>
+				N:還沒動 H:動一半 F: 完成
+				<p>
+					<li><a href="#ami">N阿美語</a></li>
+				</p>
+				<p>
+					<li><a href="#tay">N泰雅語</a></li>
+				</p>
+				<p>
+					<li><a href="#pwn">H排灣語</a></li>
+				</p>
+				<p>
+					<li><a href="#bnn">N布農語</a></li>
+				</p>
+				<p>
+					<li><a href="#pyu">N卑南語</a></li>
+				</p>
+				<p>
+					<li><a href="#dru">N魯凱語</a></li>
+				</p>
+				<p>
+					<li><a href="#tsu">F鄒語</a></li>
+				</p>
+				<p>
+					<li><a href="#xsy">F賽夏語</a></li>
+				</p>
+				<p>
+					<li><a href="#tao">F達悟語</a></li>
+				</p>
+				<p>
+					<li><a href="#ssf">F邵語</a></li>
+				</p>
+				<p>
+					<li><a href="#ckv">F噶瑪蘭語</a></li>
+				</p>
+				<p>
+					<li><a href="#trv">F太魯閣語</a></li>
+				</p>
+				<p>
+					<li><a href="#ais">F撒奇萊雅語</a></li>
+				</p>
+				<p>
+					<li><a href="#sdq">F賽德克語</a></li>
+				</p>
+				<p>
+					<li><a href="#sxr">F拉阿魯哇語</a></li>
+				</p>
+				<p>
+					<li><a href="#xnb">F卡那卡那富語</a></li>
+				</p>
+			</article>
 
-						<!-- Seediq -->
-							<article id="sdq">
-								<h2 class="major">賽德克語（德固達雅）</h2>
-								<span class="image main"><img src="images/sdq.png" alt="" /></span>
-									<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-									<p>範例：<span class="sample" onclick="samp('sdq');">Uyas mlawa 呼喚歌</span></p>
-									請在下框輸入欲標示等級的族語：<br>
-									<p><textarea id="input-sdq" class="input" onkeypress="return searchKeyPress(event,'sdq');"></textarea></p>
-									<p><button id="go-sdq" onclick="conv('sdq');">標記</button>
-									<button onclick="clean('sdq');">清空文字</button></p>
-									<p><button onclick="location.href='index.html'; clean('sdq');">回首頁</button><button onclick="location.href='index.html#menu'; clean('sdq');" >回選單</button></p>
-									<p><div id="output-sdq" class="output" ></div></p>
-							</article>
+			<!-- Amis -->
+			<article id="ami">
+				<h2 class="major">阿美語</h2>
+				<span class="image main"><img src="images/ami.png" alt="" /></span>
+				<span class="image main"><img src="images/working.png" alt="" /></span>
+			</article>
 
-						<!-- Hla'alua -->
-							<article id="sxr">
-								<h2 class="major">拉阿魯哇語</h2>
-								<span class="image main"><img src="images/sxr.png" alt="" /></span>
-								<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-								<p>範例：<span class="sample" onclick="samp('sxr');">auninia langica arinani? 今天天氣怎麼樣？</span></p>
-								請在下框輸入欲標示等級的族語：<br>
-								<p><textarea id="input-sxr" class="input" onkeypress="return searchKeyPress(event, 'sxr');"></textarea></p>
-								<p><button id="go-sxr" onclick="conv('sxr');">標記</button>
-								<button onclick="clean('sxr');">清空文字</button></p>
-								<p><button onclick="location.href='index.html'; clean('sxr');">回首頁</button><button onclick="location.href='index.html#menu'; clean('sxr');" >回選單</button></p>
-								<p><div id="output-sxr" class="output"></div></p>
-							</article>
+			<!-- Atayal -->
+			<article id="tay">
+				<h2 class="major">泰雅語</h2>
+				<span class="image main"><img src="images/tay.png" alt="" /></span>
+				<span class="image main"><img src="images/working.png" alt="" /></span>
+			</article>
 
-						<!-- Kanakanavu -->
-							<article id="xnb">
-								<h2 class="major">卡那卡那富語</h2>
-								<span class="image main"><img src="images/xnb.png" alt="" /></span>
-								<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-								<p>範例：<span class="sample" onclick="samp('xnb');">neen nganai musu? 你叫什麼名字？</span></p>
-								請在下框輸入欲標示等級的族語：<br>
-								<p><textarea id="input-xnb" class="input" onkeypress="return searchKeyPress(event,'xnb');"></textarea></p>
-								<p><button id="go-xnb" onclick="conv('xnb');">標記</button>
-								<button onclick="clean('xnb');">清空文字</button></p>
-								<p><button onclick="location.href='index.html'; clean('xnb');">回首頁</button><button onclick="location.href='index.html#menu'; clean('xnb');" >回選單</button></p>
-								<p><div id="output-xnb" class="output"></div></p>
-							</article>
+			<!-- Payuan -->
+			<article id="pwn">
+				<h2 class="major">排灣語</h2>
+				<span class="image main"><img src="images/pwn.png" alt="" /></span>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				<p>範例：<span class="sample" onclick="samp('pwn');">兩隻老虎</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-pwn" class="input" onkeypress="return searchKeyPress(event, 'pwn');"></textarea></p>
+				<p><button id="go-pwn" onclick="conv('pwn');">標記</button>
+					<button onclick="clean('pwn');">清空文字</button>
+				</p>
+				<p><button onclick="location.href='index.html'; clean('pwn');">回首頁</button><button onclick="location.href='index.html#menu'; clean('pwn');">回選單</button></p>
+				<p>
+				<div id="output-pwn" class="output"></div>
+				</p>
+			</article>
 
-						<!-- User Guide -->
-							<article id="guide">
-								<h2 class="major">使用說明</h2>
-								<span class="image main"><img src="images/guide.png" alt="" /></span>
-								<p>　　本工具參考2018年族語千詞表（賽德克、邵、太魯閣）、2020年族語學習詞表（其他語言）的詞彙分級並進行修正，使用時將您所需要標示等級的族語詞彙、句子、段落等輸入或複製到文字框中，並按下「標記」按鈕，即可標記出千詞表中含有的族語詞彙及部分常用衍生詞之等級。如果想要試用本工具，亦可點選範例文字以進行標記。</p>
-								若有任何疑問請洽：<br>
-								核心功能開發：Samaw Pan　　<a href="mailto:samuel.yhpan@gmail.com">samuel.yhpan@gmail.com</a><br>
-								UI/UX：Walis Taywang　　　<a href="mailto:walistaywang0914@gmail.com">walistaywang0914@gmail.com</a></article>
+			<!-- Bunun -->
+			<article id="bnn">
+				<h2 class="major">布農語</h2>
+				<span class="image main"><img src="images/bnn.png" alt="" /></span>
+				<span class="image main"><img src="images/working.png" alt="" /></span>
+			</article>
 
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">版本資訊</h2>
-								<span class="image main"><img src="images/ver.png" alt="" /></span>
-								<h3>目前支援語別：</h3>
-								賽德克語（德固達雅）、邵語、太魯閣語、拉阿魯哇語、卡那卡那富語、賽夏語、鄒語、噶瑪蘭語、達悟語。<p>
-                                <h3>Ver.1.3.0 </h3>
-								鄒語、噶瑪蘭語、達悟語上線：使用2020年學習詞表。<p>
-                                <h3>Ver.1.2.5 </h3>
-								核心程式調整、改善效率。<p>
-								<h3>Ver.1.2.0 </h3>
-								賽夏語上線：使用2020年學習詞表。<p>
-								<h3>Ver.1.1.1 </h3>
-								拉阿魯哇語、卡那卡那富語上線：使用2020年學習詞表。<p>
-								<h3>Ver.1.0.0 </h3>
-								基本功能上線：2018年族語千詞表詞彙等級標記。<br>
-								支援語別：賽德克德固達雅語、邵語、太魯閣語。<p>
-								</article>
+			<!-- Pinuyumayan -->
+			<article id="pyu">
+				<h2 class="major">卑南語</h2>
+				<span class="image main"><img src="images/pyu.png" alt="" /></span>
+				<span class="image main"><img src="images/working.png" alt="" /></span>
+			</article>
 
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
+			<!-- Drekai -->
+			<article id="dru">
+				<h2 class="major">魯凱語</h2>
+				<span class="image main"><img src="images/dru.png" alt="" /></span>
+				<span class="image main"><img src="images/working.png" alt="" /></span>
+			</article>
 
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
+			<!-- Cou -->
+			<article id="tsu">
+				<h2 class="major">鄒語</h2>
+				<span class="image main"><img src="images/tsu.png" alt="" /></span>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				<p>範例：<span class="sample" onclick="samp('tsu');">mʉchʉ 下雨</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-tsu" class="input" onkeypress="return searchKeyPress(event, 'tsu');"></textarea></p>
+				<p><button id="go-tsu" onclick="conv('tsu');">標記</button>
+					<button onclick="clean('tsu');">清空文字</button>
+				</p>
+				<p><button onclick="location.href='index.html'; clean('tsu');">回首頁</button><button onclick="location.href='index.html#menu'; clean('tsu');">回選單</button></p>
+				<p>
+				<div id="output-tsu" class="output"></div>
+				</p>
+			</article>
 
-while (!deck.isInOrder()) {
-	print 'Iteration ' + i;
-	deck.shuffle();
-	i++;
-}
+			<!-- SaySiyat -->
+			<article id="xsy">
+				<h2 class="major">賽夏語</h2>
+				<span class="image main"><img src="images/xsy.png" alt="" /></span>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				<p>範例：<span class="sample" onclick="samp('xsy');">So’o Sin hiya’en? 你叫什麼名字？</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-xsy" class="input" onkeypress="return searchKeyPress(event,'xsy');"></textarea></p>
+				<p><button id="go-xsy" onclick="conv('xsy');">標記</button>
+					<button onclick="clean('xsy');">清空文字</button>
+				</p>
+				<p><button onclick="location.href='index.html';conv('xsy');">回首頁</button><button onclick="location.href='index.html#menu'; clean('xsy');">回選單</button></p>
+				<p>
+				<div id="output-xsy" class="output"></div>
+				</p>
+			</article>
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
+			<!-- Tao -->
+			<article id="tao">
+				<h2 class="major">達悟語</h2>
+				<span class="image main"><img src="images/tao.png" alt="" /></span>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				<p>範例：<span class="sample" onclick="samp('tao');">sino o ngaran mo? 你叫什麼名字？</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-tao" class="input" onkeypress="return searchKeyPress(event,'tao');"></textarea></p>
+				<p><button id="go-tao" onclick="conv('tao');">標記</button>
+					<button onclick="clean('tao');">清空文字</button>
+				</p>
+				<p><button onclick="location.href='index.html';conv('tao');">回首頁</button><button onclick="location.href='index.html#menu'; clean('tao');">回選單</button></p>
+				<p>
+				<div id="output-tao" class="output"></div>
+				</p>
+			</article>
 
-								<section>
-									<h3 class="major">Lists</h3>
+			<!-- Thau -->
+			<article id="ssf">
+				<h2 class="major">邵語</h2>
+				<span class="image main"><img src="images/ssf.png" alt="" /></span>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				<p>範例：<span class="sample" onclick="samp('ssf');">lus’an a quyash 過年之歌</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-ssf" class="input" onkeypress="return searchKeyPress(event, 'ssf');"></textarea></p>
+				<p><button id="go-ssf" onclick="conv('ssf');">標記</button>
+					<button onclick="clean('ssf');">清空文字</button>
+				</p>
+				<p><button onclick="location.href='index.html'; clean('ssf');">回首頁</button><button onclick="location.href='index.html#menu'; clean('ssf'); conv('ssf');">回選單</button></p>
+				<p>
+				<div id="output-ssf" class="output"></div>
+				</p>
+			</article>
 
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+			<!-- Kebalan -->
+			<article id="ckv">
+				<h2 class="major">噶瑪蘭語</h2>
+				<span class="image main"><img src="images/ckv.png" alt="" /></span>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				<p>範例：<span class="sample" onclick="samp('ckv');">naquni dedan setangi? 今天天氣怎麼樣？</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-ckv" class="input" onkeypress="return searchKeyPress(event,'ckv');"></textarea></p>
+				<p><button id="go-ckv" onclick="conv('ckv');">標記</button>
+					<button onclick="clean('ckv');">清空文字</button>
+				</p>
+				<p><button onclick="location.href='index.html';conv('ckv');">回首頁</button><button onclick="location.href='index.html#menu'; clean('ckv');">回選單</button></p>
+				<p>
+				<div id="output-ckv" class="output"></div>
+				</p>
+			</article>
 
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+			<!-- Truku -->
+			<article id="trv">
+				<h2 class="major">太魯閣</h2>
+				<span class="image main"><img src="images/trv.png" alt="" /></span>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				<p>範例：<span class="sample" onclick="samp('trv');">Smbu hidaw 射太陽（節錄）</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-trv" class="input" onkeypress="return searchKeyPress(event, 'trv');"></textarea></p>
+				<p><button id="go-trv" onclick="conv('trv');">標記</button>
+					<button onclick="clean('trv');">清空文字</button>
+				</p>
+				<p><button onclick="location.href='index.html'; clean('trv');">回首頁</button><button onclick="location.href='index.html#menu'; clean('trv');">回選單</button></p>
+				<p>
+				<div id="output-trv" class="output"></div>
+				</p>
+			</article>
 
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
+			<!-- Sakizaya -->
+			<article id="ais">
+				<h2 class="major">撒奇萊雅語</h2>
+				<span class="image main"><img src="images/ais.png" alt="" /></span>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				<p>範例：<span class="sample" onclick="samp('ais');">cima ku ngangan nu misu? 你叫什麼名字？</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-ais" class="input" onkeypress="return searchKeyPress(event, 'ais');"></textarea></p>
+				<p><button id="go-ais" onclick="conv('ais');">標記</button>
+					<button onclick="clean('ais');">清空文字</button>
+				</p>
+				<p><button onclick="location.href='index.html'; clean('ais');">回首頁</button><button onclick="location.href='index.html#menu'; clean('ais');">回選單</button></p>
+				<p>
+				<div id="output-ais" class="output"></div>
+				</p>
+			</article>
 
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
+			<!-- Seediq -->
+			<article id="sdq">
+				<h2 class="major">賽德克語（德固達雅）</h2>
+				<span class="image main"><img src="images/sdq.png" alt="" /></span>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				<p>範例：<span class="sample" onclick="samp('sdq');">Uyas mlawa 呼喚歌</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-sdq" class="input" onkeypress="return searchKeyPress(event,'sdq');"></textarea></p>
+				<p><button id="go-sdq" onclick="conv('sdq');">標記</button>
+					<button onclick="clean('sdq');">清空文字</button>
+				</p>
+				<p><button onclick="location.href='index.html'; clean('sdq');">回首頁</button><button onclick="location.href='index.html#menu'; clean('sdq');">回選單</button></p>
+				<p>
+				<div id="output-sdq" class="output"></div>
+				</p>
+			</article>
 
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
+			<!-- Hla'alua -->
+			<article id="sxr">
+				<h2 class="major">拉阿魯哇語</h2>
+				<span class="image main"><img src="images/sxr.png" alt="" /></span>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				<p>範例：<span class="sample" onclick="samp('sxr');">auninia langica arinani? 今天天氣怎麼樣？</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-sxr" class="input" onkeypress="return searchKeyPress(event, 'sxr');"></textarea></p>
+				<p><button id="go-sxr" onclick="conv('sxr');">標記</button>
+					<button onclick="clean('sxr');">清空文字</button>
+				</p>
+				<p><button onclick="location.href='index.html'; clean('sxr');">回首頁</button><button onclick="location.href='index.html#menu'; clean('sxr');">回選單</button></p>
+				<p>
+				<div id="output-sxr" class="output"></div>
+				</p>
+			</article>
 
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
+			<!-- Kanakanavu -->
+			<article id="xnb">
+				<h2 class="major">卡那卡那富語</h2>
+				<span class="image main"><img src="images/xnb.png" alt="" /></span>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				<p>範例：<span class="sample" onclick="samp('xnb');">neen nganai musu? 你叫什麼名字？</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-xnb" class="input" onkeypress="return searchKeyPress(event,'xnb');"></textarea></p>
+				<p><button id="go-xnb" onclick="conv('xnb');">標記</button>
+					<button onclick="clean('xnb');">清空文字</button>
+				</p>
+				<p><button onclick="location.href='index.html'; clean('xnb');">回首頁</button><button onclick="location.href='index.html#menu'; clean('xnb');">回選單</button></p>
+				<p>
+				<div id="output-xnb" class="output"></div>
+				</p>
+			</article>
 
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
+			<!-- User Guide -->
+			<article id="guide">
+				<h2 class="major">使用說明</h2>
+				<span class="image main"><img src="images/guide.png" alt="" /></span>
+				<p>　　本工具參考2018年族語千詞表（賽德克、邵、太魯閣）、2020年族語學習詞表（其他語言）的詞彙分級並進行修正，使用時將您所需要標示等級的族語詞彙、句子、段落等輸入或複製到文字框中，並按下「標記」按鈕，即可標記出千詞表中含有的族語詞彙及部分常用衍生詞之等級。如果想要試用本工具，亦可點選範例文字以進行標記。</p>
+				若有任何疑問請洽：<br>
+				核心功能開發：Samaw Pan　　<a href="mailto:samuel.yhpan@gmail.com">samuel.yhpan@gmail.com</a><br>
+				UI/UX：Walis Taywang　　　<a href="mailto:walistaywang0914@gmail.com">walistaywang0914@gmail.com</a>
+			</article>
 
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-											</div>
-											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-											</div>
-											<div class="field">
-												<label for="demo-category">Category</label>
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
+			<!-- About -->
+			<article id="about">
+				<h2 class="major">版本資訊</h2>
+				<span class="image main"><img src="images/ver.png" alt="" /></span>
+				<h3>目前支援語別：</h3>
+				賽德克語（德固達雅）、邵語、太魯閣語、拉阿魯哇語、卡那卡那富語、賽夏語、鄒語、噶瑪蘭語、達悟語。<p>
+				<h3>Ver.1.3.0 </h3>
+				鄒語、噶瑪蘭語、達悟語上線：使用2020年學習詞表。<p>
+				<h3>Ver.1.2.5 </h3>
+				核心程式調整、改善效率。<p>
+				<h3>Ver.1.2.0 </h3>
+				賽夏語上線：使用2020年學習詞表。<p>
+				<h3>Ver.1.1.1 </h3>
+				拉阿魯哇語、卡那卡那富語上線：使用2020年學習詞表。<p>
+				<h3>Ver.1.0.0 </h3>
+				基本功能上線：2018年族語千詞表詞彙等級標記。<br>
+				支援語別：賽德克德固達雅語、邵語、太魯閣語。<p>
+			</article>
 
-							</article>
+			<!-- Elements -->
+			<article id="elements">
+				<h2 class="major">Elements</h2>
 
+				<section>
+					<h3 class="major">Text</h3>
+					<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+						This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+						This is <u>underlined</u> and this is code: <code>for (;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+					<hr />
+					<h2>Heading Level 2</h2>
+					<h3>Heading Level 3</h3>
+					<h4>Heading Level 4</h4>
+					<h5>Heading Level 5</h5>
+					<h6>Heading Level 6</h6>
+					<hr />
+					<h4>Blockquote</h4>
+					<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus.
+						Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+					<h4>Preformatted</h4>
+					<pre><code>i = 0;
+
+							while (!deck.isInOrder()) {
+								print 'Iteration ' + i;
+								deck.shuffle();
+								i++;
+							}
+
+							print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+				</section>
+
+				<section>
+					<h3 class="major">Lists</h3>
+
+					<h4>Unordered</h4>
+					<ul>
+						<li>Dolor pulvinar etiam.</li>
+						<li>Sagittis adipiscing.</li>
+						<li>Felis enim feugiat.</li>
+					</ul>
+
+					<h4>Alternate</h4>
+					<ul class="alt">
+						<li>Dolor pulvinar etiam.</li>
+						<li>Sagittis adipiscing.</li>
+						<li>Felis enim feugiat.</li>
+					</ul>
+
+					<h4>Ordered</h4>
+					<ol>
+						<li>Dolor pulvinar etiam.</li>
+						<li>Etiam vel felis viverra.</li>
+						<li>Felis enim feugiat.</li>
+						<li>Dolor pulvinar etiam.</li>
+						<li>Etiam vel felis lorem.</li>
+						<li>Felis enim et feugiat.</li>
+					</ol>
+					<h4>Icons</h4>
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+					</ul>
+
+					<h4>Actions</h4>
+					<ul class="actions">
+						<li><a href="#" class="button primary">Default</a></li>
+						<li><a href="#" class="button">Default</a></li>
+					</ul>
+					<ul class="actions stacked">
+						<li><a href="#" class="button primary">Default</a></li>
+						<li><a href="#" class="button">Default</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3 class="major">Table</h3>
+					<h4>Default</h4>
+					<div class="table-wrapper">
+						<table>
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Description</th>
+									<th>Price</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Item One</td>
+									<td>Ante turpis integer aliquet porttitor.</td>
+									<td>29.99</td>
+								</tr>
+								<tr>
+									<td>Item Two</td>
+									<td>Vis ac commodo adipiscing arcu aliquet.</td>
+									<td>19.99</td>
+								</tr>
+								<tr>
+									<td>Item Three</td>
+									<td> Morbi faucibus arcu accumsan lorem.</td>
+									<td>29.99</td>
+								</tr>
+								<tr>
+									<td>Item Four</td>
+									<td>Vitae integer tempus condimentum.</td>
+									<td>19.99</td>
+								</tr>
+								<tr>
+									<td>Item Five</td>
+									<td>Ante turpis integer aliquet porttitor.</td>
+									<td>29.99</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="2"></td>
+									<td>100.00</td>
+								</tr>
+							</tfoot>
+						</table>
 					</div>
 
-				<!-- Footer -->
-					<footer id="footer">
-				                        
-                        <ul class="icons">
-				            <li><a href="https://www.facebook.com/rngagi.kari" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-				            <li><a href="https://www.instagram.com/rngagi.kari" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-				            <li><a href="https://github.com/rngagi/toolbox" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
-                        </ul>
-                        <p class="copyright"> Rngagi Projects © 2021 <br>
-							Design: Samaw Pan & Walis Taywang</p>
-<!--						<p> <a href="beta/index.html"> Click for Beta Version </a><br> -->
-					</footer>
+					<h4>Alternate</h4>
+					<div class="table-wrapper">
+						<table class="alt">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Description</th>
+									<th>Price</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Item One</td>
+									<td>Ante turpis integer aliquet porttitor.</td>
+									<td>29.99</td>
+								</tr>
+								<tr>
+									<td>Item Two</td>
+									<td>Vis ac commodo adipiscing arcu aliquet.</td>
+									<td>19.99</td>
+								</tr>
+								<tr>
+									<td>Item Three</td>
+									<td> Morbi faucibus arcu accumsan lorem.</td>
+									<td>29.99</td>
+								</tr>
+								<tr>
+									<td>Item Four</td>
+									<td>Vitae integer tempus condimentum.</td>
+									<td>19.99</td>
+								</tr>
+								<tr>
+									<td>Item Five</td>
+									<td>Ante turpis integer aliquet porttitor.</td>
+									<td>29.99</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="2"></td>
+									<td>100.00</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</section>
 
-			</div>
+				<section>
+					<h3 class="major">Buttons</h3>
+					<ul class="actions">
+						<li><a href="#" class="button primary">Primary</a></li>
+						<li><a href="#" class="button">Default</a></li>
+					</ul>
+					<ul class="actions">
+						<li><a href="#" class="button">Default</a></li>
+						<li><a href="#" class="button small">Small</a></li>
+					</ul>
+					<ul class="actions">
+						<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+						<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+					</ul>
+					<ul class="actions">
+						<li><span class="button primary disabled">Disabled</span></li>
+						<li><span class="button disabled">Disabled</span></li>
+					</ul>
+				</section>
 
-		<!-- BG -->
-			<div id="bg"></div>
+				<section>
+					<h3 class="major">Form</h3>
+					<form method="post" action="#">
+						<div class="fields">
+							<div class="field half">
+								<label for="demo-name">Name</label>
+								<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+							</div>
+							<div class="field half">
+								<label for="demo-email">Email</label>
+								<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+							</div>
+							<div class="field">
+								<label for="demo-category">Category</label>
+								<select name="demo-category" id="demo-category">
+									<option value="">-</option>
+									<option value="1">Manufacturing</option>
+									<option value="1">Shipping</option>
+									<option value="1">Administration</option>
+									<option value="1">Human Resources</option>
+								</select>
+							</div>
+							<div class="field half">
+								<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+								<label for="demo-priority-low">Low</label>
+							</div>
+							<div class="field half">
+								<input type="radio" id="demo-priority-high" name="demo-priority">
+								<label for="demo-priority-high">High</label>
+							</div>
+							<div class="field half">
+								<input type="checkbox" id="demo-copy" name="demo-copy">
+								<label for="demo-copy">Email me a copy</label>
+							</div>
+							<div class="field half">
+								<input type="checkbox" id="demo-human" name="demo-human" checked>
+								<label for="demo-human">Not a robot</label>
+							</div>
+							<div class="field">
+								<label for="demo-message">Message</label>
+								<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Send Message" class="primary" /></li>
+							<li><input type="reset" value="Reset" /></li>
+						</ul>
+					</form>
+				</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-		
-	</body>
+			</article>
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+
+			<ul class="icons">
+				<li><a href="https://www.facebook.com/rngagi.kari" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+				<li><a href="https://www.instagram.com/rngagi.kari" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="https://github.com/rngagi/toolbox" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+			</ul>
+			<p class="copyright"> Rngagi Projects © 2021 <br>
+				Design: Samaw Pan & Walis Taywang</p>
+			<!--						<p> <a href="beta/index.html"> Click for Beta Version </a><br> -->
+		</footer>
+
+	</div>
+
+	<!-- BG -->
+	<div id="bg"></div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
