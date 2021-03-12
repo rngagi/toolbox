@@ -350,52 +350,52 @@
 				</p>
 			</article>
 
-			<!-- Seediq-TableTesting -->
-			<article id="sdq-tt">
+			<!-- Seediq-TableTest -->
+			<article id="sdqtt">
 				<h2 class="major">賽德克語（德固達雅）</h2>
 				<span class="image main"><img src="images/sdq.png" alt="" /></span>
 				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-				<p>範例：<span class="sample" onclick="samp('sdq-tt');">Uyas mlawa 呼喚歌</span></p>
+				<p>範例：<span class="sample" onclick="samp('sdqtt');">Uyas mlawa 呼喚歌</span></p>
 				請在下框輸入欲標示等級的族語：<br>
-				<p><textarea id="input-sdq-tt" class="input" onkeypress="return searchKeyPress(event,'sdq-tt');"></textarea></p>
-				<p><button id="go-sdq-tt" onclick="conv('sdq-tt');">標記</button>
-					<button onclick="clean('sdq-tt');">清空文字</button>
+				<p><textarea id="input-sdqtt" class="input" onkeypress="return searchKeyPress(event,'sdqtt');"></textarea></p>
+				<p><button id="go-sdqtt" onclick="conv('sdqtt'); wordlisttable('sdqtt');">標記</button>
+					<button onclick="clean('sdqtt');">清空文字</button>
 				</p>
-				<p><button onclick="location.href='index.html'; clean('sdq-tt');">回首頁</button><button onclick="location.href='index.html#menu'; clean('sdq-tt');">回選單</button></p>
+				<p><button onclick="location.href='index.html'; clean('sdqtt');">回首頁</button><button onclick="location.href='index.html#menu'; clean('sdqtt');">回選單</button></p>
 				<p>
-				<div id="output-sdq-tt" class="output"></div>
+				<div id="output-sdqtt" class="output"></div>
 				</p>
-				<table id="sort-table" data-toggle="table">
+				<table id="sort-table-sdqtt" data-toggle="table" class="sort-table">
 				    <thead>
 				      <tr>
-				        <th data-field="id" data-sortable="true">ID</th>
-				        <th data-field="name" data-sortable="true">Item Name</th>
-				        <th data-field="price" data-sortable="true">Item Price</th>
+				        <th data-field="word" data-sortable="true">詞項</th>
+				        <th data-field="meaning" data-sortable="true">中文解釋</th>
+				        <th data-field="level" data-sortable="true">級數</th>
 				      </tr>
 				    </thead>
-				    <tbody>
-				      <tr>
-				        <td>1</td>
-				        <td>Orange</td>
-				        <td>102</td>
-				      </tr>
-				      <tr>
-				        <td>2</td>
-				        <td>Guava</td>
-				        <td>8</td>
-				      </tr>
-				      <tr>
-				        <td>3</td>
-				        <td>Grape</td>
-				        <td>59</td>
-				      </tr>
-				      <tr>
-				        <td>4</td>
-				        <td>Apple</td>
-				        <td>45</td>
-				      </tr>
-				    </tbody>
+				    <tbody id="wlist-result"></tbody>
 				 </table>
+
+				 <!-- <tr>
+					 <td>1</td>
+					 <td>Orange</td>
+					 <td>102</td>
+				 </tr>
+				 <tr>
+					 <td>2</td>
+					 <td>Guava</td>
+					 <td>8</td>
+				 </tr>
+				 <tr>
+					 <td>3</td>
+					 <td>Grape</td>
+					 <td>59</td>
+				 </tr>
+				 <tr>
+					 <td>4</td>
+					 <td>Apple</td>
+					 <td>45</td>
+				 </tr> -->
 			</article>
 
 			<!-- Hla'alua -->
