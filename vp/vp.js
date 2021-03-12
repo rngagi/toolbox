@@ -47,7 +47,8 @@ function samp(mylang){
 		{samptxt = "auninia langica arinani? tam macici arinania tahliaria. auninia langica matata? taiacuami muacʉkʉhlʉka pariavaratʉ. hliumusahlʉ i kiruvana? ausii hliruhlahlavusa hla talasululunga. tam macici arinani tam hlimurutumuhlu aku mururahlʉnga. musapuaili masinu mima iiama tamucu’ai mavacangʉ. amihla kiahlahlamulangicana miataisami umusahlʉ matata. murumita vahlita atʉhlʉngʉkia mahlavaa saunga. mauruhla matata aramasarʉmʉ. macahlia kuhlaisai maritatumuhlu kiatikuru iniciki kuaracarʉmʉ.";}
     if (mylang == "xnb") //卡-neen nganai musu? 你叫什麼名字？
 		{samptxt = "macangcangarʉ soni arakukun kasua, nakai mareen, ka’aan pa ku tavarʉ’ʉ nganai musu? sua nganai maku ia, ’Akori Ka’angena, kesoni kangvang kasua, neen nganai musu? sua nganai maku ia, ’Angai, ’esi Mangacun tanasa maku. kesoni pa kasua, sua cuma mataa cina musu ia, Mu’u mataa Na’u kara? ʉʉ’ʉ, miseen kasu tavarʉ’ʉ? nimavici cu cuma mataa cima maku, mookusa tanasa musu rovʉvʉ, ’akia kasu meesua. makasoin ia, maatʉa kita Ka’angena kavangvang. ʉʉ’ʉ, cani ta’avu tanasa mita. imova! miaa mosikarʉ ku tupuru misoon ia, ’una cau makasi, capai mita makai kan kinvara. cucuru kara? tuturoo mamarang musu, ’arupacʉ’ʉra kita soni. kacangcangarʉn soni, ’apatarakanaang kita nesi.";}
-
+		if (mylang == "sdq-tt") //賽德克-Uyas mlawa 呼喚歌
+		{samptxt = "Patis uyas mlawa ka nii, niqan bale ka bnarah na, slhaye ta muuyas hayan ho? Tama mnosa su inu? Kedu bale napa su camac. Bubu mnosa su inu? Kedu bale snkegan su nuqah yqeyaq hii. Riso mnosa su inu ha? Slluhe dapin ndaan rdrudan ta. Weewa mnosa su inu ha? Slhai ka tminun pala pniri ga. Laqi mnosa su inu ha? Sprui ka rdrudan ta ma slhai ka Gaya ta.";}
 	input.value = samptxt;
 }
 
@@ -69,6 +70,7 @@ function lang(mylang){
     if (mylang == "sdq"){voc = sdq;}
     if (mylang == "sxr"){voc = sxr;}
     if (mylang == "xnb"){voc = xnb;}
+		if (mylang == "sdq-tt"){voc = sdq;}
 	return voc;
 }
 
@@ -88,14 +90,14 @@ function wordlist(mystr,mylang){
 function splitwords(mystr,mylang){
 	//產出文本詞表 wlist
 	wlist = wordlist(mystr,mylang);
-	
+
 	//確定文本語言
 	var voc = lang(mylang);
 
 	//查詞並產出 result
 	var result = '';
 	for(var i=0;i<wlist.length;i++){
-		var tagged = wlist[i];		
+		var tagged = wlist[i];
 		for(var j=0;j<voc.length;j++){
 			if(wlist[i].toLowerCase()==voc[j].lex.toLowerCase()){tagged = '<span class="lv'+voc[j].lv+'">'+tagged+'</span>';break;}
 		}

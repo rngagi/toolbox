@@ -12,14 +12,24 @@
 	<!--以上為預覽-->
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<!--以上為favicon-->
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all">
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+	<!-- 以上不知道 -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
+	<link href="https://unpkg.com/bootstrap-table@1.18.2/dist/bootstrap-table.min.css" rel="stylesheet">
+	<!-- 以上為Bootstrap -->
 	<script src='voc.js'></script>
 	<script src='vp.js'></script>
+	<!-- 以上為我們的東東 -->
+
 </head>
 
 <body class="is-preload">
@@ -338,6 +348,54 @@
 				<p>
 				<div id="output-sdq" class="output"></div>
 				</p>
+			</article>
+
+			<!-- Seediq-TableTesting -->
+			<article id="sdq-tt">
+				<h2 class="major">賽德克語（德固達雅）</h2>
+				<span class="image main"><img src="images/sdq.png" alt="" /></span>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				<p>範例：<span class="sample" onclick="samp('sdq-tt');">Uyas mlawa 呼喚歌</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-sdq-tt" class="input" onkeypress="return searchKeyPress(event,'sdq-tt');"></textarea></p>
+				<p><button id="go-sdq-tt" onclick="conv('sdq-tt');">標記</button>
+					<button onclick="clean('sdq-tt');">清空文字</button>
+				</p>
+				<p><button onclick="location.href='index.html'; clean('sdq-tt');">回首頁</button><button onclick="location.href='index.html#menu'; clean('sdq-tt');">回選單</button></p>
+				<p>
+				<div id="output-sdq-tt" class="output"></div>
+				</p>
+				<table id="sort-table" data-toggle="table">
+				    <thead>
+				      <tr>
+				        <th data-field="id" data-sortable="true">ID</th>
+				        <th data-field="name" data-sortable="true">Item Name</th>
+				        <th data-field="price" data-sortable="true">Item Price</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				      <tr>
+				        <td>1</td>
+				        <td>Orange</td>
+				        <td>102</td>
+				      </tr>
+				      <tr>
+				        <td>2</td>
+				        <td>Guava</td>
+				        <td>8</td>
+				      </tr>
+				      <tr>
+				        <td>3</td>
+				        <td>Grape</td>
+				        <td>59</td>
+				      </tr>
+				      <tr>
+				        <td>4</td>
+				        <td>Apple</td>
+				        <td>45</td>
+				      </tr>
+				    </tbody>
+				 </table>
 			</article>
 
 			<!-- Hla'alua -->
