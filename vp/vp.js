@@ -91,18 +91,32 @@ function splitwords(mystr,mylang){
 	//產出文本詞表 wlist
 	wlist = wordlist(mystr,mylang);
 
-	//確定文本語言
+	//選擇文本輸入語言之JSON
 	var voc = lang(mylang);
+
+	//詞彙儲存用 tlist
+	var tlist = [];
 
 	//查詞並產出 result
 	var result = '';
 	for(var i=0;i<wlist.length;i++){
 		var tagged = wlist[i];
 		for(var j=0;j<voc.length;j++){
-			if(wlist[i].toLowerCase()==voc[j].lex.toLowerCase()){tagged = '<span class="lv'+voc[j].lv+'">'+tagged+'</span>';break;}
+			if(wlist[i].toLowerCase()==voc[j].lex.toLowerCase()){
+				tagged = '<span class="lv'+voc[j].lv+'">'+tagged+'</span>';
+				tlist.push(voc[j]);
+				break;
+			}
 		}
 		result += tagged;
 	}
+
+	tlist = tlist.filter(function(element, index, arr){
+		return arr.indexOf(element) === index;
+	});
+
+	//console.log(tlist);
+	wordlisttable(tlist,mylang);
 	return result;
 }
 
@@ -123,22 +137,18 @@ function searchKeyPress(e, mylang){
 	return true;
 }
 
-function wordlisttable(mylang){
-	//產出文本詞表 wlist
-	wlist = wordlist(mystr,mylang);
-	//確定文本語言
-	var voc = lang(mylang);
+function wordlisttable(tlist,mylang){
+	var tableoutput = document.getElementById("tableoutput-"+mylang);
 
+	//生出表格
+	var content = '<table data-toggle="table"><thead><tr><th data-field="word" data-sortable="true">詞項</th><th data-field="meaning" data-sortable="true">中文解釋</th><th data-field="level" data-sortable="true">級別</th></tr></thead>';
+	content += '<tbody>';
 
-// 	text = "<table border='1'><tr>";
-//
-// 	for (i = 0; i < 2; i++) {
-// 	  text += "<td>" + wlist[i] + "</td>";
-// 	}
-//
-// 	text += "</tr></table>";
-//
-// document.getElementById("wlist-result").innerHTML = text;
+	for (i=0;i<tlist.length;i++){
+		content += "<tr><td>"+ tlist[i].lex +"</td><td>"+ tlist[i].zh +"</td><td>"+ tlist[i].lv +"</td></tr>";
+	}
 
+	content += "</tbody></table>";
 
+	tableoutput.innerHTML = content;
 }
