@@ -91,7 +91,7 @@ function splitwords(mystr,mylang){
 	//產出文本詞表 wlist
 	wlist = wordlist(mystr,mylang);
 
-	//確定文本語言
+	//選擇文本輸入語言之JSON
 	var voc = lang(mylang);
 
 	//查詞並產出 result
@@ -121,4 +121,26 @@ function searchKeyPress(e, mylang){
 		return false;
 	}
 	return true;
+}
+
+function wordlisttable(mylang){
+	//產出文本詞表 wlist
+	wlist = wordlist(mystr,mylang);
+	//選擇文本輸入語言之JSON
+	var voc = lang(mylang);
+	//生出表格
+	var tableoutput = '<table><thead><tr><th data-field="word" data-sortable="true">詞項</th><th data-field="meaning" data-sortable="false">中文解釋</th><th data-field="level" data-sortable="true">級別</th></tr></thead>';
+	tableoutput += '<tbody>';
+
+// 	text = "<table border='1'><tr>";
+//
+// 	for (i = 0; i < 2; i++) {
+// 	  text += "<td>" + wlist[i] + "</td>";
+// 	}
+//
+// 	text += "</tr></table>";
+//
+// document.getElementById("wlist-result").innerHTML = text;
+
+
 }
