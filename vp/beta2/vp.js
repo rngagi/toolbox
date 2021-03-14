@@ -139,7 +139,11 @@ function searchKeyPress(e, mylang){
 
 function wordlisttable(tlist,mylang){
 	var tableoutput = document.getElementById("tableoutput-"+mylang);
-
+	//tlist 按照 lex 字母排序
+	tlist.sort(function(a, b) {
+    // boolean false == 0; true == 1
+    return a.lex > b.lex ? 1 : -1;
+	});
 	//生出表格
 	var content = '';
 	for (i=0;i<tlist.length;i++){

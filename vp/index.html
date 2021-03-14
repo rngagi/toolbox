@@ -20,15 +20,6 @@
 	</noscript>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
 	<!-- 以上不知道 -->
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<script src="https://unpkg.com/tableexport.jquery.plugin/tableExport.min.js"></script>
-	<script src="https://unpkg.com/bootstrap-table@1.18.2/dist/bootstrap-table.min.js"></script>
-	<script src="https://unpkg.com/bootstrap-table@1.18.2/dist/bootstrap-table-locale-all.min.js"></script>
-	<script src="https://unpkg.com/bootstrap-table@1.18.2/dist/extensions/export/bootstrap-table-export.min.js"></script>
-	<link href="https://unpkg.com/bootstrap-table@1.18.2/dist/bootstrap-table.min.css" rel="stylesheet">
-	<!-- 以上為Bootstrap -->
 	<script src='voc.js'></script>
 	<script src='vp.js'></script>
 	<!-- 以上為我們的東東 -->
@@ -194,40 +185,15 @@
 				<p>
 				<div id="output-pwn" class="output"></div>
 				</p>
-				<p><div id="tableoutput-pwn" class="tableoutput"></div></p>
 				<p>
-				<table id="sort-table2" data-toggle="table">
-    <thead>
-      <tr>
-        <th data-field="id" data-sortable="true">ID</th>
-        <th data-field="name" data-sortable="true">Item Name</th>
-        <th data-field="price" data-sortable="true">Item Price</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>Orange</td>
-        <td>102</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Guava</td>
-        <td>8</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Grape</td>
-        <td>59</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>Apple</td>
-        <td>45</td>
-      </tr>
-    </tbody>
-  </table>
-	</p>
+					<table>
+						<thead>
+							<tr><th>詞項</th><th>中文解釋</th><th>級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-pwn">
+						</tbody>
+					</table>
+				</p>ㄒ
 			</article>
 
 			<!-- Bunun -->
@@ -266,6 +232,15 @@
 				<p>
 				<div id="output-tsu" class="output"></div>
 				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th>詞項</th><th>中文解釋</th><th>級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-tsu">
+						</tbody>
+					</table>
+				</p>
 			</article>
 
 			<!-- SaySiyat -->
@@ -282,6 +257,15 @@
 				<p><button onclick="location.href='index.html';conv('xsy');">回首頁</button><button onclick="location.href='index.html#menu'; clean('xsy');">回選單</button></p>
 				<p>
 				<div id="output-xsy" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th>詞項</th><th>中文解釋</th><th>級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-xsy">
+						</tbody>
+					</table>
 				</p>
 			</article>
 
@@ -300,6 +284,15 @@
 				<p>
 				<div id="output-tao" class="output"></div>
 				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th>詞項</th><th>中文解釋</th><th>級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-tao">
+						</tbody>
+					</table>
+				</p>
 			</article>
 
 			<!-- Thau -->
@@ -316,6 +309,15 @@
 				<p><button onclick="location.href='index.html'; clean('ssf');">回首頁</button><button onclick="location.href='index.html#menu'; clean('ssf'); conv('ssf');">回選單</button></p>
 				<p>
 				<div id="output-ssf" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th>詞項</th><th>中文解釋</th><th>級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-ssf">
+						</tbody>
+					</table>
 				</p>
 			</article>
 
@@ -334,6 +336,15 @@
 				<p>
 				<div id="output-ckv" class="output"></div>
 				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th>詞項</th><th>中文解釋</th><th>級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-ckv">
+						</tbody>
+					</table>
+				</p>
 			</article>
 
 			<!-- Truku -->
@@ -350,6 +361,15 @@
 				<p><button onclick="location.href='index.html'; clean('trv');">回首頁</button><button onclick="location.href='index.html#menu'; clean('trv');">回選單</button></p>
 				<p>
 				<div id="output-trv" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th>詞項</th><th>中文解釋</th><th>級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-trv">
+						</tbody>
+					</table>
 				</p>
 			</article>
 
@@ -368,6 +388,15 @@
 				<p>
 				<div id="output-ais" class="output"></div>
 				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th>詞項</th><th>中文解釋</th><th>級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-ais">
+						</tbody>
+					</table>
+				</p>
 			</article>
 
 			<!-- Seediq -->
@@ -385,25 +414,14 @@
 				<p>
 				<div id="output-sdq" class="output"></div>
 				</p>
-			</article>
-
-			<!-- Seediq-TableTest -->
-			<article id="sdqtt">
-				<h2 class="major">賽德克語（德固達雅）</h2>
-				<span class="image main"><img src="images/sdq.png" alt="" /></span>
-				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-				<p>範例：<span class="sample" onclick="samp('sdqtt');">Uyas mlawa 呼喚歌</span></p>
-				請在下框輸入欲標示等級的族語：<br>
-				<p><textarea id="input-sdqtt" class="input" onkeypress="return searchKeyPress(event,'sdqtt');"></textarea></p>
-				<p><button id="go-sdqtt" onclick="conv('sdqtt'); wordlisttable('sdqtt');">標記</button>
-					<button onclick="clean('sdqtt');">清空文字</button>
-				</p>
-				<p><button onclick="location.href='index.html'; clean('sdqtt');">回首頁</button><button onclick="location.href='index.html#menu'; clean('sdqtt');">回選單</button></p>
 				<p>
-				<div id="output-sdqtt" class="output"></div>
-				</p>
-				<p>
-				<div id="tableoutput-sdqtt" class="tableoutput"></div>
+					<table>
+						<thead>
+							<tr><th>詞項</th><th>中文解釋</th><th>級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-sdq">
+						</tbody>
+					</table>
 				</p>
 			</article>
 
@@ -422,6 +440,15 @@
 				<p>
 				<div id="output-sxr" class="output"></div>
 				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th>詞項</th><th>中文解釋</th><th>級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-sxr">
+						</tbody>
+					</table>
+				</p>
 			</article>
 
 			<!-- Kanakanavu -->
@@ -438,6 +465,15 @@
 				<p><button onclick="location.href='index.html'; clean('xnb');">回首頁</button><button onclick="location.href='index.html#menu'; clean('xnb');">回選單</button></p>
 				<p>
 				<div id="output-xnb" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th>詞項</th><th>中文解釋</th><th>級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-xnb">
+						</tbody>
+					</table>
 				</p>
 			</article>
 
