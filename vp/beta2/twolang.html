@@ -9,11 +9,11 @@
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
 	<script src='voc.js'></script>
 	<script src='vp.js'></script>
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
-	<link href="https://unpkg.com/bootstrap-table@1.18.2/dist/bootstrap-table.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
 </head>
 
 <body>
@@ -24,7 +24,20 @@
 	<p><textarea id="input-pwn" class="input" onkeypress="return searchKeyPress(event, 'pwn');"></textarea></p>
 	<p><button id="go-pwn" onclick="conv('pwn');">標記</button><button onclick="clean('pwn');">清空</button></p>
 	<p><div id="output-pwn" class="output"></div></p>
-	<p><div id="tableoutput-pwn" class="tableoutput"></div></p>
+	<p>
+		<table data-toggle="table">
+			<thead>
+				<tr>
+					<th data-field="word" data-sortable="true">詞項</th>
+					<th data-field="meaning" data-sortable="true">中文解釋</th>
+					<th data-field="level" data-sortable="true">級別</th>
+				</tr>
+			</thead>
+			<tbody id="tableoutput-pwn">
+
+			</tbody>
+		</table>
+	</p>
 
 	<hr>
 
@@ -36,70 +49,5 @@
 	<p>
 	<div id="output-sdq" class="output"></div>
 	</p>
-
-	<table id="sort-table-sdqtt" data-toggle="table" class="sort-table">
-		<thead>
-			<tr>
-				<th data-field="word" data-sortable="true">詞項</th>
-				<th data-field="meaning" data-sortable="true">中文解釋</th>
-				<th data-field="level" data-sortable="true">級數</th>
-			</tr>
-		</thead>
-		<tbody id="wlist-result">
-			<tr>
-				<td>1</td>
-				<td>Orange</td>
-				<td>102</td>
-			</tr>
-			<tr>
-				<td>2</td>
-				<td>Guava</td>
-				<td>8</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>Grape</td>
-				<td>59</td>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td>Apple</td>
-				<td>45</td>
-			</tr>
-		</tbody>
-	</table>
-	<div>
-	<table id="sort-table" data-toggle="table">
-	 <thead>
-		 <tr>
-			 <th data-field="id" data-sortable="true">ID</th>
-			 <th data-field="name" data-sortable="true">Item Name</th>
-			 <th data-field="price" data-sortable="true">Item Price</th>
-		 </tr>
-	 </thead>
-	 <tbody>
-		 <tr>
-			 <td>1</td>
-			 <td>Orange</td>
-			 <td>102</td>
-		 </tr>
-		 <tr>
-			 <td>2</td>
-			 <td>Guava</td>
-			 <td>8</td>
-		 </tr>
-		 <tr>
-			 <td>3</td>
-			 <td>Grape</td>
-			 <td>59</td>
-		 </tr>
-		 <tr>
-			 <td>4</td>
-			 <td>Apple</td>
-			 <td>45</td>
-		 </tr>
-	 </tbody>
- </table>
-	</div>
-
+<table data-toggle="table"><thead><tr><th data-field="word" data-sortable="true">詞項</th><th data-field="meaning" data-sortable="true">中文解釋</th><th data-field="level" data-sortable="true">級別</th></tr></thead><tbody><tr><td>izua</td><td>那裡</td><td>1</td></tr><tr><td>drusa</td><td>二</td><td>1</td></tr><tr><td>likuljav</td><td>豹</td><td>3</td></tr><tr><td>ita</td><td>一</td><td>1</td></tr><tr><td>calinga</td><td>耳朵</td><td>1</td></tr><tr><td>iku</td><td>尾巴</td><td>2</td></tr></tbody></table>
 </body>

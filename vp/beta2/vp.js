@@ -141,14 +141,10 @@ function wordlisttable(tlist,mylang){
 	var tableoutput = document.getElementById("tableoutput-"+mylang);
 
 	//生出表格
-	var content = '<table data-toggle="table"><thead><tr><th data-field="word" data-sortable="true">詞項</th><th data-field="meaning" data-sortable="true">中文解釋</th><th data-field="level" data-sortable="true">級別</th></tr></thead>';
-	content += '<tbody>';
-
+	var content = '';
 	for (i=0;i<tlist.length;i++){
 		content += "<tr><td>"+ tlist[i].lex +"</td><td>"+ tlist[i].zh +"</td><td>"+ tlist[i].lv +"</td></tr>";
 	}
-
-	content += "</tbody></table>";
 
 	tableoutput.innerHTML = content;
 }
