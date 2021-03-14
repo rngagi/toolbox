@@ -15,13 +15,17 @@
 	<link href="https://unpkg.com/bootstrap-table@1.18.2/dist/bootstrap-table.min.css" rel="stylesheet">
 </head>
 <body>
+
 	<h1>族語詞彙分級標記 - 中排灣語 (beta)</h1>
 	<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
 	<p>範例：<span class="sample" onclick="samp('pwn');">兩隻老虎</span></p>
 	<p><textarea id="input-pwn" class="input" onkeypress="return searchKeyPress(event, 'pwn');"></textarea></p>
 	<p><button id="go-pwn" onclick="conv('pwn');">標記</button><button onclick="clean('pwn');">清空</button></p>
 	<p><div id="output-pwn" class="output"></div></p>
+	<p><div id="tableoutput-pwn" class="tableoutput"></div></p>
+
 	<hr>
+
 	<h1>族語詞彙分級標記 - 賽德克語 (beta)</h1>
 	<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
 	<p>範例：<span class="sample" onclick="samp('sdq');">兩隻老虎</span></p>
