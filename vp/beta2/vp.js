@@ -141,7 +141,7 @@ function wordlisttable(tlist,mylang){
 	var tableoutput = document.getElementById("tableoutput-"+mylang);
 
 	//生出表格
-	var content = '<table><thead><tr><th data-field="word" data-sortable="true">詞項</th><th data-field="meaning" data-sortable="false">中文解釋</th><th data-field="level" data-sortable="true">級別</th></tr></thead>';
+	var content = '<table data-toggle="table"><thead><tr><th data-field="word" data-sortable="true">詞項</th><th data-field="meaning" data-sortable="true">中文解釋</th><th data-field="level" data-sortable="true">級別</th></tr></thead>';
 	content += '<tbody>';
 
 	for (i=0;i<tlist.length;i++){
