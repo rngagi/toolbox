@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<!--Ver. 2.0.1-->
+<!--Ver. 2.0.2-->
 
 <html>
 
@@ -7,7 +7,7 @@
 	<title>族語詞彙分級標記</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<meta property="og:description" content="原住民族語言學習詞表分級標記小工具" />
+	<meta property="og:description" content="farukuz - 原住民族語言學習詞表分級標記小工具" />
 	<meta property="og:image" content="images/img.png" />
 	<!--以上為預覽-->
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -38,9 +38,9 @@
 			</div>
 			<div class="content">
 				<div class="inner">
-					<h1>族語詞彙分級標記</h1>
+					<h1>farukuz</h1>
 					<h3>原住民族語言學習詞表分級標記小工具</h3>
-					<h4><a href="#about">Ver.2.0.1</a></h4>
+					<h4><a href="#about">Ver.2.0.2</a></h4>
 				</div>
 			</div>
 			<nav>
@@ -178,10 +178,12 @@
 				<p>範例：<span class="sample" onclick="samp('pwn');">兩隻老虎</span></p>
 				請在下框輸入欲標示等級的族語：<br>
 				<p><textarea id="input-pwn" class="input" onkeypress="return searchKeyPress(event, 'pwn');"></textarea></p>
-				<p><button id="go-pwn" onclick="conv('pwn');">標記</button>
+				<p>
+					<button id="go-pwn" onclick="conv('pwn');">標記</button>
 					<button onclick="clean('pwn');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('pwn');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('pwn');">回選單</button>
 				</p>
-				<p><button onclick="location.href='index.html'; clean('pwn');">回首頁</button><button onclick="location.href='index.html#menu'; clean('pwn');">回選單</button></p>
 				<p>
 				<div id="output-pwn" class="output"></div>
 				</p>
@@ -225,10 +227,12 @@
 				<p>範例：<span class="sample" onclick="samp('tsu');">mʉchʉ 下雨</span></p>
 				請在下框輸入欲標示等級的族語：<br>
 				<p><textarea id="input-tsu" class="input" onkeypress="return searchKeyPress(event, 'tsu');"></textarea></p>
-				<p><button id="go-tsu" onclick="conv('tsu');">標記</button>
+				<p>
+					<button id="go-tsu" onclick="conv('tsu');">標記</button>
 					<button onclick="clean('tsu');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('tsu');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('tsu');">回選單</button>
 				</p>
-				<p><button onclick="location.href='index.html'; clean('tsu');">回首頁</button><button onclick="location.href='index.html#menu'; clean('tsu');">回選單</button></p>
 				<p>
 				<div id="output-tsu" class="output"></div>
 				</p>
@@ -251,10 +255,12 @@
 				<p>範例：<span class="sample" onclick="samp('xsy');">So’o Sin hiya’en? 你叫什麼名字？</span></p>
 				請在下框輸入欲標示等級的族語：<br>
 				<p><textarea id="input-xsy" class="input" onkeypress="return searchKeyPress(event,'xsy');"></textarea></p>
-				<p><button id="go-xsy" onclick="conv('xsy');">標記</button>
+				<p>
+					<button id="go-xsy" onclick="conv('xsy');">標記</button>
 					<button onclick="clean('xsy');">清空文字</button>
+					<button onclick="location.href='index.html';conv('xsy');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('xsy');">回選單</button>
 				</p>
-				<p><button onclick="location.href='index.html';conv('xsy');">回首頁</button><button onclick="location.href='index.html#menu'; clean('xsy');">回選單</button></p>
 				<p>
 				<div id="output-xsy" class="output"></div>
 				</p>
@@ -277,10 +283,12 @@
 				<p>範例：<span class="sample" onclick="samp('tao');">sino o ngaran mo? 你叫什麼名字？</span></p>
 				請在下框輸入欲標示等級的族語：<br>
 				<p><textarea id="input-tao" class="input" onkeypress="return searchKeyPress(event,'tao');"></textarea></p>
-				<p><button id="go-tao" onclick="conv('tao');">標記</button>
+				<p>
+					<button id="go-tao" onclick="conv('tao');">標記</button>
 					<button onclick="clean('tao');">清空文字</button>
+					<button onclick="location.href='index.html';conv('tao');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('tao');">回選單</button>
 				</p>
-				<p><button onclick="location.href='index.html';conv('tao');">回首頁</button><button onclick="location.href='index.html#menu'; clean('tao');">回選單</button></p>
 				<p>
 				<div id="output-tao" class="output"></div>
 				</p>
@@ -303,10 +311,12 @@
 				<p>範例：<span class="sample" onclick="samp('ssf');">lus’an a quyash 過年之歌</span></p>
 				請在下框輸入欲標示等級的族語：<br>
 				<p><textarea id="input-ssf" class="input" onkeypress="return searchKeyPress(event, 'ssf');"></textarea></p>
-				<p><button id="go-ssf" onclick="conv('ssf');">標記</button>
+				<p>
+					<button id="go-ssf" onclick="conv('ssf');">標記</button>
 					<button onclick="clean('ssf');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('ssf');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('ssf'); conv('ssf');">回選單</button>
 				</p>
-				<p><button onclick="location.href='index.html'; clean('ssf');">回首頁</button><button onclick="location.href='index.html#menu'; clean('ssf'); conv('ssf');">回選單</button></p>
 				<p>
 				<div id="output-ssf" class="output"></div>
 				</p>
@@ -329,10 +339,12 @@
 				<p>範例：<span class="sample" onclick="samp('ckv');">naquni dedan setangi? 今天天氣怎麼樣？</span></p>
 				請在下框輸入欲標示等級的族語：<br>
 				<p><textarea id="input-ckv" class="input" onkeypress="return searchKeyPress(event,'ckv');"></textarea></p>
-				<p><button id="go-ckv" onclick="conv('ckv');">標記</button>
+				<p>
+					<button id="go-ckv" onclick="conv('ckv');">標記</button>
 					<button onclick="clean('ckv');">清空文字</button>
+					<button onclick="location.href='index.html';conv('ckv');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('ckv');">回選單</button>
 				</p>
-				<p><button onclick="location.href='index.html';conv('ckv');">回首頁</button><button onclick="location.href='index.html#menu'; clean('ckv');">回選單</button></p>
 				<p>
 				<div id="output-ckv" class="output"></div>
 				</p>
@@ -355,10 +367,12 @@
 				<p>範例：<span class="sample" onclick="samp('trv');">Smbu hidaw 射太陽（節錄）</span></p>
 				請在下框輸入欲標示等級的族語：<br>
 				<p><textarea id="input-trv" class="input" onkeypress="return searchKeyPress(event, 'trv');"></textarea></p>
-				<p><button id="go-trv" onclick="conv('trv');">標記</button>
+				<p>
+					<button id="go-trv" onclick="conv('trv');">標記</button>
 					<button onclick="clean('trv');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('trv');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('trv');">回選單</button>
 				</p>
-				<p><button onclick="location.href='index.html'; clean('trv');">回首頁</button><button onclick="location.href='index.html#menu'; clean('trv');">回選單</button></p>
 				<p>
 				<div id="output-trv" class="output"></div>
 				</p>
@@ -381,10 +395,12 @@
 				<p>範例：<span class="sample" onclick="samp('ais');">cima ku ngangan nu misu? 你叫什麼名字？</span></p>
 				請在下框輸入欲標示等級的族語：<br>
 				<p><textarea id="input-ais" class="input" onkeypress="return searchKeyPress(event, 'ais');"></textarea></p>
-				<p><button id="go-ais" onclick="conv('ais');">標記</button>
+				<p>
+					<button id="go-ais" onclick="conv('ais');">標記</button>
 					<button onclick="clean('ais');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('ais');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('ais');">回選單</button>
 				</p>
-				<p><button onclick="location.href='index.html'; clean('ais');">回首頁</button><button onclick="location.href='index.html#menu'; clean('ais');">回選單</button></p>
 				<p>
 				<div id="output-ais" class="output"></div>
 				</p>
@@ -407,10 +423,12 @@
 				<p>範例：<span class="sample" onclick="samp('sdq');">Uyas mlawa 呼喚歌</span></p>
 				請在下框輸入欲標示等級的族語：<br>
 				<p><textarea id="input-sdq" class="input" onkeypress="return searchKeyPress(event,'sdq');"></textarea></p>
-				<p><button id="go-sdq" onclick="conv('sdq');">標記</button>
+				<p>
+					<button id="go-sdq" onclick="conv('sdq');">標記</button>
 					<button onclick="clean('sdq');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('sdq');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('sdq');">回選單</button>
 				</p>
-				<p><button onclick="location.href='index.html'; clean('sdq');">回首頁</button><button onclick="location.href='index.html#menu'; clean('sdq');">回選單</button></p>
 				<p>
 				<div id="output-sdq" class="output"></div>
 				</p>
@@ -433,10 +451,12 @@
 				<p>範例：<span class="sample" onclick="samp('sxr');">auninia langica arinani? 今天天氣怎麼樣？</span></p>
 				請在下框輸入欲標示等級的族語：<br>
 				<p><textarea id="input-sxr" class="input" onkeypress="return searchKeyPress(event, 'sxr');"></textarea></p>
-				<p><button id="go-sxr" onclick="conv('sxr');">標記</button>
+				<p>
+					<button id="go-sxr" onclick="conv('sxr');">標記</button>
 					<button onclick="clean('sxr');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('sxr');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('sxr');">回選單</button>
 				</p>
-				<p><button onclick="location.href='index.html'; clean('sxr');">回首頁</button><button onclick="location.href='index.html#menu'; clean('sxr');">回選單</button></p>
 				<p>
 				<div id="output-sxr" class="output"></div>
 				</p>
@@ -459,10 +479,12 @@
 				<p>範例：<span class="sample" onclick="samp('xnb');">neen nganai musu? 你叫什麼名字？</span></p>
 				請在下框輸入欲標示等級的族語：<br>
 				<p><textarea id="input-xnb" class="input" onkeypress="return searchKeyPress(event,'xnb');"></textarea></p>
-				<p><button id="go-xnb" onclick="conv('xnb');">標記</button>
+				<p>
+					<button id="go-xnb" onclick="conv('xnb');">標記</button>
 					<button onclick="clean('xnb');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('xnb');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('xnb');">回選單</button>
 				</p>
-				<p><button onclick="location.href='index.html'; clean('xnb');">回首頁</button><button onclick="location.href='index.html#menu'; clean('xnb');">回選單</button></p>
 				<p>
 				<div id="output-xnb" class="output"></div>
 				</p>
@@ -493,6 +515,8 @@
 				<span class="image main"><img src="images/ver.png" alt="" /></span>
 				<h3>目前支援語別：</h3>
 				賽德克語（德固達雅）、邵語、太魯閣語、拉阿魯哇語、卡那卡那富語、賽夏語、鄒語、噶瑪蘭語、達悟語。<p>
+				<h3>Ver.2.0.2 </h3>
+				修正按鈕位置。<p>
 				<h3>Ver.2.0.1 </h3>
 				小幅修正詞表。<p>
 				<h3>Ver.2.0.0 </h3>
