@@ -78,7 +78,13 @@ function wordlist(mystr,mylang){
 	var wlist = [];
 	var myword = '';
 	for(var i=0;i<mystr.length;i++){
-		if(mystr[i].match(/^[a-z0-9^éṟɨʉ’]+$/i))
+		var regex = /^[a-z0-9^éṟɨʉ’]+$/i; //define regular expression
+		
+		/*added the sybmol : for SaiSiyat*/
+		if(mylang == "xsy")
+			{regex = /^[a-z0-9^éṟɨʉ’:]+$/i;}
+		
+		if(mystr[i].match(regex))
 			{myword+=mystr[i];}
 		else
 			{wlist.push(myword); wlist.push(mystr[i]); myword='';}
