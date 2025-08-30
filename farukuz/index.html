@@ -20,7 +20,6 @@
 	</noscript>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
 	<!-- 以上不知道 -->
-	<script src='voc.js'></script>
 	<script src='vp.js'></script>
 	<!-- 以上為我們的東東 -->
 
@@ -40,7 +39,7 @@
 				<div class="inner">
 					<h1>farukuz</h1>
 					<h3>原住民族語言學習詞表分級標記小工具</h3>
-					<h4><a href="#about">Ver.2.0.2</a></h4>
+					<h4><a href="#about">Ver.3.0.0</a></h4>
 				</div>
 			</div>
 			<nav>
@@ -63,308 +62,289 @@
 			<article id="menu">
 				<h2 class="major">語言選擇</h2>
 				<span class="image main"><img src="images/menu.png" alt="" /></span>
-				<!-- <p><li><a href="#ami">阿美語</a></li></p> -->
-				<!-- <p><li><a href="#tay">泰雅語</a></li></p> -->
-				<!-- <p><li><a href="#pwn">排灣語</a></li></p> -->
-				<!-- <p><li><a href="#bnn">布農語</a></li></p> -->
-				<!-- <p><li><a href="#pyu">卑南語</a></li></p> -->
-				<!-- <p><li><a href="#dru">魯凱語</a></li></p> -->
-				<p>
-					<li><a href="#tsu">鄒語</a></li>
-				</p>
-				<p>
-					<li><a href="#xsy">賽夏語</a></li>
-				</p>
-				<p>
-					<li><a href="#tao">達悟語</a></li>
-				</p>
-				<p>
-					<li><a href="#ssf">邵語</a></li>
-				</p>
-				<p>
-					<li><a href="#ckv">噶瑪蘭語</a></li>
-				</p>
-				<p>
-					<li><a href="#trv">太魯閣語</a></li>
-				</p>
-				<p>
-					<li><a href="#ais">撒奇萊雅語</a></li>
-				</p>
-				<p>
-					<li><a href="#sdq">賽德克語</a></li>
-				</p>
-				<p>
-					<li><a href="#sxr">拉阿魯哇語</a></li>
-				</p>
-				<p>
-					<li><a href="#xnb">卡那卡那富語</a></li>
-				</p>
+				<div class="language-selector">
+					<p>請選擇您要使用的原住民族語言：</p>
+					<div class="field">
+						<select id="language-dropdown">
+							<option value="">請選擇語言...</option>
+							<option value="ata_sq">賽考利克泰雅語</option>
+							<option value="ata_su">澤敖利泰雅語</option>
+							<option value="ata_ml">汶水泰雅語</option>
+							<option value="ata_pl">萬大泰雅語</option>
+							<option value="ata_sk">四季泰雅語</option>
+							<option value="ata_kl">宜蘭澤敖利泰雅語</option>
+							<option value="sed_to">都達賽德克語</option>
+							<option value="sed_tg">德固達雅賽德克語</option>
+							<option value="sed_tr">德鹿谷賽德克語</option>
+							<option value="trv">太魯閣語</option>
+							<option value="tso">鄒語</option>
+							<option value="knv">卡那卡那富語</option>
+							<option value="hla">拉阿魯哇語</option>
+							<option value="pai_es">東排灣語</option>
+							<option value="pai_nt">北排灣語</option>
+							<option value="pai_ct">中排灣語</option>
+							<option value="pai_st">南排灣語</option>
+							<option value="ruk_es">東魯凱語</option>
+							<option value="ruk_bd">霧台魯凱語</option>
+							<option value="ruk_tw">大武魯凱語</option>
+							<option value="ruk_tn">多納魯凱語</option>
+							<option value="ruk_mg">茂林魯凱語</option>
+							<option value="ruk_mn">萬山魯凱語</option>
+							<option value="ami_nt">南勢阿美語</option>
+							<option value="ami_hk">秀姑巒阿美語</option>
+							<option value="ami_ha">海岸阿美語</option>
+							<option value="ami_ml">馬蘭阿美語</option>
+							<option value="ami_hc">恆春阿美語</option>
+							<option value="puy_py">南王卑南語</option>
+							<option value="puy_tp">知本卑南語</option>
+							<option value="puy_ws">西群卑南語</option>
+							<option value="puy_ks">建和卑南語</option>
+							<option value="bun_td">卓群布農語</option>
+							<option value="bun_bh">卡群布農語</option>
+							<option value="bun_vt">丹群布農語</option>
+							<option value="bun_bn">巒群布農語</option>
+							<option value="bun_ib">郡群布農語</option>
+							<option value="say">賽夏語</option>
+							<option value="tha">邵語</option>
+							<option value="kav">噶瑪蘭語</option>
+							<option value="sak">撒奇萊雅語</option>
+							<option value="yam">雅美語</option>
+						</select>
+					</div>
+					<p>
+						<button id="enter-language" onclick="enterLanguage()">進入選擇的語言</button>
+					</p>
+				</div>
 			</article>
 
-			<!-- inter-menu -->
-			<article id="intermenu">
-				<h2 class="major">語言選擇（內部進度）</h2>
-				<span class="image main"><img src="images/menu.png" alt="" /></span>
-				N:還沒動 H:動一半 F: 完成
-				<p>
-					<li><a href="#ami">N阿美語</a></li>
-				</p>
-				<p>
-					<li><a href="#tay">N泰雅語</a></li>
-				</p>
-				<p>
-					<li><a href="#pwn">H排灣語</a></li>
-				</p>
-				<p>
-					<li><a href="#bnn">N布農語</a></li>
-				</p>
-				<p>
-					<li><a href="#pyu">N卑南語</a></li>
-				</p>
-				<p>
-					<li><a href="#dru">N魯凱語</a></li>
-				</p>
-				<p>
-					<li><a href="#tsu">F鄒語</a></li>
-				</p>
-				<p>
-					<li><a href="#xsy">F賽夏語</a></li>
-				</p>
-				<p>
-					<li><a href="#tao">F達悟語</a></li>
-				</p>
-				<p>
-					<li><a href="#ssf">F邵語</a></li>
-				</p>
-				<p>
-					<li><a href="#ckv">F噶瑪蘭語</a></li>
-				</p>
-				<p>
-					<li><a href="#trv">F太魯閣語</a></li>
-				</p>
-				<p>
-					<li><a href="#ais">F撒奇萊雅語</a></li>
-				</p>
-				<p>
-					<li><a href="#sdq">F賽德克語</a></li>
-				</p>
-				<p>
-					<li><a href="#sxr">F拉阿魯哇語</a></li>
-				</p>
-				<p>
-					<li><a href="#xnb">F卡那卡那富語</a></li>
-				</p>
-			</article>
-
-			<!-- Amis -->
-			<article id="ami">
-				<h2 class="major">阿美語</h2>
-				<span class="image main"><img src="images/ami.png" alt="" /></span>
-				<span class="image main"><img src="images/working.png" alt="" /></span>
-			</article>
-
-			<!-- Atayal -->
-			<article id="tay">
-				<h2 class="major">泰雅語</h2>
-				<span class="image main"><img src="images/tay.png" alt="" /></span>
-				<span class="image main"><img src="images/working.png" alt="" /></span>
-			</article>
-
-			<!-- Payuan -->
-			<article id="pwn">
-				<h2 class="major">排灣語</h2>
-				<span class="image main"><img src="images/pwn.png" alt="" /></span>
+			<article id="ata_sq">
+				<h2 class="major">賽考利克泰雅語</h2>
 				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-				<p>範例：<span class="sample" onclick="samp('pwn');">兩隻老虎</span></p>
 				請在下框輸入欲標示等級的族語：<br>
-				<p><textarea id="input-pwn" class="input" onkeypress="return searchKeyPress(event, 'pwn');"></textarea></p>
+				<p><textarea id="input-ata_sq" class="input" onkeypress="return searchKeyPress(event, 'ata_sq');"></textarea></p>
 				<p>
-					<button id="go-pwn" onclick="conv('pwn');">標記</button>
-					<button onclick="clean('pwn');">清空文字</button>
-					<button onclick="location.href='index.html'; clean('pwn');">回首頁</button>
-					<button onclick="location.href='index.html#menu'; clean('pwn');">回選單</button>
+					<button id="go-ata_sq" onclick="conv('ata_sq');">標記</button>
+					<button onclick="clean('ata_sq');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('ata_sq');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('ata_sq');">回選單</button>
 				</p>
 				<p>
-				<div id="output-pwn" class="output"></div>
+					<div id="output-ata_sq" class="output"></div>
 				</p>
 				<p>
 					<table>
 						<thead>
 							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
 						</thead>
-						<tbody id="tableoutput-pwn">
+						<tbody id="tableoutput-ata_sq">
 						</tbody>
 					</table>
-				</p>ㄒ
+				</p>
 			</article>
 
-			<!-- Bunun -->
-			<article id="bnn">
-				<h2 class="major">布農語</h2>
-				<span class="image main"><img src="images/bnn.png" alt="" /></span>
-				<span class="image main"><img src="images/working.png" alt="" /></span>
-			</article>
-
-			<!-- Pinuyumayan -->
-			<article id="pyu">
-				<h2 class="major">卑南語</h2>
-				<span class="image main"><img src="images/pyu.png" alt="" /></span>
-				<span class="image main"><img src="images/working.png" alt="" /></span>
-			</article>
-
-			<!-- Drekai -->
-			<article id="dru">
-				<h2 class="major">魯凱語</h2>
-				<span class="image main"><img src="images/dru.png" alt="" /></span>
-				<span class="image main"><img src="images/working.png" alt="" /></span>
-			</article>
-
-			<!-- Cou -->
-			<article id="tsu">
-				<h2 class="major">鄒語</h2>
-				<span class="image main"><img src="images/tsu.png" alt="" /></span>
+			<article id="ata_su">
+				<h2 class="major">澤敖利泰雅語</h2>
 				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-				<p>範例：<span class="sample" onclick="samp('tsu');">mʉchʉ 下雨</span></p>
 				請在下框輸入欲標示等級的族語：<br>
-				<p><textarea id="input-tsu" class="input" onkeypress="return searchKeyPress(event, 'tsu');"></textarea></p>
+				<p><textarea id="input-ata_su" class="input" onkeypress="return searchKeyPress(event, 'ata_su');"></textarea></p>
 				<p>
-					<button id="go-tsu" onclick="conv('tsu');">標記</button>
-					<button onclick="clean('tsu');">清空文字</button>
-					<button onclick="location.href='index.html'; clean('tsu');">回首頁</button>
-					<button onclick="location.href='index.html#menu'; clean('tsu');">回選單</button>
+					<button id="go-ata_su" onclick="conv('ata_su');">標記</button>
+					<button onclick="clean('ata_su');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('ata_su');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('ata_su');">回選單</button>
 				</p>
 				<p>
-				<div id="output-tsu" class="output"></div>
+					<div id="output-ata_su" class="output"></div>
 				</p>
 				<p>
 					<table>
 						<thead>
 							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
 						</thead>
-						<tbody id="tableoutput-tsu">
+						<tbody id="tableoutput-ata_su">
 						</tbody>
 					</table>
 				</p>
 			</article>
 
-			<!-- SaySiyat -->
-			<article id="xsy">
-				<h2 class="major">賽夏語</h2>
-				<span class="image main"><img src="images/xsy.png" alt="" /></span>
+			<article id="ata_ml">
+				<h2 class="major">汶水泰雅語</h2>
 				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-				<p>範例：<span class="sample" onclick="samp('xsy');">So’o Sin hiya’en? 你叫什麼名字？</span></p>
 				請在下框輸入欲標示等級的族語：<br>
-				<p><textarea id="input-xsy" class="input" onkeypress="return searchKeyPress(event,'xsy');"></textarea></p>
+				<p><textarea id="input-ata_ml" class="input" onkeypress="return searchKeyPress(event, 'ata_ml');"></textarea></p>
 				<p>
-					<button id="go-xsy" onclick="conv('xsy');">標記</button>
-					<button onclick="clean('xsy');">清空文字</button>
-					<button onclick="location.href='index.html';conv('xsy');">回首頁</button>
-					<button onclick="location.href='index.html#menu'; clean('xsy');">回選單</button>
+					<button id="go-ata_ml" onclick="conv('ata_ml');">標記</button>
+					<button onclick="clean('ata_ml');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('ata_ml');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('ata_ml');">回選單</button>
 				</p>
 				<p>
-				<div id="output-xsy" class="output"></div>
+					<div id="output-ata_ml" class="output"></div>
 				</p>
 				<p>
 					<table>
 						<thead>
 							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
 						</thead>
-						<tbody id="tableoutput-xsy">
+						<tbody id="tableoutput-ata_ml">
 						</tbody>
 					</table>
 				</p>
 			</article>
 
-			<!-- Tao -->
-			<article id="tao">
-				<h2 class="major">達悟語</h2>
-				<span class="image main"><img src="images/tao.png" alt="" /></span>
+			<article id="ata_pl">
+				<h2 class="major">萬大泰雅語</h2>
 				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-				<p>範例：<span class="sample" onclick="samp('tao');">sino o ngaran mo? 你叫什麼名字？</span></p>
 				請在下框輸入欲標示等級的族語：<br>
-				<p><textarea id="input-tao" class="input" onkeypress="return searchKeyPress(event,'tao');"></textarea></p>
+				<p><textarea id="input-ata_pl" class="input" onkeypress="return searchKeyPress(event, 'ata_pl');"></textarea></p>
 				<p>
-					<button id="go-tao" onclick="conv('tao');">標記</button>
-					<button onclick="clean('tao');">清空文字</button>
-					<button onclick="location.href='index.html';conv('tao');">回首頁</button>
-					<button onclick="location.href='index.html#menu'; clean('tao');">回選單</button>
+					<button id="go-ata_pl" onclick="conv('ata_pl');">標記</button>
+					<button onclick="clean('ata_pl');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('ata_pl');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('ata_pl');">回選單</button>
 				</p>
 				<p>
-				<div id="output-tao" class="output"></div>
+					<div id="output-ata_pl" class="output"></div>
 				</p>
 				<p>
 					<table>
 						<thead>
 							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
 						</thead>
-						<tbody id="tableoutput-tao">
+						<tbody id="tableoutput-ata_pl">
 						</tbody>
 					</table>
 				</p>
 			</article>
 
-			<!-- Thau -->
-			<article id="ssf">
-				<h2 class="major">邵語</h2>
-				<span class="image main"><img src="images/ssf.png" alt="" /></span>
+			<article id="ata_sk">
+				<h2 class="major">四季泰雅語</h2>
 				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-				<p>範例：<span class="sample" onclick="samp('ssf');">lus’an a quyash 過年之歌</span></p>
 				請在下框輸入欲標示等級的族語：<br>
-				<p><textarea id="input-ssf" class="input" onkeypress="return searchKeyPress(event, 'ssf');"></textarea></p>
+				<p><textarea id="input-ata_sk" class="input" onkeypress="return searchKeyPress(event, 'ata_sk');"></textarea></p>
 				<p>
-					<button id="go-ssf" onclick="conv('ssf');">標記</button>
-					<button onclick="clean('ssf');">清空文字</button>
-					<button onclick="location.href='index.html'; clean('ssf');">回首頁</button>
-					<button onclick="location.href='index.html#menu'; clean('ssf'); conv('ssf');">回選單</button>
+					<button id="go-ata_sk" onclick="conv('ata_sk');">標記</button>
+					<button onclick="clean('ata_sk');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('ata_sk');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('ata_sk');">回選單</button>
 				</p>
 				<p>
-				<div id="output-ssf" class="output"></div>
+					<div id="output-ata_sk" class="output"></div>
 				</p>
 				<p>
 					<table>
 						<thead>
 							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
 						</thead>
-						<tbody id="tableoutput-ssf">
+						<tbody id="tableoutput-ata_sk">
 						</tbody>
 					</table>
 				</p>
 			</article>
 
-			<!-- Kebalan -->
-			<article id="ckv">
-				<h2 class="major">噶瑪蘭語</h2>
-				<span class="image main"><img src="images/ckv.png" alt="" /></span>
+			<article id="ata_kl">
+				<h2 class="major">宜蘭澤敖利泰雅語</h2>
 				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-				<p>範例：<span class="sample" onclick="samp('ckv');">naquni dedan setangi? 今天天氣怎麼樣？</span></p>
 				請在下框輸入欲標示等級的族語：<br>
-				<p><textarea id="input-ckv" class="input" onkeypress="return searchKeyPress(event,'ckv');"></textarea></p>
+				<p><textarea id="input-ata_kl" class="input" onkeypress="return searchKeyPress(event, 'ata_kl');"></textarea></p>
 				<p>
-					<button id="go-ckv" onclick="conv('ckv');">標記</button>
-					<button onclick="clean('ckv');">清空文字</button>
-					<button onclick="location.href='index.html';conv('ckv');">回首頁</button>
-					<button onclick="location.href='index.html#menu'; clean('ckv');">回選單</button>
+					<button id="go-ata_kl" onclick="conv('ata_kl');">標記</button>
+					<button onclick="clean('ata_kl');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('ata_kl');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('ata_kl');">回選單</button>
 				</p>
 				<p>
-				<div id="output-ckv" class="output"></div>
+					<div id="output-ata_kl" class="output"></div>
 				</p>
 				<p>
 					<table>
 						<thead>
 							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
 						</thead>
-						<tbody id="tableoutput-ckv">
+						<tbody id="tableoutput-ata_kl">
 						</tbody>
 					</table>
 				</p>
 			</article>
 
-			<!-- Truku -->
+			<article id="sed_to">
+				<h2 class="major">都達賽德克語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-sed_to" class="input" onkeypress="return searchKeyPress(event, 'sed_to');"></textarea></p>
+				<p>
+					<button id="go-sed_to" onclick="conv('sed_to');">標記</button>
+					<button onclick="clean('sed_to');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('sed_to');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('sed_to');">回選單</button>
+				</p>
+				<p>
+					<div id="output-sed_to" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-sed_to">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="sed_tg">
+				<h2 class="major">德固達雅賽德克語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-sed_tg" class="input" onkeypress="return searchKeyPress(event, 'sed_tg');"></textarea></p>
+				<p>
+					<button id="go-sed_tg" onclick="conv('sed_tg');">標記</button>
+					<button onclick="clean('sed_tg');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('sed_tg');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('sed_tg');">回選單</button>
+				</p>
+				<p>
+					<div id="output-sed_tg" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-sed_tg">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="sed_tr">
+				<h2 class="major">德鹿谷賽德克語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-sed_tr" class="input" onkeypress="return searchKeyPress(event, 'sed_tr');"></textarea></p>
+				<p>
+					<button id="go-sed_tr" onclick="conv('sed_tr');">標記</button>
+					<button onclick="clean('sed_tr');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('sed_tr');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('sed_tr');">回選單</button>
+				</p>
+				<p>
+					<div id="output-sed_tr" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-sed_tr">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
 			<article id="trv">
-				<h2 class="major">太魯閣</h2>
-				<span class="image main"><img src="images/trv.png" alt="" /></span>
+				<h2 class="major">太魯閣語</h2>
 				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-				<p>範例：<span class="sample" onclick="samp('trv');">Smbu hidaw 射太陽（節錄）</span></p>
 				請在下框輸入欲標示等級的族語：<br>
 				<p><textarea id="input-trv" class="input" onkeypress="return searchKeyPress(event, 'trv');"></textarea></p>
 				<p>
@@ -374,7 +354,7 @@
 					<button onclick="location.href='index.html#menu'; clean('trv');">回選單</button>
 				</p>
 				<p>
-				<div id="output-trv" class="output"></div>
+					<div id="output-trv" class="output"></div>
 				</p>
 				<p>
 					<table>
@@ -387,113 +367,802 @@
 				</p>
 			</article>
 
-			<!-- Sakizaya -->
-			<article id="ais">
-				<h2 class="major">撒奇萊雅語</h2>
-				<span class="image main"><img src="images/ais.png" alt="" /></span>
+			<article id="tso">
+				<h2 class="major">鄒語</h2>
 				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-				<p>範例：<span class="sample" onclick="samp('ais');">cima ku ngangan nu misu? 你叫什麼名字？</span></p>
 				請在下框輸入欲標示等級的族語：<br>
-				<p><textarea id="input-ais" class="input" onkeypress="return searchKeyPress(event, 'ais');"></textarea></p>
+				<p><textarea id="input-tso" class="input" onkeypress="return searchKeyPress(event, 'tso');"></textarea></p>
 				<p>
-					<button id="go-ais" onclick="conv('ais');">標記</button>
-					<button onclick="clean('ais');">清空文字</button>
-					<button onclick="location.href='index.html'; clean('ais');">回首頁</button>
-					<button onclick="location.href='index.html#menu'; clean('ais');">回選單</button>
+					<button id="go-tso" onclick="conv('tso');">標記</button>
+					<button onclick="clean('tso');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('tso');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('tso');">回選單</button>
 				</p>
 				<p>
-				<div id="output-ais" class="output"></div>
+					<div id="output-tso" class="output"></div>
 				</p>
 				<p>
 					<table>
 						<thead>
 							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
 						</thead>
-						<tbody id="tableoutput-ais">
+						<tbody id="tableoutput-tso">
 						</tbody>
 					</table>
 				</p>
 			</article>
 
-			<!-- Seediq -->
-			<article id="sdq">
-				<h2 class="major">賽德克語（德固達雅）</h2>
-				<span class="image main"><img src="images/sdq.png" alt="" /></span>
-				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-				<p>範例：<span class="sample" onclick="samp('sdq');">Uyas mlawa 呼喚歌</span></p>
-				請在下框輸入欲標示等級的族語：<br>
-				<p><textarea id="input-sdq" class="input" onkeypress="return searchKeyPress(event,'sdq');"></textarea></p>
-				<p>
-					<button id="go-sdq" onclick="conv('sdq');">標記</button>
-					<button onclick="clean('sdq');">清空文字</button>
-					<button onclick="location.href='index.html'; clean('sdq');">回首頁</button>
-					<button onclick="location.href='index.html#menu'; clean('sdq');">回選單</button>
-				</p>
-				<p>
-				<div id="output-sdq" class="output"></div>
-				</p>
-				<p>
-					<table>
-						<thead>
-							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
-						</thead>
-						<tbody id="tableoutput-sdq">
-						</tbody>
-					</table>
-				</p>
-			</article>
-
-			<!-- Hla'alua -->
-			<article id="sxr">
-				<h2 class="major">拉阿魯哇語</h2>
-				<span class="image main"><img src="images/sxr.png" alt="" /></span>
-				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-				<p>範例：<span class="sample" onclick="samp('sxr');">auninia langica arinani? 今天天氣怎麼樣？</span></p>
-				請在下框輸入欲標示等級的族語：<br>
-				<p><textarea id="input-sxr" class="input" onkeypress="return searchKeyPress(event, 'sxr');"></textarea></p>
-				<p>
-					<button id="go-sxr" onclick="conv('sxr');">標記</button>
-					<button onclick="clean('sxr');">清空文字</button>
-					<button onclick="location.href='index.html'; clean('sxr');">回首頁</button>
-					<button onclick="location.href='index.html#menu'; clean('sxr');">回選單</button>
-				</p>
-				<p>
-				<div id="output-sxr" class="output"></div>
-				</p>
-				<p>
-					<table>
-						<thead>
-							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
-						</thead>
-						<tbody id="tableoutput-sxr">
-						</tbody>
-					</table>
-				</p>
-			</article>
-
-			<!-- Kanakanavu -->
-			<article id="xnb">
+			<article id="knv">
 				<h2 class="major">卡那卡那富語</h2>
-				<span class="image main"><img src="images/xnb.png" alt="" /></span>
 				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
-				<p>範例：<span class="sample" onclick="samp('xnb');">neen nganai musu? 你叫什麼名字？</span></p>
 				請在下框輸入欲標示等級的族語：<br>
-				<p><textarea id="input-xnb" class="input" onkeypress="return searchKeyPress(event,'xnb');"></textarea></p>
+				<p><textarea id="input-knv" class="input" onkeypress="return searchKeyPress(event, 'knv');"></textarea></p>
 				<p>
-					<button id="go-xnb" onclick="conv('xnb');">標記</button>
-					<button onclick="clean('xnb');">清空文字</button>
-					<button onclick="location.href='index.html'; clean('xnb');">回首頁</button>
-					<button onclick="location.href='index.html#menu'; clean('xnb');">回選單</button>
+					<button id="go-knv" onclick="conv('knv');">標記</button>
+					<button onclick="clean('knv');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('knv');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('knv');">回選單</button>
 				</p>
 				<p>
-				<div id="output-xnb" class="output"></div>
+					<div id="output-knv" class="output"></div>
 				</p>
 				<p>
 					<table>
 						<thead>
 							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
 						</thead>
-						<tbody id="tableoutput-xnb">
+						<tbody id="tableoutput-knv">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="hla">
+				<h2 class="major">拉阿魯哇語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-hla" class="input" onkeypress="return searchKeyPress(event, 'hla');"></textarea></p>
+				<p>
+					<button id="go-hla" onclick="conv('hla');">標記</button>
+					<button onclick="clean('hla');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('hla');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('hla');">回選單</button>
+				</p>
+				<p>
+					<div id="output-hla" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-hla">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="pai_es">
+				<h2 class="major">東排灣語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-pai_es" class="input" onkeypress="return searchKeyPress(event, 'pai_es');"></textarea></p>
+				<p>
+					<button id="go-pai_es" onclick="conv('pai_es');">標記</button>
+					<button onclick="clean('pai_es');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('pai_es');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('pai_es');">回選單</button>
+				</p>
+				<p>
+					<div id="output-pai_es" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-pai_es">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="pai_nt">
+				<h2 class="major">北排灣語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-pai_nt" class="input" onkeypress="return searchKeyPress(event, 'pai_nt');"></textarea></p>
+				<p>
+					<button id="go-pai_nt" onclick="conv('pai_nt');">標記</button>
+					<button onclick="clean('pai_nt');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('pai_nt');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('pai_nt');">回選單</button>
+				</p>
+				<p>
+					<div id="output-pai_nt" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-pai_nt">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="pai_ct">
+				<h2 class="major">中排灣語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-pai_ct" class="input" onkeypress="return searchKeyPress(event, 'pai_ct');"></textarea></p>
+				<p>
+					<button id="go-pai_ct" onclick="conv('pai_ct');">標記</button>
+					<button onclick="clean('pai_ct');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('pai_ct');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('pai_ct');">回選單</button>
+				</p>
+				<p>
+					<div id="output-pai_ct" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-pai_ct">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="pai_st">
+				<h2 class="major">南排灣語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-pai_st" class="input" onkeypress="return searchKeyPress(event, 'pai_st');"></textarea></p>
+				<p>
+					<button id="go-pai_st" onclick="conv('pai_st');">標記</button>
+					<button onclick="clean('pai_st');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('pai_st');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('pai_st');">回選單</button>
+				</p>
+				<p>
+					<div id="output-pai_st" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-pai_st">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="ruk_es">
+				<h2 class="major">東魯凱語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-ruk_es" class="input" onkeypress="return searchKeyPress(event, 'ruk_es');"></textarea></p>
+				<p>
+					<button id="go-ruk_es" onclick="conv('ruk_es');">標記</button>
+					<button onclick="clean('ruk_es');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('ruk_es');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('ruk_es');">回選單</button>
+				</p>
+				<p>
+					<div id="output-ruk_es" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-ruk_es">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="ruk_bd">
+				<h2 class="major">霧台魯凱語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-ruk_bd" class="input" onkeypress="return searchKeyPress(event, 'ruk_bd');"></textarea></p>
+				<p>
+					<button id="go-ruk_bd" onclick="conv('ruk_bd');">標記</button>
+					<button onclick="clean('ruk_bd');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('ruk_bd');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('ruk_bd');">回選單</button>
+				</p>
+				<p>
+					<div id="output-ruk_bd" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-ruk_bd">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="ruk_tw">
+				<h2 class="major">大武魯凱語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-ruk_tw" class="input" onkeypress="return searchKeyPress(event, 'ruk_tw');"></textarea></p>
+				<p>
+					<button id="go-ruk_tw" onclick="conv('ruk_tw');">標記</button>
+					<button onclick="clean('ruk_tw');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('ruk_tw');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('ruk_tw');">回選單</button>
+				</p>
+				<p>
+					<div id="output-ruk_tw" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-ruk_tw">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="ruk_tn">
+				<h2 class="major">多納魯凱語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-ruk_tn" class="input" onkeypress="return searchKeyPress(event, 'ruk_tn');"></textarea></p>
+				<p>
+					<button id="go-ruk_tn" onclick="conv('ruk_tn');">標記</button>
+					<button onclick="clean('ruk_tn');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('ruk_tn');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('ruk_tn');">回選單</button>
+				</p>
+				<p>
+					<div id="output-ruk_tn" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-ruk_tn">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="ruk_mg">
+				<h2 class="major">茂林魯凱語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-ruk_mg" class="input" onkeypress="return searchKeyPress(event, 'ruk_mg');"></textarea></p>
+				<p>
+					<button id="go-ruk_mg" onclick="conv('ruk_mg');">標記</button>
+					<button onclick="clean('ruk_mg');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('ruk_mg');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('ruk_mg');">回選單</button>
+				</p>
+				<p>
+					<div id="output-ruk_mg" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-ruk_mg">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="ruk_mn">
+				<h2 class="major">萬山魯凱語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-ruk_mn" class="input" onkeypress="return searchKeyPress(event, 'ruk_mn');"></textarea></p>
+				<p>
+					<button id="go-ruk_mn" onclick="conv('ruk_mn');">標記</button>
+					<button onclick="clean('ruk_mn');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('ruk_mn');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('ruk_mn');">回選單</button>
+				</p>
+				<p>
+					<div id="output-ruk_mn" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-ruk_mn">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="ami_nt">
+				<h2 class="major">南勢阿美語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-ami_nt" class="input" onkeypress="return searchKeyPress(event, 'ami_nt');"></textarea></p>
+				<p>
+					<button id="go-ami_nt" onclick="conv('ami_nt');">標記</button>
+					<button onclick="clean('ami_nt');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('ami_nt');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('ami_nt');">回選單</button>
+				</p>
+				<p>
+					<div id="output-ami_nt" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-ami_nt">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="ami_hk">
+				<h2 class="major">秀姑巒阿美語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-ami_hk" class="input" onkeypress="return searchKeyPress(event, 'ami_hk');"></textarea></p>
+				<p>
+					<button id="go-ami_hk" onclick="conv('ami_hk');">標記</button>
+					<button onclick="clean('ami_hk');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('ami_hk');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('ami_hk');">回選單</button>
+				</p>
+				<p>
+					<div id="output-ami_hk" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-ami_hk">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="ami_ha">
+				<h2 class="major">海岸阿美語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-ami_ha" class="input" onkeypress="return searchKeyPress(event, 'ami_ha');"></textarea></p>
+				<p>
+					<button id="go-ami_ha" onclick="conv('ami_ha');">標記</button>
+					<button onclick="clean('ami_ha');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('ami_ha');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('ami_ha');">回選單</button>
+				</p>
+				<p>
+					<div id="output-ami_ha" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-ami_ha">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="ami_ml">
+				<h2 class="major">馬蘭阿美語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-ami_ml" class="input" onkeypress="return searchKeyPress(event, 'ami_ml');"></textarea></p>
+				<p>
+					<button id="go-ami_ml" onclick="conv('ami_ml');">標記</button>
+					<button onclick="clean('ami_ml');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('ami_ml');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('ami_ml');">回選單</button>
+				</p>
+				<p>
+					<div id="output-ami_ml" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-ami_ml">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="ami_hc">
+				<h2 class="major">恆春阿美語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-ami_hc" class="input" onkeypress="return searchKeyPress(event, 'ami_hc');"></textarea></p>
+				<p>
+					<button id="go-ami_hc" onclick="conv('ami_hc');">標記</button>
+					<button onclick="clean('ami_hc');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('ami_hc');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('ami_hc');">回選單</button>
+				</p>
+				<p>
+					<div id="output-ami_hc" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-ami_hc">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="puy_py">
+				<h2 class="major">南王卑南語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-puy_py" class="input" onkeypress="return searchKeyPress(event, 'puy_py');"></textarea></p>
+				<p>
+					<button id="go-puy_py" onclick="conv('puy_py');">標記</button>
+					<button onclick="clean('puy_py');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('puy_py');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('puy_py');">回選單</button>
+				</p>
+				<p>
+					<div id="output-puy_py" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-puy_py">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="puy_tp">
+				<h2 class="major">知本卑南語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-puy_tp" class="input" onkeypress="return searchKeyPress(event, 'puy_tp');"></textarea></p>
+				<p>
+					<button id="go-puy_tp" onclick="conv('puy_tp');">標記</button>
+					<button onclick="clean('puy_tp');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('puy_tp');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('puy_tp');">回選單</button>
+				</p>
+				<p>
+					<div id="output-puy_tp" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-puy_tp">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="puy_ws">
+				<h2 class="major">西群卑南語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-puy_ws" class="input" onkeypress="return searchKeyPress(event, 'puy_ws');"></textarea></p>
+				<p>
+					<button id="go-puy_ws" onclick="conv('puy_ws');">標記</button>
+					<button onclick="clean('puy_ws');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('puy_ws');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('puy_ws');">回選單</button>
+				</p>
+				<p>
+					<div id="output-puy_ws" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-puy_ws">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="puy_ks">
+				<h2 class="major">建和卑南語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-puy_ks" class="input" onkeypress="return searchKeyPress(event, 'puy_ks');"></textarea></p>
+				<p>
+					<button id="go-puy_ks" onclick="conv('puy_ks');">標記</button>
+					<button onclick="clean('puy_ks');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('puy_ks');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('puy_ks');">回選單</button>
+				</p>
+				<p>
+					<div id="output-puy_ks" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-puy_ks">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="bun_td">
+				<h2 class="major">卓群布農語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-bun_td" class="input" onkeypress="return searchKeyPress(event, 'bun_td');"></textarea></p>
+				<p>
+					<button id="go-bun_td" onclick="conv('bun_td');">標記</button>
+					<button onclick="clean('bun_td');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('bun_td');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('bun_td');">回選單</button>
+				</p>
+				<p>
+					<div id="output-bun_td" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-bun_td">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="bun_bh">
+				<h2 class="major">卡群布農語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-bun_bh" class="input" onkeypress="return searchKeyPress(event, 'bun_bh');"></textarea></p>
+				<p>
+					<button id="go-bun_bh" onclick="conv('bun_bh');">標記</button>
+					<button onclick="clean('bun_bh');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('bun_bh');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('bun_bh');">回選單</button>
+				</p>
+				<p>
+					<div id="output-bun_bh" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-bun_bh">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="bun_vt">
+				<h2 class="major">丹群布農語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+bun_vt')
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-bun_vt" class="input" onkeypress="return searchKeyPress(event, 'bun_vt');"></textarea></p>
+				<p>
+					<button id="go-bun_vt" onclick="conv('bun_vt');">標記</button>
+					<button onclick="clean('bun_vt');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('bun_vt');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('bun_vt');">回選單</button>
+				</p>
+				<p>
+					<div id="output-bun_vt" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-bun_vt">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="bun_bn">
+				<h2 class="major">巒群布農語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-bun_bn" class="input" onkeypress="return searchKeyPress(event, 'bun_bn');"></textarea></p>
+				<p>
+					<button id="go-bun_bn" onclick="conv('bun_bn');">標記</button>
+					<button onclick="clean('bun_bn');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('bun_bn');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('bun_bn');">回選單</button>
+				</p>
+				<p>
+					<div id="output-bun_bn" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-bun_bn">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="bun_ib">
+				<h2 class="major">郡群布農語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-bun_ib" class="input" onkeypress="return searchKeyPress(event, 'bun_ib');"></textarea></p>
+				<p>
+					<button id="go-bun_ib" onclick="conv('bun_ib');">標記</button>
+					<button onclick="clean('bun_ib');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('bun_ib');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('bun_ib');">回選單</button>
+				</p>
+				<p>
+					<div id="output-bun_ib" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-bun_ib">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="say">
+				<h2 class="major">賽夏語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-say" class="input" onkeypress="return searchKeyPress(event, 'say');"></textarea></p>
+				<p>
+					<button id="go-say" onclick="conv('say');">標記</button>
+					<button onclick="clean('say');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('say');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('say');">回選單</button>
+				</p>
+				<p>
+					<div id="output-say" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-say">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="tha">
+				<h2 class="major">邵語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-tha" class="input" onkeypress="return searchKeyPress(event, 'tha');"></textarea></p>
+				<p>
+					<button id="go-tha" onclick="conv('tha');">標記</button>
+					<button onclick="clean('tha');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('tha');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('tha');">回選單</button>
+				</p>
+				<p>
+					<div id="output-tha" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-tha">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="kav">
+				<h2 class="major">噶瑪蘭語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-kav" class="input" onkeypress="return searchKeyPress(event, 'kav');"></textarea></p>
+				<p>
+					<button id="go-kav" onclick="conv('kav');">標記</button>
+					<button onclick="clean('kav');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('kav');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('kav');">回選單</button>
+				</p>
+				<p>
+					<div id="output-kav" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-kav">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="sak">
+				<h2 class="major">撒奇萊雅語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-sak" class="input" onkeypress="return searchKeyPress(event, 'sak');"></textarea></p>
+				<p>
+					<button id="go-sak" onclick="conv('sak');">標記</button>
+					<button onclick="clean('sak');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('sak');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('sak');">回選單</button>
+				</p>
+				<p>
+					<div id="output-sak" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-sak">
+						</tbody>
+					</table>
+				</p>
+			</article>
+
+			<article id="yam">
+				<h2 class="major">雅美語</h2>
+				<p>說明：<span class="lv1">初級</span>、<span class="lv2">中級</span>、<span class="lv3">中高級</span>、<span class="lv4">高級</span></p>
+				請在下框輸入欲標示等級的族語：<br>
+				<p><textarea id="input-yam" class="input" onkeypress="return searchKeyPress(event, 'yam');"></textarea></p>
+				<p>
+					<button id="go-yam" onclick="conv('yam');">標記</button>
+					<button onclick="clean('yam');">清空文字</button>
+					<button onclick="location.href='index.html'; clean('yam');">回首頁</button>
+					<button onclick="location.href='index.html#menu'; clean('yam');">回選單</button>
+				</p>
+				<p>
+					<div id="output-yam" class="output"></div>
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th class="lex">詞項</th><th>中文解釋</th><th class="lv">級別</th></tr>
+						</thead>
+						<tbody id="tableoutput-yam">
 						</tbody>
 					</table>
 				</p>
@@ -503,10 +1172,10 @@
 			<article id="guide">
 				<h2 class="major">使用說明</h2>
 				<span class="image main"><img src="images/guide.png" alt="" /></span>
-				<p>　　本工具參考2018年族語千詞表（賽德克、邵、太魯閣）、2020年族語學習詞表（其他語言）的詞彙分級並進行修正，使用時將您所需要標示等級的族語詞彙、句子、段落等輸入或複製到文字框中，並按下「標記」按鈕，即可標記出千詞表中含有的族語詞彙及部分常用衍生詞之等級。如果想要試用本工具，亦可點選範例文字以進行標記。</p>
+				<p>　　本工具參考2022年族語學習詞表的詞彙分級並進行修正，使用時將您所需要標示等級的族語詞彙、句子、段落等輸入或複製到文字框中，並按下「標記」按鈕，即可標記出千詞表中含有的族語詞彙及部分常用衍生詞之等級。</p>
 				若有任何疑問請洽：<br>
-				核心功能開發：Samaw Pan　　<a href="mailto:samuel.yhpan@gmail.com">samuel.yhpan@gmail.com</a><br>
-				UI/UX：Walis Taywang　　　<a href="mailto:walistaywang0914@gmail.com">walistaywang0914@gmail.com</a>
+				Samaw Pan　　<a href="mailto:samuel.yhpan@gmail.com">samuel.yhpan@gmail.com</a><br>
+				Walis Hian-chi Song　<a href="mailto:walis.hcs@gapp.nthu.edu.tw">walis.hcs@gapp.nthu.edu.tw</a>
 			</article>
 
 			<!-- About -->
@@ -514,7 +1183,9 @@
 				<h2 class="major">版本資訊</h2>
 				<span class="image main"><img src="images/ver.png" alt="" /></span>
 				<h3>目前支援語別：</h3>
-				賽德克語（德固達雅）、邵語、太魯閣語、拉阿魯哇語、卡那卡那富語、賽夏語、鄒語、噶瑪蘭語、達悟語。<p>
+				全 16 族 42 語言別<p>
+				<h3>Ver.3.0.0 </h3>
+				以 2022 學習詞表為本，新增所有語言別。<p>
 				<h3>Ver.2.0.2 </h3>
 				修正按鈕位置。<p>
 				<h3>Ver.2.0.1 </h3>
@@ -804,8 +1475,8 @@
 				<li><a href="https://www.instagram.com/rngagi.kari" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 				<li><a href="https://github.com/rngagi/toolbox" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
 			</ul>
-			<p class="copyright"> Rngagi Projects © 2021 <br>
-				Design: Samaw Pan & Walis Taywang</p>
+			<p class="copyright"> Rngagi Projects © 2021-2025 <br>
+				Design: Samaw Pan & Walis Hian-chi Song</p>
 			<p> <font size="0.1"><a href="https://rngagi.github.io/"> RNGAGi 首頁 </a></font><br>
 		</footer>
 
